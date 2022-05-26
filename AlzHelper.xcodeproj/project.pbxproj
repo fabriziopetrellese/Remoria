@@ -33,6 +33,7 @@
 		B9F45ADF283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		B9F45AE0283D0F8500899706 /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
 		B9F45AE3283D0FC600899706 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		B9F45AE5283FBEE000899706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +66,7 @@
 		B9F45AC6283D0CC000899706 /* AlzHelper */ = {
 			isa = PBXGroup;
 			children = (
+				B9F45AE5283FBEE000899706 /* Info.plist */,
 				B9F45AC7283D0CC000899706 /* AlzHelperApp.swift */,
 				B9F45AC9283D0CC000899706 /* ContentView.swift */,
 				B9F45ADC283D0F2B00899706 /* ML Stuff */,
@@ -314,6 +316,8 @@
 				DEVELOPMENT_TEAM = 37THZ8H7Q6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlzHelper/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app need camera usage to recognize objects";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +348,8 @@
 				DEVELOPMENT_TEAM = 37THZ8H7Q6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlzHelper/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app need camera usage to recognize objects";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
