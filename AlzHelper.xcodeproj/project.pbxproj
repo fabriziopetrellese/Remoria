@@ -11,6 +11,13 @@
 		B9F45ACA283D0CC000899706 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AC9283D0CC000899706 /* ContentView.swift */; };
 		B9F45ACC283D0CC100899706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F45ACB283D0CC100899706 /* Assets.xcassets */; };
 		B9F45ACF283D0CC100899706 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F45ACE283D0CC100899706 /* Preview Assets.xcassets */; };
+		B9F45AD7283D0D0A00899706 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AD6283D0D0A00899706 /* MainViewController.swift */; };
+		B9F45AD9283D0E6C00899706 /* MainViewController+CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AD8283D0E6C00899706 /* MainViewController+CameraPicker.swift */; };
+		B9F45ADB283D0E9700899706 /* MainViewController+PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45ADA283D0E9700899706 /* MainViewController+PhotoPicker.swift */; };
+		B9F45ADE283D0F6500899706 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45ADD283D0F6500899706 /* ImagePredictor.swift */; };
+		B9F45AE1283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45ADF283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
+		B9F45AE2283D0F8500899706 /* VNClassificationObservation+confidenceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AE0283D0F8500899706 /* VNClassificationObservation+confidenceString.swift */; };
+		B9F45AE4283D0FC600899706 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AE3283D0FC600899706 /* MobileNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		B9F45AC9283D0CC000899706 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B9F45ACB283D0CC100899706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9F45ACE283D0CC100899706 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B9F45AD6283D0D0A00899706 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B9F45AD8283D0E6C00899706 /* MainViewController+CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+CameraPicker.swift"; sourceTree = "<group>"; };
+		B9F45ADA283D0E9700899706 /* MainViewController+PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+PhotoPicker.swift"; sourceTree = "<group>"; };
+		B9F45ADD283D0F6500899706 /* ImagePredictor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
+		B9F45ADF283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
+		B9F45AE0283D0F8500899706 /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
+		B9F45AE3283D0FC600899706 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +67,10 @@
 			children = (
 				B9F45AC7283D0CC000899706 /* AlzHelperApp.swift */,
 				B9F45AC9283D0CC000899706 /* ContentView.swift */,
+				B9F45ADC283D0F2B00899706 /* ML Stuff */,
+				B9F45AD5283D0CF200899706 /* Controllers */,
 				B9F45ACB283D0CC100899706 /* Assets.xcassets */,
+				B9F45AE3283D0FC600899706 /* MobileNet.mlmodel */,
 				B9F45ACD283D0CC100899706 /* Preview Content */,
 			);
 			path = AlzHelper;
@@ -65,6 +82,26 @@
 				B9F45ACE283D0CC100899706 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B9F45AD5283D0CF200899706 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B9F45AD6283D0D0A00899706 /* MainViewController.swift */,
+				B9F45AD8283D0E6C00899706 /* MainViewController+CameraPicker.swift */,
+				B9F45ADA283D0E9700899706 /* MainViewController+PhotoPicker.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B9F45ADC283D0F2B00899706 /* ML Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				B9F45ADF283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+				B9F45AE0283D0F8500899706 /* VNClassificationObservation+confidenceString.swift */,
+				B9F45ADD283D0F6500899706 /* ImagePredictor.swift */,
+			);
+			path = "ML Stuff";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +174,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9F45AD7283D0D0A00899706 /* MainViewController.swift in Sources */,
+				B9F45AE2283D0F8500899706 /* VNClassificationObservation+confidenceString.swift in Sources */,
+				B9F45AE4283D0FC600899706 /* MobileNet.mlmodel in Sources */,
 				B9F45ACA283D0CC000899706 /* ContentView.swift in Sources */,
+				B9F45AE1283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
+				B9F45AD9283D0E6C00899706 /* MainViewController+CameraPicker.swift in Sources */,
+				B9F45ADB283D0E9700899706 /* MainViewController+PhotoPicker.swift in Sources */,
+				B9F45ADE283D0F6500899706 /* ImagePredictor.swift in Sources */,
 				B9F45AC8283D0CC000899706 /* AlzHelperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +319,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +349,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
