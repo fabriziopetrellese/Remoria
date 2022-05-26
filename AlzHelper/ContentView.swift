@@ -13,7 +13,7 @@ struct ContentView: View {
             VStack {
                 
                 NavigationLink {
-                    //                  CameraView()
+//                  CameraView()
                 } label: {
                     ButtonView(title: "Take a photo")
                 }
@@ -21,7 +21,7 @@ struct ContentView: View {
                 Text("or")
                 
                 NavigationLink {
-                    //                  GalleryView()
+//                  GalleryView()
                 } label: {
                     ButtonView(title: "Choose from library")
                 }
