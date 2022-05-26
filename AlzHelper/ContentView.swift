@@ -11,7 +11,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                
                 NavigationLink {
 //                  CameraView()
                 } label: {
@@ -25,8 +24,6 @@ struct ContentView: View {
                 } label: {
                     ButtonView(title: "Choose from library")
                 }
-                
-                
             }
             .navigationTitle("AlzHelper")
             .toolbar {
@@ -49,6 +46,8 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+
+
 struct ButtonView: View {
     let title: String
     
@@ -60,7 +59,6 @@ struct ButtonView: View {
             
             Text(title)
                 .foregroundColor(.white)
-            
         }
     }
 }
