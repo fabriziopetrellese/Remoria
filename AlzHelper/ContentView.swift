@@ -13,18 +13,28 @@ struct ContentView: View {
             VStack {
                 NavigationLink {
 //                  CameraView()
+                    
                 } label: {
                     ButtonView(title: "Take a photo", icon: "camera", color: .red)
                 }
+                .padding(.vertical)
                 
-                Text("or")
-                    .padding(.vertical)
+//                Text("or")
+//                    .padding(.vertical)
                 
                 NavigationLink {
 //                  GalleryView()
                 } label: {
-                    ButtonView(title: "Choose from library", icon: "photo.on.rectangle.angled", color: .yellow)
+                    ButtonView(title: "Choose from the Library", icon: "photo.on.rectangle.angled", color: .yellow)
                 }
+                .padding(.vertical)
+                
+                NavigationLink {
+//                  KeywordsView()
+                } label: {
+                    ButtonView(title: "Search by key words", icon: "keyboard", color: .blue)
+                }
+                .padding(.vertical)
             }
             .navigationTitle("AlzHelper")
             .toolbar {
