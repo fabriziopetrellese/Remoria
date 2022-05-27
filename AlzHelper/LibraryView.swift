@@ -9,19 +9,35 @@ import SwiftUI
 
 struct LibraryView: View {
     @EnvironmentObject var categoriesModel: CategoriesModel
+    @State private var searchText = ""
+    
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
+    
+    var searchResults: [Category] {
+        if searchText.isEmpty {
+            return categoriesModel.categories
+        } else {
+            return categoriesModel.categories.filter { $0.name.contains(searchText.lowercased()) }
+        }
+    }
     
     var body: some View {
         VStack {
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(categoriesModel.categories) { category in
-                        CardView(label: category.name)
+                    ForEach(searchResults) { category in
+                        NavigationLink {
+                            
+                        } label: {
+                            CardView(label: category.name.capitalized, pic: category.image)
+                        }
                     }
                 }
+                .padding()
             }
         }
         .navigationTitle("Library")
+        .searchable(text: $searchText, prompt: "Browse categories")
     }
 }
 
@@ -29,5 +45,30 @@ struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
         LibraryView()
             .environmentObject(CategoriesModel())
+    }
+}
+
+struct CardView: View {
+    let label: String
+    let pic: String
+    
+    var body: some View {
+        ZStack {
+            Image(pic)
+                .resizable()
+                .frame(width: 180, height: 120)
+                .foregroundColor(.blue)
+                .shadow(radius: 5)
+                .cornerRadius(10)
+            
+            Text(label)
+                .font(.title3)
+                .bold()
+                .foregroundColor(.white)
+                .frame(width: 150, alignment: .leading)
+                .padding(.top, 80)
+            
+        }
+//        .padding(.top, 32)
     }
 }

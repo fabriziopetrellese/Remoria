@@ -12,27 +12,24 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 NavigationLink {
-//                  CameraView()
+                    //                  CameraView()
                     
                 } label: {
                     ButtonView(title: "Take a photo", icon: "camera", color: .red)
                 }
                 .padding(.vertical)
                 
-//                Text("or")
-//                    .padding(.vertical)
-                
                 NavigationLink {
                     LibraryView()
                 } label: {
-                    ButtonView(title: "Choose from the Library", icon: "photo.on.rectangle.angled", color: .yellow)
+                    ButtonView(title: "Choose from the Library", icon: "photo.on.rectangle.angled", color: .blue)
                 }
                 .padding(.vertical)
                 
                 NavigationLink {
-//                  KeywordsView()
+                    //                  KeywordsView()
                 } label: {
-                    ButtonView(title: "Search by key words", icon: "keyboard", color: .blue)
+                    ButtonView(title: "Search by key words", icon: "keyboard", color: .yellow)
                 }
                 .padding(.vertical)
             }
@@ -40,7 +37,7 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
-//                      InfoView()
+                        //                      InfoView()
                     } label: {
                         Image(systemName: "questionmark.circle")
                             .foregroundColor(.black)
@@ -57,8 +54,6 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(CategoriesModel())
     }
 }
-
-
 
 struct ButtonView: View {
     let title: String
@@ -80,7 +75,6 @@ struct ButtonView: View {
                 Image(systemName: icon)
                     .foregroundColor(.white)
                     .padding(.top, 8)
-                
             }
         }
     }
