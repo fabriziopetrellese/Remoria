@@ -18,6 +18,9 @@
 		B9F45AE1283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45ADF283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		B9F45AE2283D0F8500899706 /* VNClassificationObservation+confidenceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AE0283D0F8500899706 /* VNClassificationObservation+confidenceString.swift */; };
 		B9F45AE4283D0FC600899706 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AE3283D0FC600899706 /* MobileNet.mlmodel */; };
+		B9F45AE72841057D00899706 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AE62841057D00899706 /* LibraryView.swift */; };
+		B9F45AE92841082500899706 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AE82841082500899706 /* CardView.swift */; };
+		B9F45AEB284108B600899706 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AEA284108B500899706 /* CategoriesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		B9F45AE0283D0F8500899706 /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
 		B9F45AE3283D0FC600899706 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		B9F45AE5283FBEE000899706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B9F45AE62841057D00899706 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		B9F45AE82841082500899706 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B9F45AEA284108B500899706 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,9 @@
 				B9F45AE5283FBEE000899706 /* Info.plist */,
 				B9F45AC7283D0CC000899706 /* AlzHelperApp.swift */,
 				B9F45AC9283D0CC000899706 /* ContentView.swift */,
+				B9F45AE62841057D00899706 /* LibraryView.swift */,
+				B9F45AE82841082500899706 /* CardView.swift */,
+				B9F45AEA284108B500899706 /* CategoriesModel.swift */,
 				B9F45ADC283D0F2B00899706 /* ML Stuff */,
 				B9F45AD5283D0CF200899706 /* Controllers */,
 				B9F45ACB283D0CC100899706 /* Assets.xcassets */,
@@ -179,11 +188,14 @@
 				B9F45AD7283D0D0A00899706 /* MainViewController.swift in Sources */,
 				B9F45AE2283D0F8500899706 /* VNClassificationObservation+confidenceString.swift in Sources */,
 				B9F45AE4283D0FC600899706 /* MobileNet.mlmodel in Sources */,
+				B9F45AEB284108B600899706 /* CategoriesModel.swift in Sources */,
 				B9F45ACA283D0CC000899706 /* ContentView.swift in Sources */,
 				B9F45AE1283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				B9F45AD9283D0E6C00899706 /* MainViewController+CameraPicker.swift in Sources */,
 				B9F45ADB283D0E9700899706 /* MainViewController+PhotoPicker.swift in Sources */,
 				B9F45ADE283D0F6500899706 /* ImagePredictor.swift in Sources */,
+				B9F45AE72841057D00899706 /* LibraryView.swift in Sources */,
+				B9F45AE92841082500899706 /* CardView.swift in Sources */,
 				B9F45AC8283D0CC000899706 /* AlzHelperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

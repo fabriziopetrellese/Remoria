@@ -12,6 +12,7 @@ struct AlzHelperApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(CategoriesModel())
         }
     }
 }

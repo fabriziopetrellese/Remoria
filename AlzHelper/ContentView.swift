@@ -23,7 +23,7 @@ struct ContentView: View {
 //                    .padding(.vertical)
                 
                 NavigationLink {
-//                  GalleryView()
+                    LibraryView()
                 } label: {
                     ButtonView(title: "Choose from the Library", icon: "photo.on.rectangle.angled", color: .yellow)
                 }
@@ -54,6 +54,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(CategoriesModel())
     }
 }
 
