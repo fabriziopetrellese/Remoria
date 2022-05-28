@@ -29,7 +29,7 @@ struct LibraryView: View {
                         NavigationLink {
                             
                         } label: {
-                            CardView(label: category.name.capitalized, pic: category.image)
+                            CardView(label: category.name.capitalized, pic: category.image, color: category.color)
                         }
                     }
                 }
@@ -51,15 +51,17 @@ struct LibraryView_Previews: PreviewProvider {
 struct CardView: View {
     let label: String
     let pic: String
+    let color: Color
     
     var body: some View {
         ZStack {
-            Image(pic)
-                .resizable()
+            RoundedRectangle(cornerRadius: 10)
                 .frame(width: 180, height: 120)
-                .foregroundColor(.blue)
+                .foregroundColor(color)
                 .shadow(radius: 5)
-                .cornerRadius(10)
+
+            Text(pic)
+                .font(.largeTitle)
             
             Text(label)
                 .font(.title3)

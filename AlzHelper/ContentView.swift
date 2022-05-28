@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var showModal: Bool = false
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -29,18 +31,21 @@ struct ContentView: View {
                 NavigationLink {
                     //                  KeywordsView()
                 } label: {
-                    ButtonView(title: "Search by key words", icon: "keyboard", color: .yellow)
+                    ButtonView(title: "Search by key-words", icon: "keyboard", color: .yellow)
                 }
                 .padding(.vertical)
             }
             .navigationTitle("AlzHelper")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink {
-                        //                      InfoView()
+                    Button {
+                        showModal.toggle()
                     } label: {
                         Image(systemName: "questionmark.circle")
                             .foregroundColor(.black)
+                    }
+                    .sheet(isPresented: $showModal) {
+                        OnboardingView(showModal: $showModal)
                     }
                 }
             }
@@ -64,18 +69,46 @@ struct ButtonView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
                 .foregroundColor(color)
-                .frame(width: 280, height: 120)
+                .frame(width: 280, height: 140)
                 .shadow(radius: 5)
             
             VStack {
                 Text(title)
+                    .font(.title)
+                    .bold()
                     .foregroundColor(.white)
-                    .padding(.bottom, 8)
+                    .frame(width: 240, alignment: .center)
+                    .multilineTextAlignment(.center)
+
                 
                 Image(systemName: icon)
                     .foregroundColor(.white)
-                    .padding(.top, 8)
+                    .padding(.top, 2)
             }
         }
+    }
+}
+
+struct OnboardingView: View {
+    @Binding var showModal: Bool
+    
+    var body: some View {
+        VStack {
+            Text("Instructions")
+                .font(.title)
+                .bold()
+            
+            Text("AlzHelper is an app to help you remember words.")
+            
+            Text("Start by:")
+            
+            Text("taking a photo of the object")
+            
+            Text("or")
+            
+            Text("choose one from the library")
+        }
+        
+
     }
 }

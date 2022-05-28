@@ -6,18 +6,21 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Category: Identifiable {
     let id = UUID()
     let name: String
     let image: String
+    let color: Color
 }
 
 class CategoriesModel: ObservableObject {
     @Published var categories: [Category] =
     [
-        Category(name: "animals", image: "Animals"),
-        Category(name: "food", image: "Food"),
-        Category(name: "clothes", image: "Clothes")
+        Category(name: "animals", image: "🐶", color: .red),
+        Category(name: "food", image: "🍽", color: .blue),
+        Category(name: "clothes", image: "👕", color: .yellow),
+        Category(name: "shops", image: "🏬", color: .green),
     ]
 }
