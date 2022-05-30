@@ -27,7 +27,7 @@ struct LibraryView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(searchResults) { category in
                         NavigationLink {
-                            
+                            CategoryView(categoryName: category.name)
                         } label: {
                             CardView(label: category.name.capitalized, pic: category.image, color: category.color)
                         }
@@ -37,7 +37,7 @@ struct LibraryView: View {
             }
         }
         .navigationTitle("Library")
-        .searchable(text: $searchText, prompt: "Browse categories")
+        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always) ,prompt: "Browse categories")
     }
 }
 
@@ -71,6 +71,5 @@ struct CardView: View {
                 .padding(.top, 80)
             
         }
-//        .padding(.top, 32)
     }
 }

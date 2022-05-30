@@ -17,7 +17,7 @@ struct ContentView: View {
                     //                  CameraView()
                     
                 } label: {
-                    ButtonView(title: "Take a photo", icon: "camera", color: .red)
+                    ButtonView(title: "Take a photo", icon: "camera.fill", color: .red)
                 }
                 .padding(.vertical)
                 
@@ -31,7 +31,7 @@ struct ContentView: View {
                 NavigationLink {
                     //                  KeywordsView()
                 } label: {
-                    ButtonView(title: "Search by key-words", icon: "keyboard", color: .yellow)
+                    ButtonView(title: "Search by key-words", icon: "keyboard.fill", color: .yellow)
                 }
                 .padding(.vertical)
             }
@@ -82,8 +82,10 @@ struct ButtonView: View {
 
                 
                 Image(systemName: icon)
+                    .resizable()
+                    .scaledToFit()
                     .foregroundColor(.white)
-                    .padding(.top, 2)
+                    .frame(width: 32, height: 32)
             }
         }
     }
