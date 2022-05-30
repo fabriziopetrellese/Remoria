@@ -10,6 +10,8 @@ import SwiftUI
 struct GuessView: View {
     @State var name: String = ""
     @State var index: Int = 0
+    @State var correctAlert: Bool = false
+    @State var wrongAlert: Bool = false
     let itemName: String
     let itemImage: String
     let itemCategory: String
@@ -27,12 +29,20 @@ struct GuessView: View {
         var add: String
         add = itemName[index]
         name.append(add)
-        name = name.uppercased()
+//        name = name.uppercased()
     }
     
     func showName() {
         name = itemName
         name = name.uppercased()
+    }
+    
+    func guessWord() {
+        if name.lowercased() == itemName {
+            correctAlert = true
+        } else {
+            wrongAlert = true
+        }
     }
     
     var body: some View {
@@ -68,6 +78,17 @@ struct GuessView: View {
         }
         .onAppear() {
             showFirstCharacter()
+        }
+        .onChange(of: name) { newValue in
+            if newValue.count == itemName.count {
+                guessWord()
+            }
+        }
+        .alert("Guessed!", isPresented: $correctAlert) {
+            Button("OK", role: .cancel) {}
+        }
+        .alert("Wrong!", isPresented: $wrongAlert) {
+            Button("OK", role: .cancel) {}
         }
     }
 }
