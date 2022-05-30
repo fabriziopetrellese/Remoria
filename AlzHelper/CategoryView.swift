@@ -18,7 +18,9 @@ struct CategoryView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(categoriesModel.get_items(categoryName: categoryName)) { item in
                         NavigationLink {
-
+                            GuessView(itemName: item.name,
+                                      itemImage: item.image,
+                                      itemCategory: categoryName)
                         } label: {
                             ItemView(pic: item.image)
                         }

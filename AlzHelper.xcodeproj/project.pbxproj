@@ -21,6 +21,7 @@
 		B9F45AE72841057D00899706 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AE62841057D00899706 /* LibraryView.swift */; };
 		B9F45AEB284108B600899706 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AEA284108B500899706 /* CategoriesModel.swift */; };
 		B9F45AED2844AE3200899706 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AEC2844AE3200899706 /* CategoryView.swift */; };
+		B9F45AEF2844F8F100899706 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AEE2844F8F100899706 /* GuessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B9F45AE62841057D00899706 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		B9F45AEA284108B500899706 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 		B9F45AEC2844AE3200899706 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		B9F45AEE2844F8F100899706 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				B9F45AE62841057D00899706 /* LibraryView.swift */,
 				B9F45AEC2844AE3200899706 /* CategoryView.swift */,
 				B9F45AEA284108B500899706 /* CategoriesModel.swift */,
+				B9F45AEE2844F8F100899706 /* GuessView.swift */,
 				B9F45ADC283D0F2B00899706 /* ML Stuff */,
 				B9F45AD5283D0CF200899706 /* Controllers */,
 				B9F45ACB283D0CC100899706 /* Assets.xcassets */,
@@ -194,6 +197,7 @@
 				B9F45AE1283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				B9F45AD9283D0E6C00899706 /* MainViewController+CameraPicker.swift in Sources */,
 				B9F45ADB283D0E9700899706 /* MainViewController+PhotoPicker.swift in Sources */,
+				B9F45AEF2844F8F100899706 /* GuessView.swift in Sources */,
 				B9F45ADE283D0F6500899706 /* ImagePredictor.swift in Sources */,
 				B9F45AE72841057D00899706 /* LibraryView.swift in Sources */,
 				B9F45AC8283D0CC000899706 /* AlzHelperApp.swift in Sources */,
