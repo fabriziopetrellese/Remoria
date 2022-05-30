@@ -22,34 +22,34 @@ class MainViewController: UIViewController {
     @IBOutlet weak var predictionLabel: UILabel!
 }
 
-extension MainViewController {
-    // MARK: Main storyboard actions
-    /// The method the storyboard calls when the user one-finger taps the screen.
-    @IBAction func singleTap() {
-        // Show options for the source picker only if the camera is available.
-        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
-            present(photoPicker, animated: false)
-            return
-        }
-
-        present(cameraPicker, animated: false)
-    }
-
-    /// The method the storyboard calls when the user two-finger taps the screen.
-    @IBAction func doubleTap() {
-        present(photoPicker, animated: false)
-    }
-}
+//extension MainViewController {
+//    // MARK: Main storyboard actions
+//    /// The method the storyboard calls when the user one-finger taps the screen.
+//    @IBAction func singleTap() {
+//        // Show options for the source picker only if the camera is available.
+//        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+//            present(photoPicker, animated: false)
+//            return
+//        }
+//
+//        present(cameraPicker, animated: false)
+//    }
+//
+//    /// The method the storyboard calls when the user two-finger taps the screen.
+//    @IBAction func doubleTap() {
+//        present(photoPicker, animated: false)
+//    }
+//}
 
 extension MainViewController {
     // MARK: Main storyboard updates
     /// Updates the storyboard's image view.
     /// - Parameter image: An image.
-    func updateImage(_ image: UIImage) {
-        DispatchQueue.main.async {
-            self.imageView.image = image
-        }
-    }
+//    func updateImage(_ image: UIImage) {
+//        DispatchQueue.main.async {
+//            self.imageView.image = image
+//        }
+//    }
 
     /// Updates the storyboard's prediction label.
     /// - Parameter message: A prediction or message string.
@@ -70,7 +70,7 @@ extension MainViewController {
     /// Notifies the view controller when a user selects a photo in the camera picker or photo library picker.
     /// - Parameter photo: A photo from the camera or photo library.
     func userSelectedPhoto(_ photo: UIImage) {
-        updateImage(photo)
+//        updateImage(photo)
         updatePredictionLabel("Making predictions for the photo...")
 
         DispatchQueue.global(qos: .userInitiated).async {
