@@ -16,8 +16,8 @@ struct GuessView: View {
     let itemName: String
     let itemImage: String
     let itemCategory: String
+    let itemUiImage: UIImage?
 
-    
     func showFirstCharacter() {
         var new: Character
         new = itemName.first!
@@ -30,7 +30,6 @@ struct GuessView: View {
         var add: String
         add = itemName[index]
         name.append(add)
-//        name = name.uppercased()
     }
     
     func showName() {
@@ -48,11 +47,17 @@ struct GuessView: View {
     
     var body: some View {
             VStack {
-                //            ScrollView(showsIndicators: false) {
                 Image(itemImage)
+
+                    } else {
+                        return Image(itemImage)
+                    }
+                }()
+                
+                imageView
                     .resizable()
                     .frame(width: 350, height: 250)
-                
+                    
                 Text("This belongs to: " + itemCategory.capitalized)
                     .font(.title)
                     .bold()
@@ -81,11 +86,13 @@ struct GuessView: View {
                 }
                 .padding(.top, 20)
                 .padding(.bottom, 40)
-//            }
                 Spacer()
             }
         .onAppear() {
             showFirstCharacter()
+            if let image = itemUiImage {
+                ImagePredictor.shared.classifyImage(image)
+            }
         }
         .onChange(of: name) { newValue in
             if newValue.count == itemName.count {
@@ -112,7 +119,12 @@ struct GuessView: View {
 
 struct GuessView_Previews: PreviewProvider {
     static var previews: some View {
-        GuessView(itemName: "dog", itemImage: "Dog", itemCategory: "animals")
+        GuessView(
+            itemName: "dog",
+            itemImage: "Dog",
+            itemCategory: "animals",
+            itemUiImage: nil
+        )
             .environmentObject(NavigationRoot())
     }
 }
@@ -134,28 +146,4 @@ struct GuessButton: View {
     }
 }
 
-extension String {
-    var length: Int {
-        return count
-    }
 
-    subscript (i: Int) -> String {
-        return self[i ..< i + 1]
-    }
-
-    func substring(fromIndex: Int) -> String {
-        return self[min(fromIndex, length) ..< length]
-    }
-
-    func substring(toIndex: Int) -> String {
-        return self[0 ..< max(0, toIndex)]
-    }
-
-    subscript (r: Range<Int>) -> String {
-        let range = Range(uncheckedBounds: (lower: max(0, min(length, r.lowerBound)),
-                                            upper: min(length, max(0, r.upperBound))))
-        let start = index(startIndex, offsetBy: range.lowerBound)
-        let end = index(start, offsetBy: range.upperBound - range.lowerBound)
-        return String(self[start ..< end])
-    }
-}

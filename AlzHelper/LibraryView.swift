@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LibraryView: View {
-    @EnvironmentObject var categoriesModel: CategoriesModel
+    @EnvironmentObject var categoriesModel: DatabaseDecoder
     @EnvironmentObject var navigationRoot: NavigationRoot
     @State private var searchText = ""
     
@@ -28,7 +28,7 @@ struct LibraryView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(searchResults) { category in
                         NavigationLink {
-                            CategoryView(categoryName: category.name)
+                            CategoryView(categoryName: category.name, categoryItems: category.items)
                         } label: {
                             CardView(label: category.name.capitalized, pic: category.image, color: category.color)
                         }
@@ -45,9 +45,8 @@ struct LibraryView: View {
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
         LibraryView()
-            .environmentObject(CategoriesModel())
+            .environmentObject(DatabaseDecoder())
             .environmentObject(NavigationRoot())
-    }
 }
 
 struct CardView: View {

@@ -11,17 +11,21 @@ struct CategoryView: View {
     @EnvironmentObject var categoriesModel: CategoriesModel
     @EnvironmentObject var navigationRoot: NavigationRoot
     let categoryName: String
+    let categoryItems: [Item]
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     
     var body: some View {
         VStack {
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(categoriesModel.get_items(categoryName: categoryName)) { item in
+                    ForEach(categoryItems) { item in
                         NavigationLink {
-                            GuessView(itemName: item.name,
-                                      itemImage: item.image,
-                                      itemCategory: categoryName)
+                            GuessView(
+                                itemName: item.label,
+                                itemImage: item.image,
+                                itemCategory: categoryName,
+                                itemUiImage: nil
+                            )
                         } label: {
                             ItemView(pic: item.image)
                         }

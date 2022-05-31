@@ -9,10 +9,15 @@ import SwiftUI
 
 @main
 struct AlzHelperApp: App {
+    @ObservedObject var db = DatabaseDecoder()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(CategoriesModel())
+                .onAppear{
+                    db.get_categories()
+                }
+                .environmentObject(db)
         }
     }
 }

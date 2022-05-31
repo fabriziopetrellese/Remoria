@@ -12,43 +12,58 @@ struct ContentView: View {
     @State var isView1Active = false
     @State var showModal: Bool = false
     
+    //camera view properties
+    @State private var isCameraViewPresented: Bool = false
+    @State private var selectedImage: UIImage?
+    
     var body: some View {
-        NavigationView {
-            VStack {
-                NavigationLink {
-                    //                  CameraView()
-                    
-                } label: {
+        if let selectedImage = selectedImage {
+            GuessView(
+                itemName: "Some Object",
+                itemImage: "Some Image",
+                itemCategory: "Some Category",
+                itemUiImage: selectedImage
+            )
+            
+        } else {
+            NavigationView {
+                VStack {
                     ButtonView(title: "Take a photo", icon: "camera.fill", color: .red)
-                }
-                .padding(.vertical)
-                
-                NavigationLink(destination: LibraryView(), isActive: $isView1Active) {
-                    ButtonView(title: "Choose from the Library", icon: "photo.on.rectangle.angled", color: .blue)
-                }
-                .isDetailLink(false)
-                .padding(.vertical)
-                
-                NavigationLink {
-                    //                  KeywordsView()
-                } label: {
-                    ButtonView(title: "Search by key-words", icon: "keyboard.fill", color: .yellow)
-                }
-                .padding(.vertical)
-            }
-            .navigationTitle("AlzHelper")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showModal.toggle()
+                        .onTapGesture {
+                            isCameraViewPresented.toggle()
+                        }
+                        .padding(.vertical)
+                    
+                    NavigationLink {
+                        LibraryView()
                     } label: {
-                        Image(systemName: "questionmark.circle")
-                            .foregroundColor(.black)
+                        ButtonView(title: "Choose from the Library", icon: "photo.on.rectangle.angled", color: .blue)
                     }
-                    .sheet(isPresented: $showModal) {
-                        OnboardingView(showModal: $showModal)
+                    .padding(.vertical)
+                    
+                    NavigationLink {
+                    } label: {
+                        ButtonView(title: "Search by key-words", icon: "keyboard.fill", color: .yellow)
+                    }
+                    .padding(.vertical)
+                }
+                .navigationTitle("AlzHelper")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            showModal.toggle()
+                        } label: {
+                            Image(systemName: "questionmark.circle")
+                                .foregroundColor(.black)
+                        }
+                        .sheet(isPresented: $showModal) {
+                            OnboardingView(showModal: $showModal)
+                        }
                     }
                 }
+            }
+            .fullScreenCover(isPresented: self.$isCameraViewPresented) {
+                ImagePickerView(selectedImage: self.$selectedImage, sourceType: .camera)
             }
         }
         .onReceive(navigationRoot.$backToRoot) { moveToDashboard in
@@ -65,6 +80,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(DatabaseDecoder())
     }
 }
 
