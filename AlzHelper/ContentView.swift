@@ -20,7 +20,7 @@ struct ContentView: View {
                 itemName: "Some Object",
                 itemImage: "Some Image",
                 itemCategory: "Some Category",
-                image: Image(uiImage: selectedImage)
+                itemUiImage: selectedImage
             )
             
         } else {

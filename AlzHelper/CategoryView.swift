@@ -22,7 +22,7 @@ struct CategoryView: View {
                                 itemName: item.name,
                                 itemImage: item.image,
                                 itemCategory: categoryName,
-                                image: nil
+                                itemUiImage: nil
                             )
                         } label: {
                             ItemView(pic: item.image)
