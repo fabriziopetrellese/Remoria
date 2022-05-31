@@ -1,0 +1,58 @@
+[
+    {
+        "id": 0,
+        "label": "dog",
+        "category": "animals",
+        "image": "Dog"
+    },
+    
+    {
+        "id": 1,
+        "label": "cat",
+        "category": "animals",
+        "image": "Cat"
+    },
+    
+    {
+        "id": 2,
+        "label": "horse",
+        "category": "animals",
+        "image": "Horse"
+    },
+    
+    {
+        "id": 3,
+        "label": "snake",
+        "category": "animals",
+        "image": "Snake"
+    },
+    
+    {
+        "id": 4,
+        "label": "apple",
+        "category": "food",
+        "image": "Apple"
+    },
+    
+    {
+        "id": 5,
+        "label": "pizza",
+        "category": "food",
+        "image": "Pizza"
+    },
+    
+    {
+        "id": 6,
+        "label": "banana",
+        "category": "food",
+        "image": "Banana"
+    },
+    
+    {
+        "id": 7,
+        "label": "bread",
+        "category": "food",
+        "image": "Bread"
+    }
+]
+
