@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategoryView: View {
-    @EnvironmentObject var categoriesModel: CategoriesModel
+    @EnvironmentObject var categoriesModel: DatabaseDecoder
     @EnvironmentObject var navigationRoot: NavigationRoot
     let categoryName: String
     let categoryItems: [Item]
@@ -40,8 +40,8 @@ struct CategoryView: View {
 
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryView(categoryName: "animals")
-            .environmentObject(CategoriesModel())
+        CategoryView(categoryName: "animals", categoryItems: DatabaseDecoder().animals)
+            .environmentObject(DatabaseDecoder())
             .environmentObject(NavigationRoot())
     }
 }

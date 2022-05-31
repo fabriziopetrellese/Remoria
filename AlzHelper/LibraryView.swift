@@ -47,6 +47,7 @@ struct LibraryView_Previews: PreviewProvider {
         LibraryView()
             .environmentObject(DatabaseDecoder())
             .environmentObject(NavigationRoot())
+    }
 }
 
 struct CardView: View {

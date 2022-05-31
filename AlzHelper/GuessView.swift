@@ -46,48 +46,50 @@ struct GuessView: View {
     }
     
     var body: some View {
-            VStack {
-                Image(itemImage)
-
-                    } else {
-                        return Image(itemImage)
-                    }
-                }()
-                
-                imageView
-                    .resizable()
-                    .frame(width: 350, height: 250)
+        VStack {
+            let imageView: Image = {
+                if let image = itemUiImage {
+                    return Image(uiImage: image)
                     
-                Text("This belongs to: " + itemCategory.capitalized)
-                    .font(.title)
-                    .bold()
-                    .padding(.top, 24)
-                
-                TextField("", text: $name)
-                    .font(.title.bold())
-                    .padding(.horizontal, 12)
-                    .frame(width: 0.77 * UIScreen.main.bounds.width, height: 60)
-                    .border(.black)
-                    .padding(.top, 12)
-                    .disableAutocorrection(true)
-                
-                HStack(alignment: .center, spacing: 48) {
-                    Button {
-                        showName()
-                    } label: {
-                        GuessButton(action: "Show name")
-                    }
-                    
-                    Button {
-                        addCharacter()
-                    } label: {
-                        GuessButton(action: "Next queue")
-                    }
+                } else {
+                    return Image(itemImage)
                 }
-                .padding(.top, 20)
-                .padding(.bottom, 40)
-                Spacer()
+            }()
+            
+            imageView
+                .resizable()
+                .frame(width: 350, height: 250)
+            
+            Text("This belongs to: " + itemCategory.capitalized)
+                .font(.title)
+                .bold()
+                .padding(.top, 24)
+            
+            TextField("", text: $name)
+                .textFieldStyle(.roundedBorder)
+                .font(.title.bold())
+                .padding(.horizontal, 12)
+                .frame(width: 0.77 * UIScreen.main.bounds.width, height: 60)
+                .padding(.top, 12)
+                .disableAutocorrection(true)
+            
+            HStack(alignment: .center, spacing: 48) {
+                Button {
+                    showName()
+                } label: {
+                    GuessButton(action: "Show name")
+                }
+                
+                Button {
+                    addCharacter()
+                } label: {
+                    GuessButton(action: "Next queue")
+                }
             }
+            .padding(.top, 20)
+            .padding(.bottom, 40)
+            Spacer()
+        }
         .onAppear() {
             showFirstCharacter()
             if let image = itemUiImage {
