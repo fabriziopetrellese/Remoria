@@ -15,8 +15,8 @@ struct GuessView: View {
     let itemName: String
     let itemImage: String
     let itemCategory: String
+    let itemUiImage: UIImage?
 
-    
     func showFirstCharacter() {
         var new: Character
         new = itemName.first!
@@ -29,7 +29,6 @@ struct GuessView: View {
         var add: String
         add = itemName[index]
         name.append(add)
-//        name = name.uppercased()
     }
     
     func showName() {
@@ -48,10 +47,20 @@ struct GuessView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .center, spacing: 32) {
-                Image(itemImage)
+                
+                let imageView: Image = {
+                    if let image = itemUiImage {
+                        return Image(uiImage: image)
+
+                    } else {
+                        return Image(itemImage)
+                    }
+                }()
+                
+                imageView
                     .resizable()
                     .frame(width: 350, height: 250)
-                
+                    
                 Text("This belongs to: " + itemCategory.capitalized)
                     .font(.title)
                     .bold()
@@ -78,6 +87,9 @@ struct GuessView: View {
         }
         .onAppear() {
             showFirstCharacter()
+            if let image = itemUiImage {
+                ImagePredictor.shared.classifyImage(image)
+            }
         }
         .onChange(of: name) { newValue in
             if newValue.count == itemName.count {
@@ -95,7 +107,13 @@ struct GuessView: View {
 
 struct GuessView_Previews: PreviewProvider {
     static var previews: some View {
-        GuessView(itemName: "dog", itemImage: "Dog", itemCategory: "animals")
+        GuessView(
+            itemName: "dog",
+            itemImage: "Dog",
+            itemCategory: "animals",
+            itemUiImage: nil
+        )
+        
     }
 }
 
