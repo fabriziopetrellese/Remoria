@@ -174,7 +174,7 @@ extension ImagePredictor {
     /// - Tag: imagePredictionHandler
     private func imagePredictionHandler(_ predictions: [ImagePredictor.Prediction]?) {
         guard let predictions = predictions else {
-            print ("No predictions. (Check console log.)")
+            print("No predictions. (Check console log.)")
             return
         }
 
