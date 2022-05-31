@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LibraryView: View {
     @EnvironmentObject var categoriesModel: CategoriesModel
+    @EnvironmentObject var navigationRoot: NavigationRoot
     @State private var searchText = ""
     
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
@@ -45,6 +46,7 @@ struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
         LibraryView()
             .environmentObject(CategoriesModel())
+            .environmentObject(NavigationRoot())
     }
 }
 

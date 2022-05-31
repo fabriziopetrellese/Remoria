@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49A770292845926000971C6C /* NavigationRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A770282845926000971C6C /* NavigationRoot.swift */; };
 		B9F45AC8283D0CC000899706 /* AlzHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AC7283D0CC000899706 /* AlzHelperApp.swift */; };
 		B9F45ACA283D0CC000899706 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AC9283D0CC000899706 /* ContentView.swift */; };
 		B9F45ACC283D0CC100899706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F45ACB283D0CC100899706 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49A770282845926000971C6C /* NavigationRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRoot.swift; sourceTree = "<group>"; };
 		B9F45AC4283D0CC000899706 /* AlzHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlzHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F45AC7283D0CC000899706 /* AlzHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzHelperApp.swift; sourceTree = "<group>"; };
 		B9F45AC9283D0CC000899706 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				B9F45AEC2844AE3200899706 /* CategoryView.swift */,
 				B9F45AEA284108B500899706 /* CategoriesModel.swift */,
 				B9F45AEE2844F8F100899706 /* GuessView.swift */,
+				49A770282845926000971C6C /* NavigationRoot.swift */,
 				B9F45AF028451C6200899706 /* database.json */,
 				B9F45ADC283D0F2B00899706 /* ML Stuff */,
 				B9F45AD5283D0CF200899706 /* Controllers */,
@@ -203,6 +206,7 @@
 				B9F45ADB283D0E9700899706 /* MainViewController+PhotoPicker.swift in Sources */,
 				B9F45AEF2844F8F100899706 /* GuessView.swift in Sources */,
 				B9F45ADE283D0F6500899706 /* ImagePredictor.swift in Sources */,
+				49A770292845926000971C6C /* NavigationRoot.swift in Sources */,
 				B9F45AE72841057D00899706 /* LibraryView.swift in Sources */,
 				B9F45AC8283D0CC000899706 /* AlzHelperApp.swift in Sources */,
 			);
@@ -333,7 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AlzHelper/Preview Content\"";
-				DEVELOPMENT_TEAM = 37THZ8H7Q6;
+				DEVELOPMENT_TEAM = 2LK4JE65RJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlzHelper/Info.plist;
@@ -365,7 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AlzHelper/Preview Content\"";
-				DEVELOPMENT_TEAM = 37THZ8H7Q6;
+				DEVELOPMENT_TEAM = 2LK4JE65RJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlzHelper/Info.plist;

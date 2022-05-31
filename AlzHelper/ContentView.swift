@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var navigationRoot = NavigationRoot()
+    @State var isView1Active = false
     @State var showModal: Bool = false
     
     var body: some View {
@@ -21,11 +23,10 @@ struct ContentView: View {
                 }
                 .padding(.vertical)
                 
-                NavigationLink {
-                    LibraryView()
-                } label: {
+                NavigationLink(destination: LibraryView(), isActive: $isView1Active) {
                     ButtonView(title: "Choose from the Library", icon: "photo.on.rectangle.angled", color: .blue)
                 }
+                .isDetailLink(false)
                 .padding(.vertical)
                 
                 NavigationLink {
@@ -50,13 +51,20 @@ struct ContentView: View {
                 }
             }
         }
+        .onReceive(navigationRoot.$backToRoot) { moveToDashboard in
+            if moveToDashboard {
+                isView1Active = false
+                navigationRoot.backToRoot = false
+            }
+        }
+        .environmentObject(CategoriesModel())
+        .environmentObject(NavigationRoot())
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(CategoriesModel())
     }
 }
 

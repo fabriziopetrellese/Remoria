@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CategoryView: View {
     @EnvironmentObject var categoriesModel: CategoriesModel
+    @EnvironmentObject var navigationRoot: NavigationRoot
     let categoryName: String
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     
@@ -37,6 +38,7 @@ struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
         CategoryView(categoryName: "animals")
             .environmentObject(CategoriesModel())
+            .environmentObject(NavigationRoot())
     }
 }
 

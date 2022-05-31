@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GuessView: View {
+    @EnvironmentObject var navigationRoot: NavigationRoot
     @State var name: String = ""
     @State var index: Int = 0
     @State var correctAlert: Bool = false
@@ -46,8 +47,8 @@ struct GuessView: View {
     }
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(alignment: .center, spacing: 32) {
+            VStack {
+                //            ScrollView(showsIndicators: false) {
                 Image(itemImage)
                     .resizable()
                     .frame(width: 350, height: 250)
@@ -55,11 +56,15 @@ struct GuessView: View {
                 Text("This belongs to: " + itemCategory.capitalized)
                     .font(.title)
                     .bold()
+                    .padding(.top, 24)
                 
                 TextField("", text: $name)
                     .font(.title.bold())
-                    .frame(width: 290, height: 60)
+                    .padding(.horizontal, 12)
+                    .frame(width: 0.77 * UIScreen.main.bounds.width, height: 60)
                     .border(.black)
+                    .padding(.top, 12)
+                    .disableAutocorrection(true)
                 
                 HStack(alignment: .center, spacing: 48) {
                     Button {
@@ -74,8 +79,11 @@ struct GuessView: View {
                         GuessButton(action: "Next queue")
                     }
                 }
+                .padding(.top, 20)
+                .padding(.bottom, 40)
+//            }
+                Spacer()
             }
-        }
         .onAppear() {
             showFirstCharacter()
         }
@@ -84,18 +92,28 @@ struct GuessView: View {
                 guessWord()
             }
         }
-        .alert("Guessed!", isPresented: $correctAlert) {
-            Button("OK", role: .cancel) {}
-        }
-        .alert("Wrong!", isPresented: $wrongAlert) {
-            Button("OK", role: .cancel) {}
-        }
+        .alert("Correct!", isPresented: $correctAlert, actions: {
+            Button("Main screen", role: .none, action: { navigationRoot.exit() })
+//            Button {
+//                navigationRoot.exit()
+//            } label: {
+//                Text("Main screen")
+//            }
+        }, message: {
+            Text("Go back to main screen to identify new objects.")
+        })
+        .alert("Nice try!", isPresented: $wrongAlert, actions: {
+            Button("Try again", role: .cancel, action: {})
+        }, message: {
+            Text("Almost done, you are very close.")
+        })
     }
 }
 
 struct GuessView_Previews: PreviewProvider {
     static var previews: some View {
         GuessView(itemName: "dog", itemImage: "Dog", itemCategory: "animals")
+            .environmentObject(NavigationRoot())
     }
 }
 
