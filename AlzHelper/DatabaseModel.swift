@@ -21,6 +21,9 @@ struct Item: Codable, Identifiable {
     var label: String
     var category: String
     var image: String
+    
+    // for previews
+    static let sampleItem = Bundle.main.decode([Item].self, from: "items.json").first!
 }
 
 class DatabaseDecoder: ObservableObject {
