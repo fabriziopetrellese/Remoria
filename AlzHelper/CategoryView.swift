@@ -21,9 +21,6 @@ struct CategoryView: View {
                     ForEach(categoryItems) { item in
                         NavigationLink {
                             GuessView(
-                                itemName: item.label,
-                                itemImage: item.image,
-                                itemCategory: categoryName,
                                 itemUiImage: nil
                             )
                         } label: {
@@ -55,8 +52,7 @@ struct ItemView: View {
                 .resizable()
                 .frame(width: 180, height: 120)
                 .cornerRadius(10)
-                .shadow(radius: 5)
-                        
+                .shadow(radius: 5)           
         }
     }
 }
