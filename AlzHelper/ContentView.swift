@@ -20,9 +20,9 @@ struct ContentView: View {
     var body: some View {
         if let selectedImage = selectedImage {
             GuessView(
-                itemName: "Some Object",
-                itemImage: "Some Image",
-                itemCategory: "Some Category",
+//                itemName: "Some Object",
+//                itemImage: "Some Image",
+//                itemCategory: "Some Category",
                 itemUiImage: selectedImage
             )
             
