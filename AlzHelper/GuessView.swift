@@ -9,36 +9,44 @@ import SwiftUI
 
 struct GuessView: View {
     @EnvironmentObject var navigationRoot: NavigationRoot
+    @StateObject var imagePredictor = ImagePredictor()
+    
     @State var name: String = ""
     @State var index: Int = 0
     @State var correctAlert: Bool = false
     @State var wrongAlert: Bool = false
-    let itemName: String
-    let itemImage: String
-    let itemCategory: String
+    
+    // set by image predictor after a prediction is made
+    @State var item: Item?
+    
+    // passed in from content view when user selects an image
     let itemUiImage: UIImage?
 
-    func showFirstCharacter() {
+    private func showFirstCharacter() {
+        guard let item = self.item else { return }
         var new: Character
-        new = itemName.first!
+        new = item.label.first!
         name.append(new)
         name = name.uppercased()
     }
     
-    func addCharacter() {
+    private func addCharacter() {
+        guard let item = self.item else { return }
         index += 1
         var add: String
-        add = itemName[index]
+        add = item.label[index]
         name.append(add)
     }
     
     func showName() {
-        name = itemName
-        name = name.uppercased()
+        guard let item = self.item else { return }
+        name = item.label
+        name = name.capitalized
     }
     
     func guessWord() {
-        if name.lowercased() == itemName {
+        guard let item = self.item else { return }
+        if name.lowercased() == item.label.lowercased() {
             correctAlert = true
         } else {
             wrongAlert = true
@@ -52,7 +60,7 @@ struct GuessView: View {
                     return Image(uiImage: image)
                     
                 } else {
-                    return Image(itemImage)
+                    return Image("Dog")
                 }
             }()
             
@@ -60,7 +68,7 @@ struct GuessView: View {
                 .resizable()
                 .frame(width: 350, height: 250)
             
-            Text("This belongs to: " + itemCategory.capitalized)
+            Text("This belongs to: " + (item?.category.capitalized ?? "Not Classified"))
                 .font(.title)
                 .bold()
                 .padding(.top, 24)
@@ -91,23 +99,31 @@ struct GuessView: View {
             Spacer()
         }
         .onAppear() {
-            showFirstCharacter()
             if let image = itemUiImage {
-                ImagePredictor.shared.classifyImage(image)
+                imagePredictor.userSelectedPhoto(image)
             }
         }
-        .onChange(of: name) { newValue in
-            if newValue.count == itemName.count {
+        
+        // Construct Item when image is classified
+        .onChange(of: imagePredictor.predictionText) { newValue in
+            self.item = Item(
+                id: 0,
+                label: newValue,
+                //TODO: Set Category
+                category: "Some Category",
+                image: ""
+            )
+            
+            showFirstCharacter()
+        }
+        .onChange(of: self.name) { newValue in
+            if newValue.lowercased() == item?.label.lowercased() {
                 guessWord()
             }
         }
         .alert("Correct!", isPresented: $correctAlert, actions: {
             Button("Main screen", role: .none, action: { navigationRoot.exit() })
-//            Button {
-//                navigationRoot.exit()
-//            } label: {
-//                Text("Main screen")
-//            }
+
         }, message: {
             Text("Go back to main screen to identify new objects.")
         })
@@ -122,12 +138,10 @@ struct GuessView: View {
 struct GuessView_Previews: PreviewProvider {
     static var previews: some View {
         GuessView(
-            itemName: "dog",
-            itemImage: "Dog",
-            itemCategory: "animals",
+            item: Item.sampleItem,
             itemUiImage: nil
         )
-            .environmentObject(NavigationRoot())
+        .environmentObject(NavigationRoot())
     }
 }
 
