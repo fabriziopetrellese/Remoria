@@ -98,6 +98,8 @@ struct GuessView: View {
             .padding(.bottom, 40)
             Spacer()
         }
+        .navigationTitle("Guess this Item")
+        .navigationBarTitleDisplayMode(.automatic)
         .onAppear() {
             if let image = itemUiImage {
                 imagePredictor.userSelectedPhoto(image)
