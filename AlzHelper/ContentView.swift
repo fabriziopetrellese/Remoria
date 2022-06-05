@@ -19,7 +19,8 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 50) {
+                
                 //Present Guess View
                 NavigationLink(
                     destination: GuessView(itemUiImage:selectedImage),
@@ -35,7 +36,6 @@ struct ContentView: View {
                 .onTapGesture {
                     isCameraViewPresented.toggle()
                 }
-                .padding(.vertical)
                 
                 //Present Library View
                 NavigationLink(
@@ -45,13 +45,13 @@ struct ContentView: View {
                     ButtonView(title: "Choose from the Library", icon: "photo.on.rectangle.angled", color: .blue)
                 }
                 .isDetailLink(false)
-                .padding(.vertical)
                 
                 NavigationLink {
                 } label: {
                     ButtonView(title: "Search by key-words", icon: "keyboard.fill", color: .yellow)
                 }
-                .padding(.vertical)
+                
+                Spacer()
             }
             .navigationTitle("Main Menu")
             .toolbar {

@@ -54,7 +54,7 @@ struct GuessView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             let imageView: Image = {
                 if let image = itemUiImage {
                     return Image(uiImage: image)
@@ -66,19 +66,18 @@ struct GuessView: View {
             
             imageView
                 .resizable()
-                .frame(width: 350, height: 250)
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 300)
             
-            Text("This belongs to: " + (item?.category.capitalized ?? "Not Classified"))
-                .font(.title)
+            Text("Item Category:\n" + (item?.category.capitalized ?? "Not Classified"))
+                .font(.title3)
                 .bold()
-                .padding(.top, 24)
+                .frame(alignment: .center)
             
             TextField("", text: $name)
                 .textFieldStyle(.roundedBorder)
                 .font(.title.bold())
                 .padding(.horizontal, 12)
-                .frame(width: 0.77 * UIScreen.main.bounds.width, height: 60)
-                .padding(.top, 12)
                 .disableAutocorrection(true)
             
             HStack(alignment: .center, spacing: 48) {
@@ -95,11 +94,12 @@ struct GuessView: View {
                 }
             }
             .padding(.top, 20)
-            .padding(.bottom, 40)
+            
             Spacer()
         }
-        .navigationTitle("Guess this Item")
-        .navigationBarTitleDisplayMode(.automatic)
+        .padding(.horizontal)
+        .navigationTitle("Guess this object")
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear() {
             if let image = itemUiImage {
                 imagePredictor.userSelectedPhoto(image)
@@ -164,5 +164,3 @@ struct GuessButton: View {
         }
     }
 }
-
-
