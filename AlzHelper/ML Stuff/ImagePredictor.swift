@@ -30,7 +30,12 @@ class ImagePredictor: ObservableObject {
         let defaultConfig = MLModelConfiguration()
 
         // Create an instance of the image classifier's wrapper class.
+        
+        // MobileNet model (Original)
         let imageClassifierWrapper = try? MobileNet(configuration: defaultConfig)
+        
+        //MobileNet V2 model
+//        let imageClassifierWrapper = try? MobileNetV2(configuration: defaultConfig)
 
         guard let imageClassifier = imageClassifierWrapper else {
             fatalError("App failed to create an image classifier model instance.")

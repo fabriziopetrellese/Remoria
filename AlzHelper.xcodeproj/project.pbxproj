@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A17297A284D1E9A0031FE20 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2A172979284D1E9A0031FE20 /* MobileNetV2.mlmodel */; };
 		2AEBDFA7284A48FE0009D657 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEBDFA6284A48FE0009D657 /* OnboardingView.swift */; };
 		2AEBDFA9284A493F0009D657 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEBDFA8284A493F0009D657 /* ButtonView.swift */; };
 		49A770292845926000971C6C /* NavigationRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A770282845926000971C6C /* NavigationRoot.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A172979284D1E9A0031FE20 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		2AEBDFA6284A48FE0009D657 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		2AEBDFA8284A493F0009D657 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		49A770282845926000971C6C /* NavigationRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRoot.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				B9F45AD5283D0CF200899706 /* Controllers */,
 				B9F45ACB283D0CC100899706 /* Assets.xcassets */,
 				B9F45AE3283D0FC600899706 /* MobileNet.mlmodel */,
+				2A172979284D1E9A0031FE20 /* MobileNetV2.mlmodel */,
 				B9F45ACD283D0CC100899706 /* Preview Content */,
 			);
 			path = AlzHelper;
@@ -219,6 +222,7 @@
 				B9F45ADB283D0E9700899706 /* MainViewController+PhotoPicker.swift in Sources */,
 				B9F45AEF2844F8F100899706 /* GuessView.swift in Sources */,
 				B948310328462DD8003F521E /* Extensions.swift in Sources */,
+				2A17297A284D1E9A0031FE20 /* MobileNetV2.mlmodel in Sources */,
 				B9F45ADE283D0F6500899706 /* ImagePredictor.swift in Sources */,
 				49A770292845926000971C6C /* NavigationRoot.swift in Sources */,
 				B9F45AE72841057D00899706 /* LibraryView.swift in Sources */,
