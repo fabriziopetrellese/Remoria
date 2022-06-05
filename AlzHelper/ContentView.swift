@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var db: DatabaseDecoder
-    @State var isView1Active = false
     @State var showModal: Bool = false
+    
+    //navigation triggers
+    @State private var isLibraryViewActive = false
     @State private var isGuessViewActive: Bool = false
     
     //camera view properties
@@ -40,7 +42,7 @@ struct ContentView: View {
                 //Present Library View
                 NavigationLink(
                     destination: LibraryView(),
-                    isActive: $isView1Active
+                    isActive: $isLibraryViewActive
                 ) {
                     ButtonView(title: "Choose from the Library", icon: "photo.on.rectangle.angled", color: .blue)
                 }
