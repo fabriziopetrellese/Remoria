@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GuessView: View {
-    @EnvironmentObject var navigationRoot: NavigationRoot
+    @Environment(\.dismiss) var dismissView
     @StateObject var imagePredictor = ImagePredictor()
     
     @State var name: String = ""
@@ -20,7 +20,7 @@ struct GuessView: View {
     @State var item: Item?
     
     // passed in from content view when user selects an image
-    let itemUiImage: UIImage?
+    @State var itemUiImage: UIImage?
 
     private func showFirstCharacter() {
         guard let item = self.item else { return }
@@ -124,7 +124,9 @@ struct GuessView: View {
             }
         }
         .alert("Correct!", isPresented: $correctAlert, actions: {
-            Button("Main screen", role: .none, action: { navigationRoot.exit() })
+            Button("Main screen", role: .none) {
+                dismissView()
+            }
 
         }, message: {
             Text("Go back to main screen to identify new objects.")
@@ -143,7 +145,6 @@ struct GuessView_Previews: PreviewProvider {
             item: Item.sampleItem,
             itemUiImage: nil
         )
-        .environmentObject(NavigationRoot())
     }
 }
 

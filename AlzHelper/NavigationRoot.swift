@@ -7,10 +7,10 @@
 
 import Foundation
 
-class NavigationRoot: ObservableObject {
-    @Published var backToRoot = false
-    
-    func exit() {
-        backToRoot = true
-    }
-}
+//class NavigationRoot: ObservableObject {
+//    @Published var backToRoot = false
+//    
+//    func exit() {
+//        backToRoot = true
+//    }
+//}

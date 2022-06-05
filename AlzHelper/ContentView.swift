@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var navigationRoot = NavigationRoot()
     @EnvironmentObject var db: DatabaseDecoder
     @State var isView1Active = false
     @State var showModal: Bool = false
@@ -40,8 +39,7 @@ struct ContentView: View {
                 
                 //Present Library View
                 NavigationLink(
-                    destination: LibraryView()
-                        .environmentObject(navigationRoot),
+                    destination: LibraryView(),
                     isActive: $isView1Active
                 ) {
                     ButtonView(title: "Choose from the Library", icon: "photo.on.rectangle.angled", color: .blue)
@@ -69,12 +67,6 @@ struct ContentView: View {
                     }
                 }
             }
-            .onReceive(navigationRoot.$backToRoot) { moveToDashboard in
-                if moveToDashboard {
-                    isView1Active = false
-                    navigationRoot.backToRoot = false
-                }
-            }
             .fullScreenCover(isPresented: self.$isCameraViewPresented) {
                 ImagePickerView(
                     selectedImage: self.$selectedImage,
@@ -94,6 +86,5 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(DatabaseDecoder())
-            .environmentObject(NavigationRoot())
     }
 }
