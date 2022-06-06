@@ -20,7 +20,7 @@ struct Item: Codable, Identifiable {
     var id: Int
     var label: String
     var category: String
-    var image: String
+    var image: URL?
 }
 
 class DatabaseDecoder: ObservableObject {

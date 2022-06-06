@@ -21,7 +21,7 @@ struct CategoryView: View {
                         NavigationLink {
                             GuessView(
                                 itemName: item.label,
-                                itemImage: item.image,
+                                itemImage: "Dog",
                                 itemCategory: categoryName,
                                 itemUiImage: nil
                             )
@@ -45,16 +45,21 @@ struct CategoryView_Previews: PreviewProvider {
 }
 
 struct ItemView: View {
-    let pic: String
+    let pic: URL?
     
     var body: some View {
         ZStack {
-            Image(pic)
-                .resizable()
-                .frame(width: 180, height: 120)
-                .cornerRadius(10)
-                .shadow(radius: 5)
-                        
+            AsyncImage (url: pic, content: { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 180, height: 120)
+                    .cornerRadius(10)
+                    .shadow(radius: 5)
+            },
+                        placeholder: {
+                ProgressView()
+            })
         }
     }
 }
