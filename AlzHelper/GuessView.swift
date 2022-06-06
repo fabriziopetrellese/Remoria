@@ -16,6 +16,8 @@ struct GuessView: View {
     @State var correctAlert: Bool = false
     @State var wrongAlert: Bool = false
     
+    @State var isLibrary: Bool = false
+    
     // set by image predictor after a prediction is made
     @State var item: Item?
     
@@ -104,6 +106,12 @@ struct GuessView: View {
             if let image = itemUiImage {
                 imagePredictor.userSelectedPhoto(image)
             }
+            
+            if isLibrary {
+                item = Item.sampleItem
+                showFirstCharacter()
+            }
+                
         }
         
         // Construct Item when image is classified
@@ -119,9 +127,10 @@ struct GuessView: View {
             showFirstCharacter()
         }
         .onChange(of: self.name) { newValue in
-            if newValue.lowercased() == item?.label.lowercased() {
+            if newValue.count == item?.label.count {
                 guessWord()
             }
+            
         }
         .alert("Correct!", isPresented: $correctAlert, actions: {
             Button("Main screen", role: .none) {
