@@ -15,7 +15,6 @@ struct GuessView: View {
     @State var index: Int = 0
     @State var correctAlert: Bool = false
     @State var wrongAlert: Bool = false
-    
     @State var isLibrary: Bool = false
     
     // set by image predictor after a prediction is made
@@ -58,12 +57,16 @@ struct GuessView: View {
     var body: some View {
         VStack(spacing: 20) {
             let imageView: Image = {
+                if isLibrary, let image = item?.image {
+                    return Image(image)
+                }
+                
                 if let image = itemUiImage {
                     return Image(uiImage: image)
-                    
-                } else {
-                    return Image("Dog")
                 }
+                
+                //fallback
+                return Image("Dog")
             }()
             
             imageView
@@ -103,19 +106,19 @@ struct GuessView: View {
         .navigationTitle("Guess this object")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear() {
+            if isLibrary {
+                showFirstCharacter()
+                return
+            }
+            
             if let image = itemUiImage {
                 imagePredictor.userSelectedPhoto(image)
             }
-            
-            if isLibrary {
-                item = Item.sampleItem
-                showFirstCharacter()
-            }
-                
         }
         
         // Construct Item when image is classified
         .onChange(of: imagePredictor.predictionText) { newValue in
+            guard !isLibrary else { return }
             self.item = Item(
                 id: 0,
                 label: newValue,

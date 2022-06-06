@@ -21,7 +21,9 @@ struct CategoryView: View {
                         NavigationLink {
                             GuessView(
                                 isLibrary: true,
+                                item: item,
                                 itemUiImage: nil
+                                
                             )
                         } label: {
                             ItemView(pic: item.image)
