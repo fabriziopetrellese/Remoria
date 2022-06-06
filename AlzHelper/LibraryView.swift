@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LibraryView: View {
+    @Environment(\.dismiss) var dismissView
     @EnvironmentObject var categoriesModel: DatabaseDecoder
     @State private var searchText = ""
     

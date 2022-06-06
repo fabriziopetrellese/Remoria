@@ -8,36 +8,46 @@
 import SwiftUI
 
 struct GuessView: View {
+    @Environment(\.dismiss) var dismissView
+    @StateObject var imagePredictor = ImagePredictor()
+    
     @State var name: String = ""
     @State var index: Int = 0
     @State var correctAlert: Bool = false
     @State var wrongAlert: Bool = false
-    let itemName: String
-    let itemImage: String
-    let itemCategory: String
-    let itemUiImage: UIImage?
+    @State var isLibrary: Bool = false
+    
+    // set by image predictor after a prediction is made
+    @State var item: Item?
+    
+    // passed in from content view when user selects an image
+    @State var itemUiImage: UIImage?
 
-    func showFirstCharacter() {
+    private func showFirstCharacter() {
+        guard let item = self.item else { return }
         var new: Character
-        new = itemName.first!
+        new = item.label.first!
         name.append(new)
         name = name.uppercased()
     }
     
-    func addCharacter() {
+    private func addCharacter() {
+        guard let item = self.item else { return }
         index += 1
         var add: String
-        add = itemName[index]
+        add = item.label[index]
         name.append(add)
     }
     
     func showName() {
-        name = itemName
-        name = name.uppercased()
+        guard let item = self.item else { return }
+        name = item.label
+        name = name.capitalized
     }
     
     func guessWord() {
-        if name.lowercased() == itemName {
+        guard let item = self.item else { return }
+        if name.lowercased() == item.label.lowercased() {
             correctAlert = true
         } else {
             wrongAlert = true
@@ -45,75 +55,108 @@ struct GuessView: View {
     }
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(alignment: .center, spacing: 32) {
+        VStack(spacing: 20) {
+            let imageView: Image = {
+                if isLibrary, let image = item?.image {
+                    return Image(image)
+                }
                 
-                let imageView: Image = {
-                    if let image = itemUiImage {
-                        return Image(uiImage: image)
-
-                    } else {
-                        return Image(itemImage)
-                    }
-                }()
+                if let image = itemUiImage {
+                    return Image(uiImage: image)
+                }
                 
-                imageView
-                    .resizable()
-                    .frame(width: 350, height: 250)
-                    
-                Text("This belongs to: " + itemCategory.capitalized)
-                    .font(.title)
-                    .bold()
+                //fallback
+                return Image("Dog")
+            }()
+            
+            imageView
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 300)
+            
+            Text("Item Category:\n" + (item?.category.capitalized ?? "Not Classified"))
+                .font(.title3)
+                .bold()
+                .frame(alignment: .center)
+            
+            TextField("", text: $name)
+                .textFieldStyle(.roundedBorder)
+                .font(.title.bold())
+                .padding(.horizontal, 12)
+                .disableAutocorrection(true)
+            
+            HStack(alignment: .center, spacing: 48) {
+                Button {
+                    showName()
+                } label: {
+                    GuessButton(action: "Show name")
+                }
                 
-                TextField("", text: $name)
-                    .font(.title.bold())
-                    .frame(width: 290, height: 60)
-                    .border(.black)
-                
-                HStack(alignment: .center, spacing: 48) {
-                    Button {
-                        showName()
-                    } label: {
-                        GuessButton(action: "Show name")
-                    }
-                    
-                    Button {
-                        addCharacter()
-                    } label: {
-                        GuessButton(action: "Next queue")
-                    }
+                Button {
+                    addCharacter()
+                } label: {
+                    GuessButton(action: "Next queue")
                 }
             }
+            .padding(.top, 20)
+            
+            Spacer()
         }
+        .padding(.horizontal)
+        .navigationTitle("Guess this object")
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear() {
-            showFirstCharacter()
+            if isLibrary {
+                showFirstCharacter()
+                return
+            }
+            
             if let image = itemUiImage {
-                ImagePredictor.shared.classifyImage(image)
+                imagePredictor.userSelectedPhoto(image)
             }
         }
-        .onChange(of: name) { newValue in
-            if newValue.count == itemName.count {
+        
+        // Construct Item when image is classified
+        .onChange(of: imagePredictor.predictionText) { newValue in
+            guard !isLibrary else { return }
+            self.item = Item(
+                id: 0,
+                label: newValue,
+                //TODO: Set Category
+                category: "Some Category",
+                image: ""
+            )
+            
+            showFirstCharacter()
+        }
+        .onChange(of: self.name) { newValue in
+            if newValue.count == item?.label.count {
                 guessWord()
             }
+            
         }
-        .alert("Guessed!", isPresented: $correctAlert) {
-            Button("OK", role: .cancel) {}
-        }
-        .alert("Wrong!", isPresented: $wrongAlert) {
-            Button("OK", role: .cancel) {}
-        }
+        .alert("Correct!", isPresented: $correctAlert, actions: {
+            Button("Main screen", role: .none) {
+                dismissView()
+            }
+
+        }, message: {
+            Text("Go back to main screen to identify new objects.")
+        })
+        .alert("Nice try!", isPresented: $wrongAlert, actions: {
+            Button("Try again", role: .cancel, action: {})
+        }, message: {
+            Text("Almost done, you are very close.")
+        })
     }
 }
 
 struct GuessView_Previews: PreviewProvider {
     static var previews: some View {
         GuessView(
-            itemName: "dog",
-            itemImage: "Dog",
-            itemCategory: "animals",
+            item: Item.sampleItem,
             itemUiImage: nil
         )
-        
     }
 }
 
@@ -133,5 +176,3 @@ struct GuessButton: View {
         }
     }
 }
-
-

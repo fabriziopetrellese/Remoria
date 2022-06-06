@@ -22,24 +22,24 @@ class MainViewController: UIViewController {
     @IBOutlet weak var predictionLabel: UILabel!
 }
 
-//extension MainViewController {
+extension MainViewController {
 //    // MARK: Main storyboard actions
 //    /// The method the storyboard calls when the user one-finger taps the screen.
-//    @IBAction func singleTap() {
-//        // Show options for the source picker only if the camera is available.
-//        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
-//            present(photoPicker, animated: false)
-//            return
-//        }
-//
-//        present(cameraPicker, animated: false)
-//    }
-//
-//    /// The method the storyboard calls when the user two-finger taps the screen.
-//    @IBAction func doubleTap() {
-//        present(photoPicker, animated: false)
-//    }
-//}
+    @IBAction func singleTap() {
+        // Show options for the source picker only if the camera is available.
+        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+            present(photoPicker, animated: false)
+            return
+        }
+
+        present(cameraPicker, animated: false)
+    }
+
+    /// The method the storyboard calls when the user two-finger taps the screen.
+    @IBAction func doubleTap() {
+        present(photoPicker, animated: false)
+    }
+}
 
 extension MainViewController {
     // MARK: Main storyboard updates

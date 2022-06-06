@@ -17,12 +17,11 @@ import UIKit
 /// - Converts the prediction results in a completion handler
 /// - Updates the delegate's `predictions` property
 /// - Tag: ImagePredictor
-class ImagePredictor {
-    
-    static let shared = ImagePredictor()
+class ImagePredictor: ObservableObject {
+    @Published var predictionText: String = ""
     
     /// The largest number of predictions the main view controller displays the user.
-    let predictionsToShow = 2
+    let predictionsToShow = 1
     var firstRun = true
     
     /// - Tag: name
@@ -31,7 +30,12 @@ class ImagePredictor {
         let defaultConfig = MLModelConfiguration()
 
         // Create an instance of the image classifier's wrapper class.
+        
+        // MobileNet model (Original)
         let imageClassifierWrapper = try? MobileNet(configuration: defaultConfig)
+        
+        //MobileNet V2 model
+//        let imageClassifierWrapper = try? MobileNetV2(configuration: defaultConfig)
 
         guard let imageClassifier = imageClassifierWrapper else {
             fatalError("App failed to create an image classifier model instance.")
@@ -157,13 +161,26 @@ class ImagePredictor {
 
 extension ImagePredictor {
     
+    /// Notifies the view controller when a user selects a photo in the camera picker or photo library picker.
+    /// - Parameter photo: A photo from the camera or photo library.
+    func userSelectedPhoto(_ photo: UIImage) {
+//        updatePredictionLabel("Making predictions for the photo...")
+        print("Making predictions for the photo...")
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.classifyImage(photo)
+        }
+    }
+    
     // MARK: Image prediction methods
     /// Sends a photo to the Image Predictor to get a prediction of its content.
     /// - Parameter image: A photo.
-    func classifyImage(_ image: UIImage) {
+    private func classifyImage(_ image: UIImage) {
         do {
-            try ImagePredictor.shared.makePredictions(for: image,
-                                                    completionHandler: imagePredictionHandler)
+            try self.makePredictions(
+                for: image,
+                completionHandler: imagePredictionHandler
+            )
+            
         } catch {
             print("Vision was unable to make a prediction...\n\n\(error.localizedDescription)")
         }
@@ -175,13 +192,14 @@ extension ImagePredictor {
     private func imagePredictionHandler(_ predictions: [ImagePredictor.Prediction]?) {
         guard let predictions = predictions else {
             print("No predictions. (Check console log.)")
+//            updatePredictionLabel("No predictions. (Check console log.)")
             return
         }
 
         let formattedPredictions = formatPredictions(predictions)
-
-        print(formattedPredictions.joined(separator: "\n"))
-//        updatePredictionLabel(predictionString)
+        let predictionString = formattedPredictions.joined(separator: "\n")
+        updatePredictionLabel(predictionString)
+//        print(predictionString)
     }
     
     /// Converts a prediction's observations into human-readable strings.
@@ -197,10 +215,23 @@ extension ImagePredictor {
                 name = String(name.prefix(upTo: firstComma))
             }
 
-            return "\(name) - \(prediction.confidencePercentage)%"
+            print("\(name) - \(prediction.confidencePercentage)%")
+            return name
         }
 
         return topPredictions
+    }
+    
+    private func updatePredictionLabel(_ message: String) {
+        DispatchQueue.main.async {
+            self.predictionText = message
+        }
+
+        if firstRun {
+            DispatchQueue.main.async {
+                self.firstRun = false
+            }
+        }
     }
 }
 

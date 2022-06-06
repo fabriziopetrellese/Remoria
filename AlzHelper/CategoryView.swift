@@ -20,10 +20,10 @@ struct CategoryView: View {
                     ForEach(categoryItems) { item in
                         NavigationLink {
                             GuessView(
-                                itemName: item.label,
-                                itemImage: "Dog",
-                                itemCategory: categoryName,
+                                isLibrary: true,
+                                item: item,
                                 itemUiImage: nil
+                                
                             )
                         } label: {
                             ItemView(pic: item.image)
