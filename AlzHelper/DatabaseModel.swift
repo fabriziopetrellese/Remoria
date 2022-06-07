@@ -5,7 +5,6 @@
 //  Created by Valerio Domenico Conte on 30/05/22.
 //
 
-import Foundation
 import SwiftUI
 
 struct Category: Identifiable {
@@ -20,7 +19,10 @@ struct Item: Codable, Identifiable {
     var id: Int
     var label: String
     var category: String
-    var image: URL?
+    var imageUrl: String? // Library Category Image Url path
+    
+    // for previews
+    static let sampleItem = Bundle.main.decode([Item].self, from: "items.json").first!
 }
 
 class DatabaseDecoder: ObservableObject {

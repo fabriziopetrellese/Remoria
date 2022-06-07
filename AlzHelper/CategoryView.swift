@@ -21,12 +21,11 @@ struct CategoryView: View {
                         NavigationLink {
                             GuessView(
                                 isLibrary: true,
-                                item: item,
-                                itemUiImage: nil
-                                
+                                itemUiImage: nil,
+                                item: item
                             )
                         } label: {
-                            ItemView(pic: item.image)
+                            ItemView(imageUrl: item.imageUrl!)
                         }
                     }
                 }
@@ -45,21 +44,24 @@ struct CategoryView_Previews: PreviewProvider {
 }
 
 struct ItemView: View {
-    let pic: URL?
+    let imageUrl: String
     
     var body: some View {
         ZStack {
-            AsyncImage (url: pic, content: { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 180, height: 120)
-                    .cornerRadius(10)
-                    .shadow(radius: 5)
-            },
-                        placeholder: {
-                ProgressView()
-            })
+            AsyncImage(
+                url: URL(string: self.imageUrl),
+                content: { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 180, height: 120)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                },
+                placeholder: {
+                    ProgressView()
+                }
+            )
         }
     }
 }

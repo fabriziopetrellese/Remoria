@@ -15,14 +15,16 @@ struct GuessView: View {
     @State var index: Int = 0
     @State var correctAlert: Bool = false
     @State var wrongAlert: Bool = false
+    
+    // passed in from library view
     @State var isLibrary: Bool = false
     
-    // set by image predictor after a prediction is made
+    // passed in from content view when user takes a photo
+    @State var itemUiImage: UIImage?
+    
+    // passed in from libary view or set by image predictor for user photos
     @State var item: Item?
     
-    // passed in from content view when user selects an image
-    @State var itemUiImage: UIImage?
-
     private func showFirstCharacter() {
         guard let item = self.item else { return }
         var new: Character
@@ -56,23 +58,29 @@ struct GuessView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            let imageView: Image = {
-                if isLibrary, let image = item?.image {
-                    return Image(image)
-                }
-                
-                if let image = itemUiImage {
-                    return Image(uiImage: image)
-                }
-                
-                //fallback
-                return Image("Dog")
-            }()
             
-            imageView
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 300)
+            // set image view if Library image
+            if isLibrary, let imageUrl = item?.imageUrl {
+                AsyncImage(
+                    url: URL(string: imageUrl),
+                    content: { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 300)
+                    },
+                    placeholder: {
+                        ProgressView()
+                    }
+                )
+                
+            // set image view if user photo
+            } else if let image = itemUiImage {
+                Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 300)
+            }
             
             Text("Item Category:\n" + (item?.category.capitalized ?? "Not Classified"))
                 .font(.title3)
@@ -123,8 +131,7 @@ struct GuessView: View {
                 id: 0,
                 label: newValue,
                 //TODO: Set Category
-                category: "Some Category",
-                image: ""
+                category: "Some Category"
             )
             
             showFirstCharacter()
@@ -154,8 +161,8 @@ struct GuessView: View {
 struct GuessView_Previews: PreviewProvider {
     static var previews: some View {
         GuessView(
-            item: Item.sampleItem,
-            itemUiImage: nil
+            itemUiImage: nil,
+            item: Item.sampleItem
         )
     }
 }
