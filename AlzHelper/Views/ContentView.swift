@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var navigationRoot = NavigationRoot()
-    @EnvironmentObject var db: DatabaseDecoder
+    @EnvironmentObject var categories: Categories
     @State var showModal: Bool = false
     
     //navigation triggers
@@ -95,6 +95,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(DatabaseDecoder())
+            .environmentObject(Categories())
     }
 }

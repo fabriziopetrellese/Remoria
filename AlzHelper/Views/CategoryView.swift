@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategoryView: View {
-    @EnvironmentObject var categoriesModel: DatabaseDecoder
+    @EnvironmentObject var categoriesModel: Categories
     let categoryName: String
     let categoryItems: [Item]
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
@@ -38,8 +38,8 @@ struct CategoryView: View {
 
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryView(categoryName: "animals", categoryItems: DatabaseDecoder().animals)
-            .environmentObject(DatabaseDecoder())
+        CategoryView(categoryName: "animals", categoryItems: Categories().animals)
+            .environmentObject(Categories())
     }
 }
 
