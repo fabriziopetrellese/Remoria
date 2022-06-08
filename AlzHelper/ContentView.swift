@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var navigationRoot = NavigationRoot()
     @EnvironmentObject var db: DatabaseDecoder
     @State var showModal: Bool = false
     
@@ -81,6 +82,13 @@ struct ContentView: View {
             guard newValue != nil else { return }
             isGuessViewActive.toggle()
         }
+        .onReceive(navigationRoot.$backToRoot) { newValue in
+            if newValue {
+                isLibraryViewActive = false
+                navigationRoot.backToRoot = false
+            }
+        }
+        .environmentObject(navigationRoot)
     }
 }
 

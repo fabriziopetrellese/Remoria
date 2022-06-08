@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct GuessView: View {
-    @Environment(\.dismiss) var dismissView
+    // Navigation to Main Menu
+    @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var navigationRoot: NavigationRoot
+    
     @StateObject var imagePredictor = ImagePredictor()
     
     @State var name: String = ""
@@ -155,6 +158,10 @@ struct GuessView: View {
         }, message: {
             Text("Almost done, you are very close.")
         })
+    }
+    
+    private func dismissView() {
+        isLibrary ? navigationRoot.exit() : self.dismiss()
     }
 }
 
