@@ -60,7 +60,7 @@ struct GuessView: View {
     }
     
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 15) {
             
             // set image view if Library image
             if isLibrary, let imageUrl = item?.imageUrl {
@@ -70,7 +70,7 @@ struct GuessView: View {
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(height: 300)
+                            .frame(height: 280)
                     },
                     placeholder: {
                         ProgressView()
@@ -82,13 +82,13 @@ struct GuessView: View {
                 Image(uiImage: image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: 300)
+                    .frame(height: 280)
             }
             
             Text("Item Category:\n" + (item?.category.capitalized ?? "Not Classified"))
                 .font(.title3)
                 .bold()
-                .frame(alignment: .center)
+                .frame(width: 220, height: 55, alignment: .center)
             
             TextField("", text: $name)
                 .textFieldStyle(.roundedBorder)
