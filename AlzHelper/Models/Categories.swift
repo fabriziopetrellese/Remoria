@@ -25,13 +25,13 @@ struct Item: Codable, Identifiable {
     static let sampleItem = Bundle.main.decode([Item].self, from: "items.json").first!
 }
 
-class DatabaseDecoder: ObservableObject {
+class Categories: ObservableObject {
     @Published var itemsCollection = Bundle.main.decode([Item].self, from: "items.json")
     @Published var categories = [Category]()
     @Published var animals = [Item]()
     @Published var food = [Item]()
     
-    func get_categories() {
+    func getCategories() {
         for i in 0..<itemsCollection.count {
             switch itemsCollection[i].category {
             case "animals":
@@ -42,10 +42,10 @@ class DatabaseDecoder: ObservableObject {
                 return
             }
         }
-        append_categories()
+        appendCategories()
     }
     
-    func append_categories() {
+    func appendCategories() {
         categories.append(Category(name: "animals", image: "🐶", color: .red, items: animals))
         categories.append(Category(name: "food", image: "🍽", color: .blue, items: food))
     }

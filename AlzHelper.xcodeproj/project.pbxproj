@@ -10,8 +10,9 @@
 		2A17297A284D1E9A0031FE20 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2A172979284D1E9A0031FE20 /* MobileNetV2.mlmodel */; };
 		2AEBDFA7284A48FE0009D657 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEBDFA6284A48FE0009D657 /* OnboardingView.swift */; };
 		2AEBDFA9284A493F0009D657 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEBDFA8284A493F0009D657 /* ButtonView.swift */; };
+		2AED3FBD2850D67E006159B7 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AED3FBC2850D67E006159B7 /* Bundle+Extensions.swift */; };
 		49A770292845926000971C6C /* NavigationRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A770282845926000971C6C /* NavigationRoot.swift */; };
-		B948310328462DD8003F521E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B948310228462DD8003F521E /* Extensions.swift */; };
+		B948310328462DD8003F521E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B948310228462DD8003F521E /* String+Extensions.swift */; };
 		B9483105284642FF003F521E /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9483104284642FF003F521E /* ImagePickerView.swift */; };
 		B9F45AC8283D0CC000899706 /* AlzHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AC7283D0CC000899706 /* AlzHelperApp.swift */; };
 		B9F45ACA283D0CC000899706 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AC9283D0CC000899706 /* ContentView.swift */; };
@@ -28,15 +29,16 @@
 		B9F45AED2844AE3200899706 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AEC2844AE3200899706 /* CategoryView.swift */; };
 		B9F45AEF2844F8F100899706 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AEE2844F8F100899706 /* GuessView.swift */; };
 		B9F45AF128451C6200899706 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F45AF028451C6200899706 /* items.json */; };
-		B9F45AF32845417A00899706 /* DatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AF22845417A00899706 /* DatabaseModel.swift */; };
+		B9F45AF32845417A00899706 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AF22845417A00899706 /* Categories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2A172979284D1E9A0031FE20 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		2AEBDFA6284A48FE0009D657 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		2AEBDFA8284A493F0009D657 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		2AED3FBC2850D67E006159B7 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		49A770282845926000971C6C /* NavigationRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRoot.swift; sourceTree = "<group>"; };
-		B948310228462DD8003F521E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B948310228462DD8003F521E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		B9483104284642FF003F521E /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		B9F45AC4283D0CC000899706 /* AlzHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlzHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F45AC7283D0CC000899706 /* AlzHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzHelperApp.swift; sourceTree = "<group>"; };
@@ -55,7 +57,7 @@
 		B9F45AEC2844AE3200899706 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		B9F45AEE2844F8F100899706 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
 		B9F45AF028451C6200899706 /* items.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
-		B9F45AF22845417A00899706 /* DatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModel.swift; sourceTree = "<group>"; };
+		B9F45AF22845417A00899706 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AED3FB72850D4C0006159B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2AEBDFA6284A48FE0009D657 /* OnboardingView.swift */,
+				B9F45AC9283D0CC000899706 /* ContentView.swift */,
+				B9F45AE62841057D00899706 /* LibraryView.swift */,
+				B9F45AEC2844AE3200899706 /* CategoryView.swift */,
+				B9F45AEE2844F8F100899706 /* GuessView.swift */,
+				2AEBDFA8284A493F0009D657 /* ButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2AED3FB82850D4CD006159B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9F45AF22845417A00899706 /* Categories.swift */,
+				49A770282845926000971C6C /* NavigationRoot.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2AED3FB92850D4E2006159B7 /* MainViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B9F45AD6283D0D0A00899706 /* MainViewController.swift */,
+				B9F45AD8283D0E6C00899706 /* MainViewController+CameraPicker.swift */,
+				B9F45ADA283D0E9700899706 /* MainViewController+PhotoPicker.swift */,
+			);
+			path = MainViewControllers;
+			sourceTree = "<group>";
+		};
+		2AED3FBA2850D52A006159B7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B9F45AF028451C6200899706 /* items.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2AED3FBB2850D551006159B7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B948310228462DD8003F521E /* String+Extensions.swift */,
+				2AED3FBC2850D67E006159B7 /* Bundle+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B9F45ABB283D0CC000899706 = {
 			isa = PBXGroup;
 			children = (
@@ -90,17 +141,11 @@
 			children = (
 				B9F45AE5283FBEE000899706 /* Info.plist */,
 				B9F45AC7283D0CC000899706 /* AlzHelperApp.swift */,
-				2AEBDFA6284A48FE0009D657 /* OnboardingView.swift */,
-				B9F45AC9283D0CC000899706 /* ContentView.swift */,
-				B9F45AE62841057D00899706 /* LibraryView.swift */,
-				B9F45AEC2844AE3200899706 /* CategoryView.swift */,
-				B9F45AEE2844F8F100899706 /* GuessView.swift */,
-				2AEBDFA8284A493F0009D657 /* ButtonView.swift */,
-				49A770282845926000971C6C /* NavigationRoot.swift */,
-				B9F45AF22845417A00899706 /* DatabaseModel.swift */,
-				B948310228462DD8003F521E /* Extensions.swift */,
-				B9F45AF028451C6200899706 /* items.json */,
-				B9F45ADC283D0F2B00899706 /* ML Stuff */,
+				2AED3FB82850D4CD006159B7 /* Models */,
+				2AED3FBA2850D52A006159B7 /* Data */,
+				2AED3FB72850D4C0006159B7 /* Views */,
+				2AED3FBB2850D551006159B7 /* Extensions */,
+				B9F45ADC283D0F2B00899706 /* ML Image Classification */,
 				B9F45AD5283D0CF200899706 /* Controllers */,
 				B9F45ACB283D0CC100899706 /* Assets.xcassets */,
 				B9F45AE3283D0FC600899706 /* MobileNet.mlmodel */,
@@ -122,21 +167,19 @@
 			isa = PBXGroup;
 			children = (
 				B9483104284642FF003F521E /* ImagePickerView.swift */,
-				B9F45AD6283D0D0A00899706 /* MainViewController.swift */,
-				B9F45AD8283D0E6C00899706 /* MainViewController+CameraPicker.swift */,
-				B9F45ADA283D0E9700899706 /* MainViewController+PhotoPicker.swift */,
+				2AED3FB92850D4E2006159B7 /* MainViewControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		B9F45ADC283D0F2B00899706 /* ML Stuff */ = {
+		B9F45ADC283D0F2B00899706 /* ML Image Classification */ = {
 			isa = PBXGroup;
 			children = (
 				B9F45ADF283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
 				B9F45AE0283D0F8500899706 /* VNClassificationObservation+confidenceString.swift */,
 				B9F45ADD283D0F6500899706 /* ImagePredictor.swift */,
 			);
-			path = "ML Stuff";
+			path = "ML Image Classification";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,12 +264,13 @@
 				2AEBDFA9284A493F0009D657 /* ButtonView.swift in Sources */,
 				B9F45ADB283D0E9700899706 /* MainViewController+PhotoPicker.swift in Sources */,
 				B9F45AEF2844F8F100899706 /* GuessView.swift in Sources */,
-				B948310328462DD8003F521E /* Extensions.swift in Sources */,
+				2AED3FBD2850D67E006159B7 /* Bundle+Extensions.swift in Sources */,
+				B948310328462DD8003F521E /* String+Extensions.swift in Sources */,
 				2A17297A284D1E9A0031FE20 /* MobileNetV2.mlmodel in Sources */,
 				B9F45ADE283D0F6500899706 /* ImagePredictor.swift in Sources */,
 				49A770292845926000971C6C /* NavigationRoot.swift in Sources */,
 				B9F45AE72841057D00899706 /* LibraryView.swift in Sources */,
-				B9F45AF32845417A00899706 /* DatabaseModel.swift in Sources */,
+				B9F45AF32845417A00899706 /* Categories.swift in Sources */,
 				2AEBDFA7284A48FE0009D657 /* OnboardingView.swift in Sources */,
 				B9F45AC8283D0CC000899706 /* AlzHelperApp.swift in Sources */,
 			);

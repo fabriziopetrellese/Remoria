@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LibraryView: View {
     @Environment(\.dismiss) var dismissView
-    @EnvironmentObject var categoriesModel: DatabaseDecoder
+    @EnvironmentObject var categoriesModel: Categories
     @State private var searchText = ""
     
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
@@ -45,7 +45,7 @@ struct LibraryView: View {
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
         LibraryView()
-            .environmentObject(DatabaseDecoder())
+            .environmentObject(Categories())
     }
 }
 
