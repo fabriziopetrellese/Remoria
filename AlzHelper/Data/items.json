@@ -1,58 +1,67 @@
 [
-    {
-        "id": 0,
-        "label": "dog",
-        "category": "animals",
-        "imageUrl": "https://cdn.pixabay.com/photo/2016/02/19/15/46/labrador-retriever-1210559_1280.jpg"
-    },
-    
-    {
-        "id": 1,
-        "label": "cat",
-        "category": "animals",
-        "imageUrl": "https://cdn.pixabay.com/photo/2015/11/16/22/14/cat-1046544_1280.jpg"
-    },
-    
-    {
-        "id": 2,
-        "label": "horse",
-        "category": "animals",
-        "imageUrl": "https://cdn.pixabay.com/photo/2018/08/17/01/14/horse-3611921_1280.jpg"
-    },
-    
-    {
-        "id": 3,
-        "label": "snake",
-        "category": "animals",
-        "imageUrl": "https://cdn.pixabay.com/photo/2014/08/15/21/40/snake-419043_1280.jpg"
-    },
-    
-    {
-        "id": 4,
-        "label": "apple",
-        "category": "food",
-        "imageUrl": "https://cdn.pixabay.com/photo/2017/09/26/13/31/apple-2788616_1280.jpg"
-    },
-    
-    {
-        "id": 5,
-        "label": "pizza",
-        "category": "food",
-        "imageUrl": "https://cdn.pixabay.com/photo/2020/06/08/16/49/pizza-5275191_1280.jpg"
-    },
-    
-    {
-        "id": 6,
-        "label": "banana",
-        "category": "food",
-        "imageUrl": "https://cdn.pixabay.com/photo/2015/02/27/17/58/bananas-652497_1280.jpg"
-    },
-    
-    {
-        "id": 7,
-        "label": "bread",
-        "category": "food",
-        "imageUrl": "https://cdn.pixabay.com/photo/2017/06/23/23/57/bread-2436370_1280.jpg"
-    }
-]
+     {
+         "id": 0,
+         "label": "dog",
+         "category": "animals",
+         "imageUrl": "https://cdn.pixabay.com/photo/2016/02/19/15/46/labrador-retriever-1210559_1280.jpg",
+         "tags": ["animal", "pet", "furry"]
+     },
+     
+     {
+         "id": 1,
+         "label": "cat",
+         "category": "animals",
+         "imageUrl": "https://cdn.pixabay.com/photo/2015/11/16/22/14/cat-1046544_1280.jpg",
+         "tags": ["animal", "pet", "meow"]
+     },
+     
+     {
+         "id": 2,
+         "label": "horse",
+         "category": "animals",
+         "imageUrl": "https://cdn.pixabay.com/photo/2018/08/17/01/14/horse-3611921_1280.jpg",
+         "tags": ["animal", "tail", "horseshoes"]
+     },
+     
+     {
+         "id": 3,
+         "label": "snake",
+         "category": "animals",
+         "imageUrl": "https://cdn.pixabay.com/photo/2014/08/15/21/40/snake-419043_1280.jpg",
+         "tags": ["animal", "reptile", "poison"]
+     },
+     
+     {
+         "id": 4,
+         "label": "apple",
+         "category": "food",
+         "imageUrl": "https://cdn.pixabay.com/photo/2017/09/26/13/31/apple-2788616_1280.jpg",
+         "tags": ["fruit", "red", "green"]
+     },
+     
+     {
+         "id": 5,
+         "label": "pizza",
+         "category": "food",
+         "imageUrl": "https://cdn.pixabay.com/photo/2020/06/08/16/49/pizza-5275191_1280.jpg",
+         "tags": ["food", "tomato", "cheese"]
+     },
+     
+     {
+         "id": 6,
+         "label": "banana",
+         "category": "food",
+         "imageUrl": "https://cdn.pixabay.com/photo/2015/02/27/17/58/bananas-652497_1280.jpg",
+         "tags": ["fruit", "yellow", "potassium"]
+     },
+     
+     {
+         "id": 7,
+         "label": "bread",
+         "category": "food",
+         "imageUrl": "https://cdn.pixabay.com/photo/2017/06/23/23/57/bread-2436370_1280.jpg",
+         "tags": ["food", "flour", "sugar"]
+     }
+ ]
+
 
