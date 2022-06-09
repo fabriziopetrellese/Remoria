@@ -19,9 +19,6 @@ struct GuessView: View {
     @State var correctAlert: Bool = false
     @State var wrongAlert: Bool = false
     
-    // passed in from library view
-    @State var isLibrary: Bool = false
-    
     // passed in from content view when user takes a photo
     @State var itemUiImage: UIImage?
     
@@ -63,7 +60,7 @@ struct GuessView: View {
         VStack(spacing: 15) {
             
             // set image view if Library image
-            if isLibrary, let imageUrl = item?.imageUrl {
+            if item?.source == .library, let imageUrl = item?.imageUrl {
                 AsyncImage(
                     url: URL(string: imageUrl),
                     content: { image in
@@ -117,7 +114,7 @@ struct GuessView: View {
         .navigationTitle("Guess this object")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear() {
-            if isLibrary {
+            if item?.source == .library {
                 showFirstCharacter()
                 return
             }
@@ -129,7 +126,7 @@ struct GuessView: View {
         
         // Construct Item when image is classified
         .onChange(of: imagePredictor.predictionText) { newValue in
-            guard !isLibrary else { return }
+            guard item?.source != .library  else { return }
             self.item = Item(
                 id: 0,
                 label: newValue,
@@ -162,7 +159,7 @@ struct GuessView: View {
     }
     
     private func dismissView() {
-        isLibrary ? navigationRoot.exit() : self.dismiss()
+        item?.source == .library ? navigationRoot.exit() : self.dismiss()
     }
 }
 
