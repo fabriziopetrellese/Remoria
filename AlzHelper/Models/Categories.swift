@@ -16,10 +16,17 @@ struct Category: Identifiable {
 }
 
 struct Item: Codable, Identifiable {
+    
+    enum SourceType: String, Codable {
+        case library, photo
+    }
+    
     var id: Int
     var label: String
     var category: String
     var imageUrl: String? // Library Category Image Url path
+    var source: SourceType
+    var tags: [String]?
     
     // for previews
     static let sampleItem = Bundle.main.decode([Item].self, from: "items.json").first!
@@ -50,9 +57,3 @@ class Categories: ObservableObject {
         categories.append(Category(name: "food", image: "🍽", color: .blue, items: food))
     }
 }
-
-
-
-
-
-

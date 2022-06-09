@@ -134,7 +134,8 @@ struct GuessView: View {
                 id: 0,
                 label: newValue,
                 //TODO: Set Category
-                category: "Some Category"
+                category: "Some Category",
+                source: .photo
             )
             
             showFirstCharacter()

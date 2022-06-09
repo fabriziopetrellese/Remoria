@@ -4,6 +4,7 @@
          "label": "dog",
          "category": "animals",
          "imageUrl": "https://cdn.pixabay.com/photo/2016/02/19/15/46/labrador-retriever-1210559_1280.jpg",
+         "source": "library",
          "tags": ["animal", "pet", "furry"]
      },
      
@@ -12,6 +13,7 @@
          "label": "cat",
          "category": "animals",
          "imageUrl": "https://cdn.pixabay.com/photo/2015/11/16/22/14/cat-1046544_1280.jpg",
+         "source": "library",
          "tags": ["animal", "pet", "meow"]
      },
      
@@ -20,6 +22,7 @@
          "label": "horse",
          "category": "animals",
          "imageUrl": "https://cdn.pixabay.com/photo/2018/08/17/01/14/horse-3611921_1280.jpg",
+         "source": "library",
          "tags": ["animal", "tail", "horseshoes"]
      },
      
@@ -28,6 +31,7 @@
          "label": "snake",
          "category": "animals",
          "imageUrl": "https://cdn.pixabay.com/photo/2014/08/15/21/40/snake-419043_1280.jpg",
+         "source": "library",
          "tags": ["animal", "reptile", "poison"]
      },
      
@@ -36,6 +40,7 @@
          "label": "apple",
          "category": "food",
          "imageUrl": "https://cdn.pixabay.com/photo/2017/09/26/13/31/apple-2788616_1280.jpg",
+         "source": "library",
          "tags": ["fruit", "red", "green"]
      },
      
@@ -44,6 +49,7 @@
          "label": "pizza",
          "category": "food",
          "imageUrl": "https://cdn.pixabay.com/photo/2020/06/08/16/49/pizza-5275191_1280.jpg",
+         "source": "library",
          "tags": ["food", "tomato", "cheese"]
      },
      
@@ -52,6 +58,7 @@
          "label": "banana",
          "category": "food",
          "imageUrl": "https://cdn.pixabay.com/photo/2015/02/27/17/58/bananas-652497_1280.jpg",
+         "source": "library",
          "tags": ["fruit", "yellow", "potassium"]
      },
      
@@ -60,6 +67,7 @@
          "label": "bread",
          "category": "food",
          "imageUrl": "https://cdn.pixabay.com/photo/2017/06/23/23/57/bread-2436370_1280.jpg",
+         "source": "library",
          "tags": ["food", "flour", "sugar"]
      }
  ]
