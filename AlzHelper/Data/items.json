@@ -4,6 +4,7 @@
          "label": "dog",
          "category": "animals",
          "imageUrl": "https://cdn.pixabay.com/photo/2016/02/19/15/46/labrador-retriever-1210559_1280.jpg",
+         "source": "library",
          "tags": ["animal", "pet", "furry"]
      },
      
@@ -12,6 +13,7 @@
          "label": "cat",
          "category": "animals",
          "imageUrl": "https://cdn.pixabay.com/photo/2015/11/16/22/14/cat-1046544_1280.jpg",
+         "source": "library",
          "tags": ["animal", "pet", "meow"]
      },
      
@@ -20,6 +22,7 @@
          "label": "horse",
          "category": "animals",
          "imageUrl": "https://cdn.pixabay.com/photo/2018/08/17/01/14/horse-3611921_1280.jpg",
+         "source": "library",
          "tags": ["animal", "tail", "horseshoes"]
      },
      
@@ -28,6 +31,7 @@
          "label": "snake",
          "category": "animals",
          "imageUrl": "https://cdn.pixabay.com/photo/2014/08/15/21/40/snake-419043_1280.jpg",
+         "source": "library",
          "tags": ["animal", "reptile", "poison"]
      },
      
@@ -36,6 +40,7 @@
          "label": "apple",
          "category": "food",
          "imageUrl": "https://cdn.pixabay.com/photo/2017/09/26/13/31/apple-2788616_1280.jpg",
+         "source": "library",
          "tags": ["fruit", "red", "green"]
      },
      
@@ -44,6 +49,7 @@
          "label": "pizza",
          "category": "food",
          "imageUrl": "https://cdn.pixabay.com/photo/2020/06/08/16/49/pizza-5275191_1280.jpg",
+         "source": "library",
          "tags": ["food", "tomato", "cheese"]
      },
      
@@ -52,6 +58,7 @@
          "label": "banana",
          "category": "food",
          "imageUrl": "https://cdn.pixabay.com/photo/2015/02/27/17/58/bananas-652497_1280.jpg",
+         "source": "library",
          "tags": ["fruit", "yellow", "potassium"]
      },
      
@@ -60,8 +67,4064 @@
          "label": "bread",
          "category": "food",
          "imageUrl": "https://cdn.pixabay.com/photo/2017/06/23/23/57/bread-2436370_1280.jpg",
+         "source": "library",
          "tags": ["food", "flour", "sugar"]
+     },
+     
+     
+     {
+         "id": 8,
+         "label": "tench",
+         "category": "fish",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["fish"]
+     },
+     
+     
+     {
+         "id": 9,
+         "label": "goldfish",
+         "category": "fish",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["fish"]
+     },
+     
+     
+     {
+         "id": 10,
+         "label": "white shark",
+         "category": "fish",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["fish"]
+     },
+     
+     {
+         "id": 11,
+         "label": "tiger shark",
+         "category": "fish",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["fish"]
+     },
+     
+     
+     {
+         "id": 12,
+         "label": "hammerhead",
+         "category": "fish",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["fish"]
+     },
+     
+     
+     {
+         "id": 13,
+         "label": "electric ray",
+         "category": "fish",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["fish"]
+     },
+     
+     
+     {
+         "id": 14,
+         "label": "stingray",
+         "category": "fish",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["fish"]
+     },
+     
+     
+     {
+         "id": 15,
+         "label": "cock",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 16,
+         "label": "hen",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 17,
+         "label": "ostrich",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 18,
+         "label": "brambling",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 19,
+         "label": "goldfinch",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 20,
+         "label": "house finch",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 21,
+         "label": "junco",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 22,
+         "label": "indigo bunting",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 23,
+         "label": "robin",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 24,
+         "label": "bulbul",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 25,
+         "label": "jay",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 26,
+         "label": "magpie",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 27,
+         "label": "chickadee",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     
+     {
+         "id": 28,
+         "label": "water ouzel",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 29,
+         "label": "kite",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 30,
+         "label": "bald eagle",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 31,
+         "label": "vulture",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 32,
+         "label": "great grey owl",
+         "category": "bird",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     
+     
+     {
+         "id": 33,
+         "label": "european fire salamander",
+         "category": "amphibians",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["amphibia"]
+     },
+     
+     
+     {
+         "id": 34,
+         "label": "common newt",
+         "category": "amphibians",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["amphibia"]
+     },
+     
+     
+     {
+         "id": 35,
+         "label": "eft",
+         "category": "amphibians",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["amphibia"]
+     },
+     
+     
+     {
+         "id": 36,
+         "label": "spotted salamander",
+         "category": "amphibians",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["amphibia"]
+     },
+     
+     
+     {
+         "id": 37,
+         "label": "axolotl",
+         "category": "amphibians",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["amphibia"]
+     },
+     
+     
+     {
+         "id": 38,
+         "label": "bullfrog",
+         "category": "amphibians",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["amphibia"]
+     },
+     
+     
+     {
+         "id": 39,
+         "label": "tree frog",
+         "category": "amphibians",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["amphibia"]
+     },
+     
+     
+     {
+         "id": 40,
+         "label": "tailed frog",
+         "category": "amphibians",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["amphibia"]
+     },
+     
+     
+     {
+         "id": 41,
+         "label": "loggerhead",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 42,
+         "label": "leatherback turtle",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 43,
+         "label": "coriacea",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 44,
+         "label": "mud turtle",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 45,
+         "label": "terrapin",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 46,
+         "label": "box turtle",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 47,
+         "label": "banded gecko",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 48,
+         "label": "common iguana",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 49,
+         "label": "american chameleon",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+    
+     {
+         "id": 50,
+         "label": "whiptail",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 51,
+         "label": "agama",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 52,
+         "label": "frilled lizard",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 53,
+         "label": "alligator lizard",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 54,
+         "label": "gila monster",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 55,
+         "label": "green lizard",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 56,
+         "label": "african chameleon",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 57,
+         "label": "komodo dragon",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 58,
+         "label": "varanus komodoensis",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 59,
+         "label": "african crocodile",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 60,
+         "label": "american alligator",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 61,
+         "label": "triceratops",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 62,
+         "label": "thunder snake",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 63,
+         "label": "ringneck snake",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 64,
+         "label": "hognose snake",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 65,
+         "label": "green snake",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     
+     {
+         "id": 66,
+         "label": "king snake",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 67,
+         "label": "garter snake",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 68,
+         "label": "water snake",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 69,
+         "label": "wine snake",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 70,
+         "label": "night snake",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 71,
+         "label": "boa constrictor",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 72,
+         "label": "rock python",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 73,
+         "label": "indian cobra",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 74,
+         "label": "green mamba",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 75,
+         "label": "sea snake",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 76,
+         "label": "horned viper",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 77,
+         "label": "cornutus",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 78,
+         "label": "diamondback",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 79,
+         "label": "adamanteus",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 80,
+         "label": "sidewinder",
+         "category": "reptiles",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["reptile"]
+     },
+     
+     
+     {
+         "id": 81,
+         "label": "trilobite",
+         "category": "arachnids",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["arachnid"]
+     },
+     
+     
+     {
+         "id": 82,
+         "label": "harvestman",
+         "category": "arachnids",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["arachnid"]
+     },
+     
+     
+     {
+         "id": 83,
+         "label": "scorpion",
+         "category": "arachnids",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["arachnid"]
+     },
+     
+     
+     {
+         "id": 84,
+         "label": "black and gold garden spider",
+         "category": "arachnids",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["arachnid"]
+     },
+     
+     
+     {
+         "id": 85,
+         "label": "barn spider",
+         "category": "arachnids",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["arachnid"]
+     },
+     
+     
+     {
+         "id": 86,
+         "label": "garden spider",
+         "category": "arachnids",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["arachnid"]
+     },
+     
+     
+     {
+         "id": 87,
+         "label": "black widow",
+         "category": "arachnids",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["arachnid"]
+     },
+     
+     
+     {
+         "id": 88,
+         "label": "tarantula",
+         "category": "arachnids",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["arachnid"]
+     },
+     
+     
+     {
+         "id": 89,
+         "label": "wolf spider",
+         "category": "arachnids",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["arachnid"]
+     },
+     
+     
+     {
+         "id": 90,
+         "label": "tick",
+         "category": "arachnids",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["arachnid"]
+     },
+     
+     
+     {
+         "id": 91,
+         "label": "centipede",
+         "category": "annelids",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["annelid"]
+     },
+     
+     
+     {
+         "id": 92,
+         "label": "black grouse",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 93,
+         "label": "ptarmigan",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 94,
+         "label": "ruffed grouse",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 95,
+         "label": "prairie chicken",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 96,
+         "label": "peacock",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 97,
+         "label": "quail",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 98,
+         "label": "partridge",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     
+     {
+         "id": 99,
+         "label": "african grey",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 100,
+         "label": "macaw",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 101,
+         "label": "sulphur-crested cockatoo",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 102,
+         "label": "cacatua galerita",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 103,
+         "label": "lorikeet",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 104,
+         "label": "coucal",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 105,
+         "label": "bee eater",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 106,
+         "label": "hornbill",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 107,
+         "label": "hummingbird",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 108,
+         "label": "jacamar",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 109,
+         "label": "toucan",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 110,
+         "label": "drake",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 111,
+         "label": "red-breasted merganser",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 112,
+         "label": "goose",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 113,
+         "label": "black swan",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 114,
+         "label": "tusker",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 115,
+         "label": "echidna",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 116,
+         "label": "platypus",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 117,
+         "label": "wallaby",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 118,
+         "label": "koala",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 119,
+         "label": "wombat",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 120,
+         "label": "jellyfish",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 121,
+         "label": "sea anemone",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     
+     {
+         "id": 122,
+         "label": "brain coral",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 123,
+         "label": "flatworm",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 124,
+         "label": "nematode",
+         "category": "annelids",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["annelid"]
+     },
+     
+     
+     {
+         "id": 125,
+         "label": "conch",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 126,
+         "label": "snail",
+         "category": "mollusks",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["mollusk"]
+     },
+     
+     
+     
+     {
+         "id": 127,
+         "label": "slug",
+         "category": "mollusks",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["mollusk"]
+     },
+     
+     
+     
+     {
+         "id": 128,
+         "label": "sea slug",
+         "category": "mollusks",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["mollusk"]
+     },
+     
+     
+     {
+         "id": 129,
+         "label": "chiton",
+         "category": "mollusks",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["mollusk"]
+     },
+     
+     
+     {
+         "id": 130,
+         "label": "chambered nautilus",
+         "category": "mollusks",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["mollusk"]
+     },
+     
+     
+     {
+         "id": 131,
+         "label": "king crab",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 132,
+         "label": "american lobster",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 133,
+         "label": "spiny lobster",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     
+     {
+         "id": 134,
+         "label": "crayfish",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 135,
+         "label": "hermit crab",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 136,
+         "label": "isopod",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 137,
+         "label": "king crab",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 138,
+         "label": "white stork",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 139,
+         "label": "black stork",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 140,
+         "label": "spoonbill",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 141,
+         "label": "flamingo",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 142,
+         "label": "little blue heron",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 143,
+         "label": "american egret",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 144,
+         "label": "white stork",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 145,
+         "label": "bittern",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 146,
+         "label": "crane",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 147,
+         "label": "limpkin",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 148,
+         "label": "european gallinule",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 149,
+         "label": "american coot",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 150,
+         "label": "bustard",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     {
+         "id": 151,
+         "label": "ruddy turnstone",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 152,
+         "label": "red-backed sandpiper",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 153,
+         "label": "dowitcher",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 154,
+         "label": "oystercatcher",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 155,
+         "label": "pelican",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 156,
+         "label": "oystercatcher",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 157,
+         "label": "king penguin",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 158,
+         "label": "albatross",
+         "category": "birds",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["bird"]
+     },
+     
+     
+     {
+         "id": 159,
+         "label": "grey whale",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 160,
+         "label": "killer whale",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 161,
+         "label": "dugong",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 162,
+         "label": "sea lion",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 163,
+         "label": "chihuahua",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 164,
+         "label": "japanese spaniel",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 165,
+         "label": "maltese dog",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 166,
+         "label": "pekinese",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 167,
+         "label": "shih-tzu",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 168,
+         "label": "blenheim spaniel",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 169,
+         "label": "papillon",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 170,
+         "label": "toy terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 171,
+         "label": "rhodesian ridgeback",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 172,
+         "label": "afghan hound",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     
+     {
+         "id": 173,
+         "label": "basset",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 174,
+         "label": "beagle",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     
+     {
+         "id": 175,
+         "label": "bloodhound",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 176,
+         "label": "bluetick",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 177,
+         "label": "black-and-tan coonhound",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 178,
+         "label": "walker hound",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 179,
+         "label": "english foxhound",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 180,
+         "label": "redbone",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 181,
+         "label": "borzoi",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 182,
+         "label": "irish wolfhound",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 183,
+         "label": "italian greyhound",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 184,
+         "label": "whippet",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 185,
+         "label": "ibizan hound",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 186,
+         "label": "norwegian elkhound",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 187,
+         "label": "otterhound",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 188,
+         "label": "saluki",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 189,
+         "label": "scottish deerhound",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 190,
+         "label": "weimaraner",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 191,
+         "label": "staffordshire bullterrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 192,
+         "label": "american staffordshire terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 193,
+         "label": "bedlington terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 194,
+         "label": "border terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 195,
+         "label": "kerry blue terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 196,
+         "label": "irish terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 197,
+         "label": "norfolk terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 198,
+         "label": "norwich terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 199,
+         "label": "yorkshire terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 200,
+         "label": "wire-haired fox terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 201,
+         "label": "lakeland terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 202,
+         "label": "sealyham terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     
+     {
+         "id": 203,
+         "label": "airedale",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     
+     {
+         "id": 204,
+         "label": "cairn",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     
+     {
+         "id": 205,
+         "label": "australian terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     
+     {
+         "id": 206,
+         "label": "dandie dinmont",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     
+     {
+         "id": 207,
+         "label": "boston bull",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     
+     {
+         "id": 208,
+         "label": "miniature schnauzer",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 209,
+         "label": "giant schnauzer",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 210,
+         "label": "standart schnauzer",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 211,
+         "label": "scotch terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 212,
+         "label": "tibetan terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 213,
+         "label": "silky terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 214,
+         "label": "soft-coated wheaten terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 215,
+         "label": "west highland white terrier",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 216,
+         "label": "lhasa",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 219,
+         "label": "flat-coated retriever",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 220,
+         "label": "curly-coated retriever",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 221,
+         "label": "golden retriever",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 222,
+         "label": "labrador retriever",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 223,
+         "label": "chesapeake bay retriever",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 224,
+         "label": "german short-haired pointer",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 225,
+         "label": "vizsla",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 226,
+         "label": "english setter",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 227,
+         "label": "irish setter",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 228,
+         "label": "gordon setter",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 229,
+         "label": "brittany spaniel",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 230,
+         "label": "clumber",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 231,
+         "label": "english springer",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 232,
+         "label": "welsh springer spaniel",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 233,
+         "label": "cocker spaniel",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 234,
+         "label": "sussex spaniel",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 235,
+         "label": "irish water spaniel",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 236,
+         "label": "kuvasz",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 237,
+         "label": "schipperke",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 238,
+         "label": "groenendael",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 239,
+         "label": "malinois",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 240,
+         "label": "briard",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 241,
+         "label": "kelpie",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 242,
+         "label": "komondor",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 243,
+         "label": "old english sheepdog",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 244,
+         "label": "shetland sheepdog",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 245,
+         "label": "collie",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 246,
+         "label": "border collie",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 247,
+         "label": "bouvier des flandres",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 248,
+         "label": "rottweiler",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 249,
+         "label": "german shepherd",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 250,
+         "label": "doberman",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 251,
+         "label": "miniature pinscher",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 252,
+         "label": "greater swiss mountain dog",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 253,
+         "label": "bernese mountain dog",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 254,
+         "label": "appenzeller,
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 255,
+         "label": "entleBucher",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 256,
+         "label": "boxer",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 257,
+         "label": "bull mastiff",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 258,
+         "label": "tibetan mastiff",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 259,
+         "label": "french bulldog",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 260,
+         "label": "great dane",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     {
+         "id": 261,
+         "label": "saint bernard",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 262,
+         "label": "eskimo dog",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 263,
+         "label": "malamute",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 264,
+         "label": "siberian husky",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 265,
+         "label": "dalmatian",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 266,
+         "label": "affenpinscher",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 267,
+         "label": "basenji",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 268,
+         "label": "pug",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 269,
+         "label": "leonberg",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 270,
+         "label": "newfoundland",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 271,
+         "label": "great pyrenees",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 272,
+         "label": "samoyed",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 273,
+         "label": "pomeranian",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 274,
+         "label": "chow",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 275,
+         "label": "keeshond",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 276,
+         "label": "brabancon griffon",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 277,
+         "label": "pembroke",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 278,
+         "label": "cardigan",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 279,
+         "label": "toy poodle",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 280,
+         "label": "miniature poodle",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 281,
+         "label": "standart poodle",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 282,
+         "label": "mexican hairless",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 283,
+         "label": "timber wolf",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "dog", "pet"]
+     },
+     
+     
+     {
+         "id": 284,
+         "label": "timber wolf",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 285,
+         "label": "white wolf",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 286,
+         "label": "red wolf",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 287,
+         "label": "coyote",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 288,
+         "label": "dingo",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 289,
+         "label": "dhole",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 290,
+         "label": "african hunting dog",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 291,
+         "label": "hyena",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 292,
+         "label": "red fox",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 293,
+         "label": "kit fox",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 294,
+         "label": "arctic fox",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 295,
+         "label": "grey fox",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 296,
+         "label": "tabby",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "cat", "pet"]
+     },
+     
+     
+     {
+         "id": 297,
+         "label": "tiger cat",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "cat", "pet"]
+     },
+     
+     
+     {
+         "id": 298,
+         "label": "persian cat",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "cat", "pet"]
+     },
+     
+     
+     {
+         "id": 299,
+         "label": "siamese cat",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "cat", "pet"]
+     },
+     
+     
+     {
+         "id": 300,
+         "label": "egyptian cat",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "cat", "pet"]
+     },
+     
+     
+     {
+         "id": 301,
+         "label": "cougar",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 302,
+         "label": "lynx",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 303,
+         "label": "leopard",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 304,
+         "label": "snow leopard",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 305,
+         "label": "jaguar",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 306,
+         "label": "lion",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 307,
+         "label": "tiger",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 308,
+         "label": "cheetah",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 309,
+         "label": "brown bear",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 310,
+         "label": "american black bear",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 311,
+         "label": "ice bear",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 312,
+         "label": "sloth bear",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 313,
+         "label": "mongoose",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 314,
+         "label": "meerkat",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 315,
+         "label": "tiger beetle",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 316,
+         "label": "ladybug",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 317,
+         "label": "ground beetle",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 318,
+         "label": "long-horned beetle",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 319,
+         "label": "leaf beetle",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 320,
+         "label": "dung beetle",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 321,
+         "label": "rhinoceros beetle",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 322,
+         "label": "weevil",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 323,
+         "label": "fly",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 324,
+         "label": "bee",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 325,
+         "label": "ant",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 326,
+         "label": "grasshopper",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 327,
+         "label": "cricket",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 328,
+         "label": "walking stick",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 329,
+         "label": "cockroach",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 330,
+         "label": "mantis",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 331,
+         "label": "cicada",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 332,
+         "label": "leafhopper",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 333,
+         "label": "lacewing",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 334,
+         "label": "dragonfly",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 335,
+         "label": "damsefly",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 336,
+         "label": "admiral",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 337,
+         "label": "ringlet",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 338,
+         "label": "monarch",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 339,
+         "label": "cabbage butterfly",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 340,
+         "label": "sulphur butterfly",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 341,
+         "label": "lycaenid",
+         "category": "insects",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["insect"]
+     },
+     
+     
+     {
+         "id": 342,
+         "label": "starfish",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 343,
+         "label": "sea urchin",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 344,
+         "label": "sea cucumber",
+         "category": "ocean animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["ocean animal"]
+     },
+     
+     
+     {
+         "id": 345,
+         "label": "wood rabbit",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 346,
+         "label": "hare",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 347,
+         "label": "angora",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 348,
+         "label": "hamster",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 349,
+         "label": "porcupine",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 350,
+         "label": "fox squirrel",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 351,
+         "label": "marmot",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 352,
+         "label": "beaver",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 353,
+         "label": "guinea pig",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal", "pet"]
+     },
+     
+     
+     {
+         "id": 354,
+         "label": "sorrel",
+         "category": "plants",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["plant"]
+     },
+     
+     
+     {
+         "id": 355,
+         "label": "zebra",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 356,
+         "label": "hog",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     {
+         "id": 357,
+         "label": "wild boar",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 358,
+         "label": "warthog",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 359,
+         "label": "hippopotamus",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 360,
+         "label": "ox",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 361,
+         "label": "water buffalo",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     {
+         "id": 362,
+         "label": "bison",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 363,
+         "label": "ram",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 364,
+         "label": "bighorn",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 365,
+         "label": "ibex",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 366,
+         "label": "hartebeest",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 367,
+         "label": "impala",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 368,
+         "label": "gazelle",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     
+     {
+         "id": 369,
+         "label": "arabian camel",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 370,
+         "label": "llama",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 371,
+         "label": "weasel",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 372,
+         "label": "mink",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 373,
+         "label": "polecat",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 374,
+         "label": "black-footed ferret",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 375,
+         "label": "otter",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 376,
+         "label": "skunk",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 377,
+         "label": "badger",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 378,
+         "label": "armadillo",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 379,
+         "label": "three-toed sloth",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 380,
+         "label": "orangutan",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 381,
+         "label": "gorilla",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 382,
+         "label": "chimpanzee",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 383,
+         "label": "gibbon",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 384,
+         "label": "siamang",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 385,
+         "label": "guenon",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 386,
+         "label": "patas",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 387,
+         "label": "baboon",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 388,
+         "label": "macaque",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 389,
+         "label": "langur",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 390,
+         "label": "colobus",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 391,
+         "label": "proboscis monkey",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 392,
+         "label": "marmoset",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 393,
+         "label": "capuchin",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 394,
+         "label": "howler monkey",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 395,
+         "label": "titi",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 396,
+         "label": "spider monkey",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 397,
+         "label": "squirrel monkey",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 398,
+         "label": "madagascar cat",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     {
+         "id": 399,
+         "label": "indri",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 400,
+         "label": "indian elephant",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 401,
+         "label": "african elephant",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 402,
+         "label": "lesser panda",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 403,
+         "label": "giant panda",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 404,
+         "label": "barracouta,
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 405,
+         "label": "eel",
+         "category": "fish",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["fish"]
+     },
+     
+     
+     {
+         "id": 406,
+         "label": "coho",
+         "category": "fish",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["fish"]
+     },
+     
+     
+     {
+         "id": 407,
+         "label": "rock beauty",
+         "category": "fish",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["fish"]
+     },
+     
+     
+     {
+         "id": 408,
+         "label": "anemone fish",
+         "category": "fish",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["fish"]
+     },
+     
+     
+     {
+         "id": 409,
+         "label": "sturgeon",
+         "category": "fish",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["fish"]
+     },
+     
+     
+     {
+         "id": 410,
+         "label": "gar",
+         "category": "fish",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["fish"]
+     },
+     
+     
+     {
+         "id": 411,
+         "label": "lionfish",
+         "category": "fish",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["fish"]
+     },
+     
+     
+     {
+         "id": 412,
+         "label": "puffer",
+         "category": "animals",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["animal"]
+     },
+     
+     
+     {
+         "id": 413,
+         "label": "abacus",
+         "category": "plants",
+         "imageUrl": "",
+         "source": "library",
+         "tags": ["plant"]
      }
+     
+     
+    
  ]
 
 
