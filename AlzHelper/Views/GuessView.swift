@@ -19,6 +19,7 @@ struct GuessView: View {
     @State var correctAlert: Bool = false
     @State var wrongAlert: Bool = false
     
+    
     // passed in from library view
     @State var isLibrary: Bool = false
     
@@ -28,10 +29,18 @@ struct GuessView: View {
     // passed in from libary view or set by image predictor for user photos
     @State var item: Item?
     
+    
+    let correct: LocalizedStringKey = "correct"
+    let mainScreen: LocalizedStringKey = "mainScreen"
+    let correctMessage: LocalizedStringKey = "correctMessage"
+    let wrong: LocalizedStringKey = "wrong"
+    let tryAgain: LocalizedStringKey = "tryAgain"
+    let wrongMessage: LocalizedStringKey = "wrongMessage"
+    
     private func showFirstCharacter() {
         guard let item = self.item else { return }
         var new: Character
-        new = item.label.first!
+        new = String(format: NSLocalizedString(item.label, comment: "")).first!
         name.append(new)
         name = name.uppercased()
     }
@@ -40,19 +49,19 @@ struct GuessView: View {
         guard let item = self.item else { return }
         index += 1
         var add: String
-        add = item.label[index]
+        add = String(format: NSLocalizedString(item.label, comment: ""))[index]
         name.append(add)
     }
     
     func showName() {
         guard let item = self.item else { return }
-        name = item.label
+        name = String(format: NSLocalizedString(item.label, comment: ""))
         name = name.capitalized
     }
     
     func guessWord() {
         guard let item = self.item else { return }
-        if name.lowercased() == item.label.lowercased() {
+        if name.lowercased() == String(format: NSLocalizedString(item.label, comment: "")).lowercased() {
             correctAlert = true
         } else {
             wrongAlert = true
@@ -140,23 +149,22 @@ struct GuessView: View {
             showFirstCharacter()
         }
         .onChange(of: self.name) { newValue in
-            if newValue.count == item?.label.count {
+            if newValue.count == NSLocalizedString(item!.label, comment: "").count {
                 guessWord()
             }
             
         }
-        .alert("Correct!", isPresented: $correctAlert, actions: {
-            Button("Main screen", role: .none) {
+        .alert(correct, isPresented: $correctAlert, actions: {
+            Button(mainScreen, role: .none) {
                 dismissView()
             }
-
         }, message: {
-            Text("Go back to main screen to identify new objects.")
+            Text(correctMessage)
         })
-        .alert("Nice try!", isPresented: $wrongAlert, actions: {
-            Button("Try again", role: .cancel, action: {})
+        .alert(wrong, isPresented: $wrongAlert, actions: {
+            Button(tryAgain, role: .cancel, action: {})
         }, message: {
-            Text("Almost done, you are very close.")
+            Text(wrongMessage)
         })
     }
     

@@ -32,13 +32,14 @@ struct CategoryView: View {
                 .padding()
             }
         }
-        .navigationTitle(categoryName.capitalized)
+        .navigationTitle(String(format: NSLocalizedString(categoryName, comment: "")).capitalized)
     }
 }
 
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryView(categoryName: "animals", categoryItems: Categories().animals)
+        CategoryView(categoryName: "animals",
+                     categoryItems: Categories().animals)
             .environmentObject(Categories())
     }
 }

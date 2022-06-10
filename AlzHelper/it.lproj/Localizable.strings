@@ -1,0 +1,74 @@
+/* 
+  Localizable.strings
+  AlzHelper
+
+  Created by Valerio Domenico Conte on 09/06/22.
+  
+*/
+
+// CONTENT VIEW
+"mainMenu" = "Menu principale";
+"takePhoto" = "Scatta una foto";
+"chooseLibrary" =  "Scegli dalla libreria";
+"searchKeywords" =  "Ricerca con parole chiave";
+
+//ALERTS GUESS VIEW
+"correct" = "Esatto!";
+"mainScreen" = "Menu principale";
+"correctMessage" = "Torna al menu principale per identificare nuovi oggetti.";
+"wrong" = "Bel tentativo!";
+"tryAgain" = "Prova ancora";
+"wrongMessage" = "Ce l'hai quasi fatta, sei molto vicino.";
+
+//LIBRARY VIEW
+"library" = "Libreria";
+"browseCategories" = "Cerca tra le categorie";
+
+//CATEGORIES
+"animals" = "animali";
+"food" = "cibo";
+
+
+//LABELS
+//House
+"abacus" = "abaco";
+"analog clock" = "orologio";
+"ashcan" = "cestino";
+"ballpoint" = "penna";
+"Band Aid" = "cerotto";
+"barber chair" = "sedia";
+"barometer" = "barometro";
+"bassinet" = "culla";
+"bath towel" = "asciugamano";
+"bathtub" = "vasca";
+"beer bottle" = "bottiglia";
+"beer glass" = "bicchiere";
+"binder" = "raccoglitore";
+"binoculars" = "binocolo";
+"bookcase" = "libreria";
+"bottlecap" = "tappo";
+"broom" = "scopa";
+"bucket" = "secchio";
+"caldron" = "calderone";
+"candle" = "candela";
+"can opener" = "apri lattine";
+"carpenter's kit" = "attrezzi";
+"carton" = "cartone";
+"chain saw" = "motosega";
+"chest" = "cassa";
+"chiffonier" = "comodino";
+"china cabinet" = "armadio";
+"Christmas stocking" = "calza di natale";
+"cleaver" = "mannaia";
+
+"iPod" = "smartphone";
+
+"water bottle" = "bottiglia";
+
+//Tech
+"cassette" = "cassetta";
+"cassette player" = "lettore di cassette";
+"CD player" = "lettore cd";
+"cellular telephone" = "smartphone";
+
+

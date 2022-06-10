@@ -20,6 +20,11 @@ struct ContentView: View {
     @State private var isCameraViewPresented: Bool = false
     @State private var selectedImage: UIImage?
     
+    let mainMenu: LocalizedStringKey = "mainMenu"
+    let takePhoto: LocalizedStringKey = "takePhoto"
+    let chooseLibrary: LocalizedStringKey = "chooseLibrary"
+    let searchKeywords: LocalizedStringKey = "searchKeywords"
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 50) {
@@ -32,7 +37,7 @@ struct ContentView: View {
                 
                 //Present Camera View
                 ButtonView(
-                    title: "Take a photo",
+                    title: takePhoto,
                     icon: "camera.fill",
                     color: .red
                 )
@@ -45,18 +50,22 @@ struct ContentView: View {
                     destination: LibraryView(),
                     isActive: $isLibraryViewActive
                 ) {
-                    ButtonView(title: "Choose from the Library", icon: "photo.on.rectangle.angled", color: .blue)
+                    ButtonView(title: chooseLibrary,
+                               icon: "photo.on.rectangle.angled",
+                               color: .blue)
                 }
                 .isDetailLink(false)
                 
                 NavigationLink {
                 } label: {
-                    ButtonView(title: "Search by key-words", icon: "keyboard.fill", color: .yellow)
+                    ButtonView(title: searchKeywords,
+                               icon: "keyboard.fill",
+                               color: .yellow)
                 }
                 
                 Spacer()
             }
-            .navigationTitle("Main Menu")
+            .navigationTitle(mainMenu)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {

@@ -1,0 +1,72 @@
+/* 
+  Localizable.strings
+  AlzHelper
+
+  Created by Valerio Domenico Conte on 09/06/22.
+  
+*/
+
+// CONTENT VIEW
+"mainMenu" = "Main menu";
+"takePhoto" = "Take a photo";
+"chooseLibrary" =  "Choose from the library";
+"searchKeywords" =  "Search by key-words";
+
+//ALERTS GUESS VIEW
+"correct" = "Correct!";
+"mainScreen" = "Main screen";
+"correctMessage" = "Go back to main screen to identify new objects.";
+"wrong" = "Nice try!";
+"tryAgain" = "Try again";
+"wrongMessage" = "Almost done, you are very close.";
+
+//LIBRARY VIEW
+"library" = "Library";
+"browseCategories" = "Browse categories";
+
+//CATEGORIES
+"animals" = "animals";
+"food" = "food";
+
+
+//LABELS
+//House
+"abacus" = "abacus";
+"analog clock" = "clock";
+"ashcan" = "trash bin";
+"ballpoint" = "pen";
+"Band Aid" = "band aid";
+"barber chair" = "chair";
+"barometer" = "barometer";
+"bassinet" = "bassinet";
+"bath towel" = "bath towel";
+"bathtub" = "bathing tub";
+"beer bottle" = "bottle";
+"beer glass" = "glass";
+"binder" = "binder";
+"binoculars" = "binoculars";
+"bookcase" = "bookcase";
+"bottlecap" = "bottlecap";
+"broom" = "broom";
+"bucket" = "bucket";
+"caldron" = "caldron";
+"candle" = "candle";
+"can opener" = "can opener";
+"carpenter's kit" = "tool kit";
+"carton" = "carton";
+"chain saw" = "chainsaw";
+"chest" = "chest";
+"chiffonier" = "commode";
+"china cabinet" = "closet";
+"Christmas stocking" = "christmas stocking";
+"cleaver" = "cleaver";
+
+"iPod" = "smartphone";
+
+"water bottle" = "bottle";
+
+//Tech
+"cassette" = "cassette";
+"cassette player" = "cassette player";
+"CD player" = "cd player";
+"cellular telephone" = "smartphone";

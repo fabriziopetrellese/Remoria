@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ButtonView: View {
-    let title: String
+    let title: LocalizedStringKey
     let icon: String
     let color: Color
     

@@ -14,11 +14,14 @@ struct LibraryView: View {
     
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     
+    let library: LocalizedStringKey = "library"
+    let browseCategories: LocalizedStringKey = "browseCategories"
+    
     var searchResults: [Category] {
         if searchText.isEmpty {
             return categoriesModel.categories
         } else {
-            return categoriesModel.categories.filter { $0.name.contains(searchText.lowercased()) }
+            return categoriesModel.categories.filter { String(format: NSLocalizedString($0.name, comment: "")).contains(searchText.lowercased()) }
         }
     }
     
@@ -28,17 +31,20 @@ struct LibraryView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(searchResults) { category in
                         NavigationLink {
-                            CategoryView(categoryName: category.name, categoryItems: category.items)
+                            CategoryView(categoryName: String(format: NSLocalizedString(category.name, comment: "")),
+                                         categoryItems: category.items)
                         } label: {
-                            CardView(label: category.name.capitalized, pic: category.image, color: category.color)
+                            CardView(label: String(format: NSLocalizedString(category.name, comment: "")).capitalized,
+                                     pic: category.image,
+                                     color: category.color)
                         }
                     }
                 }
                 .padding()
             }
         }
-        .navigationTitle("Library")
-        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always) ,prompt: "Browse categories")
+        .navigationTitle(library)
+        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always) ,prompt: browseCategories)
     }
 }
 

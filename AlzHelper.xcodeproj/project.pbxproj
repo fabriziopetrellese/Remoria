@@ -14,6 +14,7 @@
 		49A770292845926000971C6C /* NavigationRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A770282845926000971C6C /* NavigationRoot.swift */; };
 		B948310328462DD8003F521E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B948310228462DD8003F521E /* String+Extensions.swift */; };
 		B9483105284642FF003F521E /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9483104284642FF003F521E /* ImagePickerView.swift */; };
+		B9B517B12852222200D481C2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9B517B32852222200D481C2 /* Localizable.strings */; };
 		B9F45AC8283D0CC000899706 /* AlzHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AC7283D0CC000899706 /* AlzHelperApp.swift */; };
 		B9F45ACA283D0CC000899706 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AC9283D0CC000899706 /* ContentView.swift */; };
 		B9F45ACC283D0CC100899706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F45ACB283D0CC100899706 /* Assets.xcassets */; };
@@ -40,6 +41,8 @@
 		49A770282845926000971C6C /* NavigationRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRoot.swift; sourceTree = "<group>"; };
 		B948310228462DD8003F521E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		B9483104284642FF003F521E /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		B9B517B22852222200D481C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9B517B42852222400D481C2 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B9F45AC4283D0CC000899706 /* AlzHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlzHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F45AC7283D0CC000899706 /* AlzHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzHelperApp.swift; sourceTree = "<group>"; };
 		B9F45AC9283D0CC000899706 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 				B9F45ADC283D0F2B00899706 /* ML Image Classification */,
 				B9F45AD5283D0CF200899706 /* Controllers */,
 				B9F45ACB283D0CC100899706 /* Assets.xcassets */,
+				B9B517B32852222200D481C2 /* Localizable.strings */,
 				B9F45AE3283D0FC600899706 /* MobileNet.mlmodel */,
 				2A172979284D1E9A0031FE20 /* MobileNetV2.mlmodel */,
 				B9F45ACD283D0CC100899706 /* Preview Content */,
@@ -224,6 +228,7 @@
 			knownRegions = (
 				en,
 				Base,
+				it,
 			);
 			mainGroup = B9F45ABB283D0CC000899706;
 			productRefGroup = B9F45AC5283D0CC000899706 /* Products */;
@@ -241,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F45ACF283D0CC100899706 /* Preview Assets.xcassets in Resources */,
+				B9B517B12852222200D481C2 /* Localizable.strings in Resources */,
 				B9F45AF128451C6200899706 /* items.json in Resources */,
 				B9F45ACC283D0CC100899706 /* Assets.xcassets in Resources */,
 			);
@@ -277,6 +283,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B9B517B32852222200D481C2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9B517B22852222200D481C2 /* en */,
+				B9B517B42852222400D481C2 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B9F45AD0283D0CC100899706 /* Debug */ = {
@@ -401,7 +419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AlzHelper/Preview Content\"";
-				DEVELOPMENT_TEAM = 2LK4JE65RJ;
+				DEVELOPMENT_TEAM = 37THZ8H7Q6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlzHelper/Info.plist;
@@ -433,7 +451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AlzHelper/Preview Content\"";
-				DEVELOPMENT_TEAM = 2LK4JE65RJ;
+				DEVELOPMENT_TEAM = 37THZ8H7Q6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlzHelper/Info.plist;

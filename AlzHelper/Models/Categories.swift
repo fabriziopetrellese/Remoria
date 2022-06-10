@@ -20,6 +20,7 @@ struct Item: Codable, Identifiable {
     var label: String
     var category: String
     var imageUrl: String? // Library Category Image Url path
+//    var tags: [String]
     
     // for previews
     static let sampleItem = Bundle.main.decode([Item].self, from: "items.json").first!
@@ -27,9 +28,18 @@ struct Item: Codable, Identifiable {
 
 class Categories: ObservableObject {
     @Published var itemsCollection = Bundle.main.decode([Item].self, from: "items.json")
+    
     @Published var categories = [Category]()
+    
     @Published var animals = [Item]()
     @Published var food = [Item]()
+    @Published var music = [Item]()
+    @Published var house = [Item]()
+    @Published var technology = [Item]()
+    @Published var sport = [Item]()
+    @Published var clothes = [Item]()
+    @Published var vehicles = [Item]()
+    @Published var buildings = [Item]()
     
     func getCategories() {
         for i in 0..<itemsCollection.count {
@@ -38,6 +48,10 @@ class Categories: ObservableObject {
                 animals.append(itemsCollection[i])
             case "food":
                 food.append(itemsCollection[i])
+            case "music":
+                music.append(itemsCollection[i])
+            case "house":
+                house.append(itemsCollection[i])
             default:
                 return
             }
