@@ -34,12 +34,12 @@ struct ContentView: View {
                     destination: GuessView(itemUiImage:selectedImage),
                     isActive: $isGuessViewActive
                 ) {}
-                
                 //Present Camera View
                 ButtonView(
                     title: takePhoto,
                     icon: "camera.fill",
-                    color: .red
+                    color: .red,
+                    shadowRadius: 4
                 )
                 .onTapGesture {
                     isCameraViewPresented.toggle()
@@ -52,7 +52,9 @@ struct ContentView: View {
                 ) {
                     ButtonView(title: chooseLibrary,
                                icon: "photo.on.rectangle.angled",
-                               color: .blue)
+                               color: .blue,
+                               shadowRadius: 4
+                    )
                 }
                 .isDetailLink(false)
                 
@@ -60,11 +62,12 @@ struct ContentView: View {
                 } label: {
                     ButtonView(title: searchKeywords,
                                icon: "keyboard.fill",
-                               color: .yellow)
+                               color: .yellow,
+                               shadowRadius: 4
+                    )
                 }
-                
-                Spacer()
             }
+            .padding(.bottom, 40)
             .navigationTitle(mainMenu)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
