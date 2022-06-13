@@ -80,6 +80,22 @@ class Categories: ObservableObject {
                 mollusks.append(itemsCollection[i])
             case "annelids":
                 annelids.append(itemsCollection[i])
+            case "food":
+                fish.append(itemsCollection[i])
+            case "music":
+                birds.append(itemsCollection[i])
+            case "house":
+                amphibians.append(itemsCollection[i])
+            case "technology":
+                insects.append(itemsCollection[i])
+            case "sport":
+                reptiles.append(itemsCollection[i])
+            case "clothes":
+                arachnids.append(itemsCollection[i])
+            case "vehicles":
+                mollusks.append(itemsCollection[i])
+            case "buildings":
+                annelids.append(itemsCollection[i])
             default:
                 print("ERROR")
                 print(itemsCollection[i].label)
@@ -100,5 +116,16 @@ class Categories: ObservableObject {
         categories.append(Category(name: "arachnids", image: "🦂", color: .blue, items: arachnids))
         categories.append(Category(name: "mollusks", image: "🦑", color: .red, items: mollusks))
         categories.append(Category(name: "annelids", image: "🪱", color: .yellow, items: annelids))
+        
+        
+        
+        categories.append(Category(name: "food", image: "🍽", color: .green, items: food))
+        categories.append(Category(name: "music", image: "🎹", color: .blue, items: music))
+        categories.append(Category(name: "house", image: "🏠", color: .red, items: house))
+        categories.append(Category(name: "technology", image: "💻", color: .yellow, items: technology))
+        categories.append(Category(name: "sport", image: "⚽️", color: .green, items: sport))
+        categories.append(Category(name: "clothes", image: "👕", color: .red, items: clothes))
+        categories.append(Category(name: "vehicles", image: "🚗", color: .blue, items: vehicles))
+        categories.append(Category(name: "buildings", image: "🏬", color: .yellow, items: buildings))
     }
 }

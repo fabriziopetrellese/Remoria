@@ -36,6 +36,15 @@
 "mollusks" = "molluschi";
 "annelids" = "anellidi";
 
+"food" = "cibo";
+"music" = "musica";
+"house" = "casa";
+"technology" = "tecnologia";
+"sport" = "sport";
+"vehicles" = "veicoli";
+"buildings" = "edifici";
+
+
 
 //LABELS
 //House
@@ -78,5 +87,13 @@
 "cassette player" = "lettore di cassette";
 "CD player" = "lettore cd";
 "cellular telephone" = "smartphone";
+
+//Fish
+//"tench"
+//"goldfish"
+//"great white shark"
+//"tiger shark"
+//"hammerhead"
+//"electric ray"
 
 

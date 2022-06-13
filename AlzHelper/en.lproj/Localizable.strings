@@ -36,6 +36,14 @@
 "mollusks" = "mollusks";
 "annelids" = "annelids";
 
+"food" = "food";
+"music" = "music";
+"house" = "house";
+"technology" = "technology";
+"sport" = "sport";
+"vehicles" = "vehicles";
+"buildings" = "buildings";
+
 //LABELS
 //House
 "abacus" = "abacus";
