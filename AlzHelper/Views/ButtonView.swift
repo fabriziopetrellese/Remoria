@@ -11,13 +11,14 @@ struct ButtonView: View {
     let title: LocalizedStringKey
     let icon: String
     let color: Color
+    var shadowRadius: CGFloat
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
                 .foregroundColor(color)
                 .frame(width: 280, height: 140)
-                .shadow(radius: 5)
+                .shadow(radius: shadowRadius)
             
             VStack {
                 Text(title)
