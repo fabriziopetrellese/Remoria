@@ -1,78 +1,5 @@
 [
      {
-         "id": 0,
-         "label": "dog",
-         "category": "animals",
-         "imageUrl": "https://cdn.pixabay.com/photo/2016/02/19/15/46/labrador-retriever-1210559_1280.jpg",
-         "source": "library",
-         "tags": ["animal", "pet", "furry"]
-     },
-     
-     {
-         "id": 1,
-         "label": "cat",
-         "category": "animals",
-         "imageUrl": "https://cdn.pixabay.com/photo/2015/11/16/22/14/cat-1046544_1280.jpg",
-         "source": "library",
-         "tags": ["animal", "pet", "meow"]
-     },
-     
-     {
-         "id": 2,
-         "label": "horse",
-         "category": "animals",
-         "imageUrl": "https://cdn.pixabay.com/photo/2018/08/17/01/14/horse-3611921_1280.jpg",
-         "source": "library",
-         "tags": ["animal", "tail", "horseshoes"]
-     },
-     
-     {
-         "id": 3,
-         "label": "snake",
-         "category": "animals",
-         "imageUrl": "https://cdn.pixabay.com/photo/2014/08/15/21/40/snake-419043_1280.jpg",
-         "source": "library",
-         "tags": ["animal", "reptile", "poison"]
-     },
-     
-     {
-         "id": 4,
-         "label": "apple",
-         "category": "food",
-         "imageUrl": "https://cdn.pixabay.com/photo/2017/09/26/13/31/apple-2788616_1280.jpg",
-         "source": "library",
-         "tags": ["fruit", "red", "green"]
-     },
-     
-     {
-         "id": 5,
-         "label": "pizza",
-         "category": "food",
-         "imageUrl": "https://cdn.pixabay.com/photo/2020/06/08/16/49/pizza-5275191_1280.jpg",
-         "source": "library",
-         "tags": ["food", "tomato", "cheese"]
-     },
-     
-     {
-         "id": 6,
-         "label": "banana",
-         "category": "food",
-         "imageUrl": "https://cdn.pixabay.com/photo/2015/02/27/17/58/bananas-652497_1280.jpg",
-         "source": "library",
-         "tags": ["fruit", "yellow", "potassium"]
-     },
-     
-     {
-         "id": 7,
-         "label": "bread",
-         "category": "food",
-         "imageUrl": "https://cdn.pixabay.com/photo/2017/06/23/23/57/bread-2436370_1280.jpg",
-         "source": "library",
-         "tags": ["food", "flour", "sugar"]
-     },
-     
-     
-     {
          "id": 8,
          "label": "tench",
          "category": "fish",
@@ -144,7 +71,7 @@
      {
          "id": 15,
          "label": "cock",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -154,7 +81,7 @@
      {
          "id": 16,
          "label": "hen",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -164,7 +91,7 @@
      {
          "id": 17,
          "label": "ostrich",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -174,7 +101,7 @@
      {
          "id": 18,
          "label": "brambling",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -184,7 +111,7 @@
      {
          "id": 19,
          "label": "goldfinch",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -194,7 +121,7 @@
      {
          "id": 20,
          "label": "house finch",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -204,7 +131,7 @@
      {
          "id": 21,
          "label": "junco",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -214,7 +141,7 @@
      {
          "id": 22,
          "label": "indigo bunting",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -224,7 +151,7 @@
      {
          "id": 23,
          "label": "robin",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -234,7 +161,7 @@
      {
          "id": 24,
          "label": "bulbul",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -244,7 +171,7 @@
      {
          "id": 25,
          "label": "jay",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -254,7 +181,7 @@
      {
          "id": 26,
          "label": "magpie",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -264,7 +191,7 @@
      {
          "id": 27,
          "label": "chickadee",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -275,7 +202,7 @@
      {
          "id": 28,
          "label": "water ouzel",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -285,7 +212,7 @@
      {
          "id": 29,
          "label": "kite",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -295,7 +222,7 @@
      {
          "id": 30,
          "label": "bald eagle",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -305,7 +232,7 @@
      {
          "id": 31,
          "label": "vulture",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -315,7 +242,7 @@
      {
          "id": 32,
          "label": "great grey owl",
-         "category": "bird",
+         "category": "birds",
          "imageUrl": "",
          "source": "library",
          "tags": ["bird"]
@@ -3529,10 +3456,10 @@
      {
          "id": 354,
          "label": "sorrel",
-         "category": "plants",
+         "category": "animals",
          "imageUrl": "",
          "source": "library",
-         "tags": ["plant"]
+         "tags": ["animal", "horse"]
      },
      
      
@@ -4111,20 +4038,7 @@
          "imageUrl": "",
          "source": "library",
          "tags": ["animal"]
-     },
-     
-     
-     {
-         "id": 413,
-         "label": "abacus",
-         "category": "plants",
-         "imageUrl": "",
-         "source": "library",
-         "tags": ["plant"]
      }
-     
-     
-    
  ]
 
 

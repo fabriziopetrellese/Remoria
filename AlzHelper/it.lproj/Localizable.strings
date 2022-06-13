@@ -25,8 +25,16 @@
 "browseCategories" = "Cerca tra le categorie";
 
 //CATEGORIES
-"animals" = "animali";
-"food" = "cibo";
+"animals" = "animal";
+"ocean animals" = "animali oceanici";
+"fish" = "pesci";
+"birds" = "uccelli";
+"amphibians" = "amfibi";
+"insects" = "insetti";
+"arachnids" = "aracnidi";
+"reptiles" = "rettili";
+"mollusks" = "molluschi";
+"annelids" = "anellidi";
 
 
 //LABELS

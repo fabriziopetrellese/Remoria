@@ -26,8 +26,15 @@
 
 //CATEGORIES
 "animals" = "animals";
-"food" = "food";
-
+"ocean animals" = "ocean animals";
+"fish" = "fish";
+"birds" = "birds";
+"amphibians" = "amphibians";
+"insects" = "insects";
+"arachnids" = "arachnids";
+"reptiles" = "reptiles";
+"mollusks" = "mollusks";
+"annelids" = "annelids";
 
 //LABELS
 //House
@@ -70,3 +77,6 @@
 "cassette player" = "cassette player";
 "CD player" = "cd player";
 "cellular telephone" = "smartphone";
+
+
+
