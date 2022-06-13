@@ -89,11 +89,31 @@
 "cellular telephone" = "smartphone";
 
 //Fish
-"tench" = "pesce"
-"goldfish"= "pesce"
-"great white shark" = "squalo"
-"tiger shark" = "squalo"
-"hammerhead" = "pesce"
-"electric ray" =
+"tench" = "pesce";
+"goldfish"= "pesce";
+"great white shark" = "squalo";
+"tiger shark" = "squalo";
+"hammerhead" = "pesce";
+"electric ray" = "pesce";
+
+//Birds
+"cock" = "gallo";
+"hen" = "gallina";
+"ostrich" = "struzzo";
+"brambling" = "uccello"
+"goldfinch" = "uccello";
+"house finch" = "uccello";
+"junco" = "uccello";
+"indigo bunting" = "uccello";
+"robin" = "uccello";
+"bulbul" = "uccello";
+"jay" = "uccello";
+"magpie" = "uccello";
+"chickadee" = "uccello";
+"water ouzel" = "uccello";
+"kite" = "uccello";
+"bald eagle" = "aquila";
+"vulture" = "avvoltoio";
+"great grey owl" = "gufo";
 
 
