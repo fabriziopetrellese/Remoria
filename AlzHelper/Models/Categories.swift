@@ -81,21 +81,21 @@ class Categories: ObservableObject {
             case "annelids":
                 annelids.append(itemsCollection[i])
             case "food":
-                fish.append(itemsCollection[i])
+                food.append(itemsCollection[i])
             case "music":
-                birds.append(itemsCollection[i])
+                music.append(itemsCollection[i])
             case "house":
-                amphibians.append(itemsCollection[i])
+                house.append(itemsCollection[i])
             case "technology":
-                insects.append(itemsCollection[i])
+                technology.append(itemsCollection[i])
             case "sport":
-                reptiles.append(itemsCollection[i])
+                sport.append(itemsCollection[i])
             case "clothes":
-                arachnids.append(itemsCollection[i])
+                clothes.append(itemsCollection[i])
             case "vehicles":
-                mollusks.append(itemsCollection[i])
+                vehicles.append(itemsCollection[i])
             case "buildings":
-                annelids.append(itemsCollection[i])
+                buildings.append(itemsCollection[i])
             default:
                 print("ERROR")
                 print(itemsCollection[i].label)

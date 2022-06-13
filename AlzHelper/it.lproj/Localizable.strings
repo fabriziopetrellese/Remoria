@@ -89,11 +89,11 @@
 "cellular telephone" = "smartphone";
 
 //Fish
-//"tench"
-//"goldfish"
-//"great white shark"
-//"tiger shark"
-//"hammerhead"
-//"electric ray"
+"tench" = "pesce"
+"goldfish"= "pesce"
+"great white shark" = "squalo"
+"tiger shark" = "squalo"
+"hammerhead" = "pesce"
+"electric ray" =
 
 
