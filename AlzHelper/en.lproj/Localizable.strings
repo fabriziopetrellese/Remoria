@@ -98,7 +98,7 @@
 "cock" = "cock";
 "cock" = "cock";
 "ostrich" = "ostrich";
-"brambling" = "bird"
+"brambling" = "bird";
 "goldfinch" = "bird";
 "house finch" = "bird";
 "junco" = "bird";
@@ -114,5 +114,13 @@
 "vulture" = "vulture";
 "great grey owl" = "owl";
 
-
+//Amphibians
+"European fire salamander" = "salamander";
+"common newt" = "salamander";
+"eft" = "salamander";
+"spotted salamander" = "salamander";
+"axolotl" = "salamander";
+"bullfrog" = "frog";
+"tree frog" = "frog";
+"tailed frog" = "frog";
 
