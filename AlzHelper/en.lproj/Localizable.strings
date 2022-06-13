@@ -86,6 +86,36 @@
 "CD player" = "cd player";
 "cellular telephone" = "smartphone";
 
+//Fish
+"tench" = "fish";
+"goldfish"= "fish";
+"great white shark" = "shark";
+"tiger shark" = "shark";
+"hammerhead" = "fish";
+"electric ray" = "fish";
+
+//Birds
+"cock" = "cock";
+"cock" = "cock";
+"ostrich" = "ostrich";
+"brambling" = "bird"
+"goldfinch" = "bird";
+"house finch" = "bird";
+"junco" = "bird";
+"indigo bunting" = "bird";
+"robin" = "bird";
+"bulbul" = "bird";
+"jay" = "bird";
+"magpie" = "bird";
+"chickadee" = "bird";
+"water ouzel" = "bird";
+"kite" = "bird";
+"bald eagle" = "eagle";
+"vulture" = "vulture";
+"great grey owl" = "owl";
+
+
+
 "first" = " Make sure the object";
 "second" = " is prominent.";
 
