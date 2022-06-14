@@ -39,7 +39,7 @@ struct ContentView: View {
                     title: takePhoto,
                     icon: "camera.fill",
                     color: .red,
-                    shadowRadius: 4
+                    card: "firstCard"
                 )
                 .onTapGesture {
                     isCameraViewPresented.toggle()
@@ -53,7 +53,7 @@ struct ContentView: View {
                     ButtonView(title: chooseLibrary,
                                icon: "photo.on.rectangle.angled",
                                color: .blue,
-                               shadowRadius: 4
+                               card: "secondCard"
                     )
                 }
                 .isDetailLink(false)
@@ -63,7 +63,7 @@ struct ContentView: View {
                     ButtonView(title: searchKeywords,
                                icon: "keyboard.fill",
                                color: .yellow,
-                               shadowRadius: 4
+                               card: "thirdCard"
                     )
                 }
             }
@@ -103,6 +103,13 @@ struct ContentView: View {
         .environmentObject(navigationRoot)
     }
 }
+
+
+extension Color {
+    static let lightPurple = Color("lightPurple")
+}
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

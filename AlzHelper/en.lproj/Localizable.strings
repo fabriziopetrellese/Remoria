@@ -34,13 +34,13 @@
 "arachnids" = "arachnids";
 "reptiles" = "reptiles";
 "mollusks" = "mollusks";
-"annelids" = "annelids";
 
 "food" = "food";
 "music" = "music";
 "house" = "house";
 "technology" = "technology";
 "sport" = "sport";
+"clothes" = "clothing";
 "vehicles" = "vehicles";
 "buildings" = "buildings";
 
@@ -115,7 +115,7 @@
 "great grey owl" = "owl";
 
 
-
+//ONBOARDING
 "first" = " Make sure the object";
 "second" = " is prominent.";
 
@@ -132,3 +132,5 @@
 
 "first6" = " Try to describe the";
 "second6" = " object using key-words.";
+
+"done" = "Done";

@@ -48,12 +48,12 @@ struct LibraryView: View {
     }
 }
 
-struct LibraryView_Previews: PreviewProvider {
-    static var previews: some View {
-        LibraryView()
-            .environmentObject(Categories())
-    }
-}
+//struct LibraryView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LibraryView()
+//            .environmentObject(Categories())
+//    }
+//}
 
 struct CardView: View {
     let label: String
@@ -62,13 +62,11 @@ struct CardView: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 180, height: 120)
-                .foregroundColor(color)
-                .shadow(radius: 5)
+            Image("libraryCard")
 
             Text(pic)
                 .font(.largeTitle)
+                .padding(.bottom, 23)
             
             Text(label)
                 .font(.title3)
@@ -76,7 +74,15 @@ struct CardView: View {
                 .foregroundColor(.white)
                 .frame(width: 150, alignment: .leading)
                 .padding(.top, 80)
+                .padding(.trailing, 10)
             
         }
+    }
+}
+
+struct CardView_Previews: PreviewProvider {
+    static var previews: some View {
+        CardView(label: "Animali marini", pic: "🐍", color: .lightPurple)
+            .environmentObject(Categories())
     }
 }

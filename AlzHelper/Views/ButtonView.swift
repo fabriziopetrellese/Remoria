@@ -11,22 +11,21 @@ struct ButtonView: View {
     let title: LocalizedStringKey
     let icon: String
     let color: Color
-    var shadowRadius: CGFloat
+    var card: String
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 20)
-                .foregroundColor(color)
-                .frame(width: 280, height: 140)
-                .shadow(radius: shadowRadius)
             
-            VStack {
+            Image(card)
+            
+            ZStack {
                 Text(title)
                     .font(.title)
                     .bold()
                     .foregroundColor(.white)
                     .frame(width: 240, alignment: .center)
                     .multilineTextAlignment(.center)
+                    .padding(.bottom, 42)
 
                 
                 Image(systemName: icon)
@@ -34,7 +33,15 @@ struct ButtonView: View {
                     .scaledToFit()
                     .foregroundColor(.white)
                     .frame(width: 32, height: 32)
+                    .padding(.top, 69)
             }
         }
+    }
+}
+
+
+struct ButtonView_Previews: PreviewProvider {
+    static var previews: some View {
+        ButtonView(title: "Take a photo", icon: "photo.on.rectangle.angled", color: .white, card: "firstCard")
     }
 }

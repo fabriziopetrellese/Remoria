@@ -46,7 +46,6 @@ class Categories: ObservableObject {
     @Published var reptiles = [Item]()
     @Published var arachnids = [Item]()
     @Published var mollusks = [Item]()
-    @Published var annelids = [Item]()
 
     @Published var food = [Item]()
     @Published var music = [Item]()
@@ -78,8 +77,6 @@ class Categories: ObservableObject {
                 arachnids.append(itemsCollection[i])
             case "mollusks":
                 mollusks.append(itemsCollection[i])
-            case "annelids":
-                annelids.append(itemsCollection[i])
             case "food":
                 food.append(itemsCollection[i])
             case "music":
@@ -106,26 +103,23 @@ class Categories: ObservableObject {
     }
     
     func appendCategories() {
-        categories.append(Category(name: "animals", image: "🐶", color: .red, items: animals))
-        categories.append(Category(name: "ocean animals", image: "🐳", color: .yellow, items: ocean_animals))
-        categories.append(Category(name: "fish", image: "🐟", color: .green, items: fish))
-        categories.append(Category(name: "birds", image: "🐥", color: .blue, items: birds))
-        categories.append(Category(name: "amphibians", image: "🐸", color: .red, items: amphibians))
-        categories.append(Category(name: "insects", image: "🐞", color: .yellow, items: insects))
-        categories.append(Category(name: "reptiles", image: "🐍", color: .green, items: reptiles))
-        categories.append(Category(name: "arachnids", image: "🦂", color: .blue, items: arachnids))
-        categories.append(Category(name: "mollusks", image: "🦑", color: .red, items: mollusks))
-        categories.append(Category(name: "annelids", image: "🪱", color: .yellow, items: annelids))
+        categories.append(Category(name: "animals", image: "🐶", color: .lightPurple, items: animals))
+        categories.append(Category(name: "ocean animals", image: "🐳", color: .lightPurple, items: ocean_animals))
+        categories.append(Category(name: "fish", image: "🐟", color: .lightPurple, items: fish))
+        categories.append(Category(name: "birds", image: "🐥", color: .lightPurple, items: birds))
+        categories.append(Category(name: "amphibians", image: "🐸", color: .lightPurple, items: amphibians))
+        categories.append(Category(name: "insects", image: "🐞", color: .lightPurple, items: insects))
+        categories.append(Category(name: "reptiles", image: "🐍", color: .lightPurple, items: reptiles))
+        categories.append(Category(name: "arachnids", image: "🦂", color: .lightPurple, items: arachnids))
+        categories.append(Category(name: "mollusks", image: "🦑", color: .lightPurple, items: mollusks))
         
-        
-        
-        categories.append(Category(name: "food", image: "🍽", color: .green, items: food))
-        categories.append(Category(name: "music", image: "🎹", color: .blue, items: music))
-        categories.append(Category(name: "house", image: "🏠", color: .red, items: house))
-        categories.append(Category(name: "technology", image: "💻", color: .yellow, items: technology))
-        categories.append(Category(name: "sport", image: "⚽️", color: .green, items: sport))
-        categories.append(Category(name: "clothes", image: "👕", color: .red, items: clothes))
-        categories.append(Category(name: "vehicles", image: "🚗", color: .blue, items: vehicles))
-        categories.append(Category(name: "buildings", image: "🏬", color: .yellow, items: buildings))
+        categories.append(Category(name: "food", image: "🍽", color: .lightPurple, items: food))
+        categories.append(Category(name: "music", image: "🎹", color: .lightPurple, items: music))
+        categories.append(Category(name: "house", image: "🏠", color: .lightPurple, items: house))
+        categories.append(Category(name: "technology", image: "💻", color: .lightPurple, items: technology))
+        categories.append(Category(name: "sport", image: "⚽️", color: .lightPurple, items: sport))
+        categories.append(Category(name: "clothes", image: "👕", color: .lightPurple, items: clothes))
+        categories.append(Category(name: "vehicles", image: "🚗", color: .lightPurple, items: vehicles))
+        categories.append(Category(name: "buildings", image: "🏬", color: .lightPurple, items: buildings))
     }
 }

@@ -835,7 +835,7 @@
      {
          "id": 91,
          "label": "centipede",
-         "category": "annelids",
+         "category": "insects",
          "imageUrl": "",
          "source": "library",
          "tags": ["annelid"]
@@ -1167,7 +1167,7 @@
      {
          "id": 124,
          "label": "nematode",
-         "category": "annelids",
+         "category": "insects",
          "imageUrl": "",
          "source": "library",
          "tags": ["annelid"]

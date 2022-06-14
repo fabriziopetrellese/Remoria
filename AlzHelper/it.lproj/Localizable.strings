@@ -25,16 +25,15 @@
 "browseCategories" = "Cerca tra le categorie";
 
 //CATEGORIES
-"animals" = "animal";
-"ocean animals" = "animali oceanici";
+"animals" = "animali";
+"ocean animals" = "animali marini";
 "fish" = "pesci";
 "birds" = "uccelli";
-"amphibians" = "amfibi";
+"amphibians" = "anfibi";
 "insects" = "insetti";
 "arachnids" = "aracnidi";
 "reptiles" = "rettili";
 "mollusks" = "molluschi";
-"annelids" = "anellidi";
 
 "food" = "cibo";
 "music" = "musica";
@@ -42,6 +41,7 @@
 "technology" = "tecnologia";
 "sport" = "sport";
 "vehicles" = "veicoli";
+"clothes" = "abbigliamento";
 "buildings" = "edifici";
 
 
@@ -117,6 +117,7 @@
 "great grey owl" = "gufo";
 
 
+//ONBOARDING
 "first" = " Controlla che l'oggetto";
 "second" = " sia in primo piano.";
 
@@ -133,3 +134,5 @@
 
 "first6" = " Descrivi l'oggetto";
 "second6" = " usando parole chiave.";
+
+"done" = "Fatto";

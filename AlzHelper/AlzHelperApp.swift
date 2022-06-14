@@ -14,6 +14,7 @@ struct AlzHelperApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(.light)
                 .onAppear {
                     categories.getCategories()
                 }
