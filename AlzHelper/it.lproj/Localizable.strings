@@ -28,19 +28,6 @@
 "library" = "Libreria";
 "browseCategories" = "Cerca tra le categorie";
 
-//ONBOARDING
-"first" = " Controlla che l'oggetto";
-"second" = " sia in primo piano.";
-"first2" = " Controlla che l'oggetto";
-"second2" = " sia a fuoco.";
-"first3" = " Se non hai l'oggetto";
-"second3" = " a disposizione";
-"first4" = " Scegli dal nostro";
-"second4" = " catalogo di immagini.";
-"first5" = " Non trovi un'immagine nella libreria?";
-"first6" = " Descrivi l'oggetto";
-"second6" = " usando parole chiave.";
-
 //CATEGORIES
 "animals" = "animali";
 "ocean animals" = "animali marini";
