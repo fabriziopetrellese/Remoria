@@ -62,6 +62,7 @@ struct ContentView: View {
                 .isDetailLink(false)
                 
                 NavigationLink {
+                    KeywordsSearchView()
                 } label: {
                     ButtonView(title: searchKeywords,
                                icon: "keyboard.fill",
