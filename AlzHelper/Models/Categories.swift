@@ -33,66 +33,70 @@ struct Item: Codable, Identifiable {
 }
 
 class Categories: ObservableObject {
-    @Published var itemsCollection = Bundle.main.decode([Item].self, from: "items.json")
+    let itemsCollection = Bundle.main.decode([Item].self, from: "items.json")
     
-    @Published var categories = [Category]()
+    var categories = [Category]()
+    var animals = [Item]()
+    var ocean_animals = [Item]()
+    var fish = [Item]()
+    var birds = [Item]()
+    var amphibians = [Item]()
+    var insects = [Item]()
+    var reptiles = [Item]()
+    var arachnids = [Item]()
+    var mollusks = [Item]()
+    var food = [Item]()
+    var music = [Item]()
+    var house = [Item]()
+    var technology = [Item]()
+    var sport = [Item]()
+    var clothes = [Item]()
+    var vehicles = [Item]()
+    var buildings = [Item]()
     
-    @Published var animals = [Item]()
-    @Published var ocean_animals = [Item]()
-    @Published var fish = [Item]()
-    @Published var birds = [Item]()
-    @Published var amphibians = [Item]()
-    @Published var insects = [Item]()
-    @Published var reptiles = [Item]()
-    @Published var arachnids = [Item]()
-    @Published var mollusks = [Item]()
-
-    @Published var food = [Item]()
-    @Published var music = [Item]()
-    @Published var house = [Item]()
-    @Published var technology = [Item]()
-    @Published var sport = [Item]()
-    @Published var clothes = [Item]()
-    @Published var vehicles = [Item]()
-    @Published var buildings = [Item]()
-    
-    func getCategories() {
+    func getCategories() async {
         for i in 0..<itemsCollection.count {
+            
+            var item = itemsCollection[i]
+            
             switch itemsCollection[i].category {
             case "animals":
-                animals.append(itemsCollection[i])
+                if animals.count == 20 { continue }
+                item.imageUrl = await NetworkManager.shared.getItemImageUrl(using: (categoryName: item.category, label: item.label))
+                animals.append(item)
+                
             case "ocean animals":
-                ocean_animals.append(itemsCollection[i])
+                ocean_animals.append(item)
             case "fish":
-                fish.append(itemsCollection[i])
+                fish.append(item)
             case "birds":
-                birds.append(itemsCollection[i])
+                birds.append(item)
             case "amphibians":
-                amphibians.append(itemsCollection[i])
+                amphibians.append(item)
             case "insects":
-                insects.append(itemsCollection[i])
+                insects.append(item)
             case "reptiles":
-                reptiles.append(itemsCollection[i])
+                reptiles.append(item)
             case "arachnids":
-                arachnids.append(itemsCollection[i])
+                arachnids.append(item)
             case "mollusks":
-                mollusks.append(itemsCollection[i])
+                mollusks.append(item)
             case "food":
-                food.append(itemsCollection[i])
+                food.append(item)
             case "music":
-                music.append(itemsCollection[i])
+                music.append(item)
             case "house":
-                house.append(itemsCollection[i])
+                house.append(item)
             case "technology":
-                technology.append(itemsCollection[i])
+                technology.append(item)
             case "sport":
-                sport.append(itemsCollection[i])
+                sport.append(item)
             case "clothes":
-                clothes.append(itemsCollection[i])
+                clothes.append(item)
             case "vehicles":
-                vehicles.append(itemsCollection[i])
+                vehicles.append(item)
             case "buildings":
-                buildings.append(itemsCollection[i])
+                buildings.append(item)
             default:
                 print("ERROR")
                 print(itemsCollection[i].label)
@@ -112,7 +116,6 @@ class Categories: ObservableObject {
         categories.append(Category(name: "reptiles", image: "🐍", color: .lightPurple, items: reptiles))
         categories.append(Category(name: "arachnids", image: "🦂", color: .lightPurple, items: arachnids))
         categories.append(Category(name: "mollusks", image: "🦑", color: .lightPurple, items: mollusks))
-        
         categories.append(Category(name: "food", image: "🍽", color: .lightPurple, items: food))
         categories.append(Category(name: "music", image: "🎹", color: .lightPurple, items: music))
         categories.append(Category(name: "house", image: "🏠", color: .lightPurple, items: house))

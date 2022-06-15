@@ -24,7 +24,10 @@ struct CategoryView: View {
                                 item: item
                             )
                         } label: {
-                            ItemView(imageUrl: item.imageUrl!)
+                            if let imageUrl = item.imageUrl {
+                                ItemView(imageUrl: imageUrl)
+                            }
+//                            Image(systemName: "photo")
                         }
                     }
                 }
