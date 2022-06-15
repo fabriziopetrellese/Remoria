@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A17297A284D1E9A0031FE20 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2A172979284D1E9A0031FE20 /* MobileNetV2.mlmodel */; };
+		2A3455AF285A7FFE00C3EA3C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3455AE285A7FFE00C3EA3C /* NetworkManager.swift */; };
 		2AEBDFA7284A48FE0009D657 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEBDFA6284A48FE0009D657 /* OnboardingView.swift */; };
 		2AEBDFA9284A493F0009D657 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEBDFA8284A493F0009D657 /* ButtonView.swift */; };
 		2AED3FBD2850D67E006159B7 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AED3FBC2850D67E006159B7 /* Bundle+Extensions.swift */; };
@@ -24,9 +24,6 @@
 		B9F45ACA283D0CC000899706 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AC9283D0CC000899706 /* ContentView.swift */; };
 		B9F45ACC283D0CC100899706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F45ACB283D0CC100899706 /* Assets.xcassets */; };
 		B9F45ACF283D0CC100899706 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F45ACE283D0CC100899706 /* Preview Assets.xcassets */; };
-		B9F45AD7283D0D0A00899706 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AD6283D0D0A00899706 /* MainViewController.swift */; };
-		B9F45AD9283D0E6C00899706 /* MainViewController+CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AD8283D0E6C00899706 /* MainViewController+CameraPicker.swift */; };
-		B9F45ADB283D0E9700899706 /* MainViewController+PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45ADA283D0E9700899706 /* MainViewController+PhotoPicker.swift */; };
 		B9F45ADE283D0F6500899706 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45ADD283D0F6500899706 /* ImagePredictor.swift */; };
 		B9F45AE1283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45ADF283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		B9F45AE2283D0F8500899706 /* VNClassificationObservation+confidenceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45AE0283D0F8500899706 /* VNClassificationObservation+confidenceString.swift */; };
@@ -39,7 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A172979284D1E9A0031FE20 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		2A3455AE285A7FFE00C3EA3C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2AEBDFA6284A48FE0009D657 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		2AEBDFA8284A493F0009D657 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		2AED3FBC2850D67E006159B7 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
@@ -58,9 +55,6 @@
 		B9F45AC9283D0CC000899706 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B9F45ACB283D0CC100899706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9F45ACE283D0CC100899706 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B9F45AD6283D0D0A00899706 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		B9F45AD8283D0E6C00899706 /* MainViewController+CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+CameraPicker.swift"; sourceTree = "<group>"; };
-		B9F45ADA283D0E9700899706 /* MainViewController+PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+PhotoPicker.swift"; sourceTree = "<group>"; };
 		B9F45ADD283D0F6500899706 /* ImagePredictor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
 		B9F45ADF283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		B9F45AE0283D0F8500899706 /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
@@ -102,20 +96,11 @@
 		2AED3FB82850D4CD006159B7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2A3455AE285A7FFE00C3EA3C /* NetworkManager.swift */,
 				B9F45AF22845417A00899706 /* Categories.swift */,
 				49A770282845926000971C6C /* NavigationRoot.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		2AED3FB92850D4E2006159B7 /* MainViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				B9F45AD6283D0D0A00899706 /* MainViewController.swift */,
-				B9F45AD8283D0E6C00899706 /* MainViewController+CameraPicker.swift */,
-				B9F45ADA283D0E9700899706 /* MainViewController+PhotoPicker.swift */,
-			);
-			path = MainViewControllers;
 			sourceTree = "<group>";
 		};
 		2AED3FBA2850D52A006159B7 /* Data */ = {
@@ -165,7 +150,6 @@
 				B9F45ACB283D0CC100899706 /* Assets.xcassets */,
 				B9B517B32852222200D481C2 /* Localizable.strings */,
 				B9F45AE3283D0FC600899706 /* MobileNet.mlmodel */,
-				2A172979284D1E9A0031FE20 /* MobileNetV2.mlmodel */,
 				496479F9285A166700112313 /* Nexa.ttf */,
 				496479FA285A166700112313 /* NexaBold.ttf */,
 				496479FB285A166700112313 /* NexaHeavy.ttf */,
@@ -186,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				B9483104284642FF003F521E /* ImagePickerView.swift */,
-				2AED3FB92850D4E2006159B7 /* MainViewControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -277,7 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F45AD7283D0D0A00899706 /* MainViewController.swift in Sources */,
+				2A3455AF285A7FFE00C3EA3C /* NetworkManager.swift in Sources */,
 				49956BA22856003E00729618 /* TextAnimation.swift in Sources */,
 				B9F45AE2283D0F8500899706 /* VNClassificationObservation+confidenceString.swift in Sources */,
 				B9F45AED2844AE3200899706 /* CategoryView.swift in Sources */,
@@ -285,14 +268,11 @@
 				B9483105284642FF003F521E /* ImagePickerView.swift in Sources */,
 				B9F45ACA283D0CC000899706 /* ContentView.swift in Sources */,
 				B9F45AE1283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
-				B9F45AD9283D0E6C00899706 /* MainViewController+CameraPicker.swift in Sources */,
 				2AEBDFA9284A493F0009D657 /* ButtonView.swift in Sources */,
 				B912AF1F285A068F009D51C3 /* KeywordSearchView.swift in Sources */,
-				B9F45ADB283D0E9700899706 /* MainViewController+PhotoPicker.swift in Sources */,
 				B9F45AEF2844F8F100899706 /* GuessView.swift in Sources */,
 				2AED3FBD2850D67E006159B7 /* Bundle+Extensions.swift in Sources */,
 				B948310328462DD8003F521E /* String+Extensions.swift in Sources */,
-				2A17297A284D1E9A0031FE20 /* MobileNetV2.mlmodel in Sources */,
 				B9F45ADE283D0F6500899706 /* ImagePredictor.swift in Sources */,
 				49A770292845926000971C6C /* NavigationRoot.swift in Sources */,
 				B9F45AE72841057D00899706 /* LibraryView.swift in Sources */,

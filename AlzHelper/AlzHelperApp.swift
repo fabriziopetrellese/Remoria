@@ -16,7 +16,7 @@ struct AlzHelperApp: App {
             ContentView()
                 .preferredColorScheme(.light)
                 .onAppear {
-                    categories.getCategories()
+                    Task { await categories.getCategories() }
                 }
                 .environmentObject(categories)
         }
