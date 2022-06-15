@@ -13,6 +13,7 @@
 		2AED3FBD2850D67E006159B7 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AED3FBC2850D67E006159B7 /* Bundle+Extensions.swift */; };
 		49956BA22856003E00729618 /* TextAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49956BA12856003E00729618 /* TextAnimation.swift */; };
 		49A770292845926000971C6C /* NavigationRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A770282845926000971C6C /* NavigationRoot.swift */; };
+		B912AF1F285A068F009D51C3 /* KeywordSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912AF1E285A068F009D51C3 /* KeywordSearchView.swift */; };
 		B948310328462DD8003F521E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B948310228462DD8003F521E /* String+Extensions.swift */; };
 		B9483105284642FF003F521E /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9483104284642FF003F521E /* ImagePickerView.swift */; };
 		B9B517B12852222200D481C2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9B517B32852222200D481C2 /* Localizable.strings */; };
@@ -41,6 +42,7 @@
 		2AED3FBC2850D67E006159B7 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		49956BA12856003E00729618 /* TextAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnimation.swift; sourceTree = "<group>"; };
 		49A770282845926000971C6C /* NavigationRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRoot.swift; sourceTree = "<group>"; };
+		B912AF1E285A068F009D51C3 /* KeywordSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordSearchView.swift; sourceTree = "<group>"; };
 		B948310228462DD8003F521E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		B9483104284642FF003F521E /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		B9B517B22852222200D481C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				B9F45AEC2844AE3200899706 /* CategoryView.swift */,
 				B9F45AEE2844F8F100899706 /* GuessView.swift */,
 				2AEBDFA8284A493F0009D657 /* ButtonView.swift */,
+				B912AF1E285A068F009D51C3 /* KeywordSearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				B9F45AE1283D0F8500899706 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				B9F45AD9283D0E6C00899706 /* MainViewController+CameraPicker.swift in Sources */,
 				2AEBDFA9284A493F0009D657 /* ButtonView.swift in Sources */,
+				B912AF1F285A068F009D51C3 /* KeywordSearchView.swift in Sources */,
 				B9F45ADB283D0E9700899706 /* MainViewController+PhotoPicker.swift in Sources */,
 				B9F45AEF2844F8F100899706 /* GuessView.swift in Sources */,
 				2AED3FBD2850D67E006159B7 /* Bundle+Extensions.swift in Sources */,
@@ -423,7 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AlzHelper/Preview Content\"";
-				DEVELOPMENT_TEAM = 2LK4JE65RJ;
+				DEVELOPMENT_TEAM = 37THZ8H7Q6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlzHelper/Info.plist;
@@ -455,7 +459,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AlzHelper/Preview Content\"";
-				DEVELOPMENT_TEAM = 2LK4JE65RJ;
+				DEVELOPMENT_TEAM = 37THZ8H7Q6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlzHelper/Info.plist;
