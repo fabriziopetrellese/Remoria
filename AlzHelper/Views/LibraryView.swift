@@ -12,7 +12,7 @@ struct LibraryView: View {
     @EnvironmentObject var categoriesModel: Categories
     @State private var searchText = ""
     
-    var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
+    var columns: [GridItem] = Array(repeating: .init(.adaptive(minimum: 150)), count: 2)
     
     let library: LocalizedStringKey = "library"
     let browseCategories: LocalizedStringKey = "browseCategories"
@@ -28,15 +28,16 @@ struct LibraryView: View {
     var body: some View {
         VStack {
             ScrollView {
-                LazyVGrid(columns: columns) {
+                LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(searchResults) { category in
                         NavigationLink {
                             CategoryView(categoryName: String(format: NSLocalizedString(category.name, comment: "")),
                                          categoryItems: category.items)
                         } label: {
                             CardView(label: String(format: NSLocalizedString(category.name, comment: "")).capitalized,
-                                     pic: category.image,
-                                     color: category.color)
+                                     pic: category.image)
+                                       .frame(height: 150)
+                                     
                         }
                     }
                 }
@@ -64,24 +65,20 @@ struct LibraryView_Previews: PreviewProvider {
 struct CardView: View {
     let label: String
     let pic: String
-    let color: Color
     
     var body: some View {
         ZStack {
-            Image("libraryCard")
-                .resizable()
-                .frame(width: 180, height: 120)
 
-            Text(pic)
-                .font(.largeTitle)
-                .padding(.bottom, 20)
+
+            Image(pic)
+                .resizable()
             
             Text(label)
                 .font(Font.custom("Nexa", size: 20))
-                .fontWeight(.bold)
+                .fontWeight(.heavy)
                 .foregroundColor(.white)
                 .frame(width: 150, alignment: .leading)
-                .padding(.top, 80)
+                .padding(.top, 90)
                 .padding(.trailing, 10)
             
         }
@@ -90,7 +87,7 @@ struct CardView: View {
 
 //struct CardView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        CardView(label: "Animali marini", pic: "🐍", color: .lightPurple)
+//        CardView(label: "Animali marini", pic: "🐍")
 //            .environmentObject(Categories())
 //    }
 //}
