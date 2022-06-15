@@ -66,6 +66,6 @@ Contact Us
 
 If you have any questions about this Privacy Policy, You can contact us:
 
-By visiting this page on our website: https://github.com/fabriziopetrellese/Remoria
-By sending an email at: petrellesefabrizio@icloud.com
+###### By visiting this page on our website: https://github.com/fabriziopetrellese/Remoria
+###### By sending an email at: petrellesefabrizio@icloud.com
 
