@@ -17,15 +17,19 @@ struct ButtonView: View {
         ZStack {
             
             Image(card)
+                .resizable()
+                .frame(width: 290, height: 150)
             
             ZStack {
                 Text(title)
-                    .font(.title)
-                    .bold()
+                    .font(Font.custom("Nexa", size: 30))
+                    .fontWeight(.bold)
+//                    .font(.title)
+//                    .bold()
                     .foregroundColor(.white)
                     .frame(width: 240, alignment: .center)
                     .multilineTextAlignment(.center)
-                    .padding(.bottom, 42)
+                    .padding(.bottom, 25)
 
                 
                 Image(systemName: icon)

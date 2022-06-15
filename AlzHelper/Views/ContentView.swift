@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @StateObject var navigationRoot = NavigationRoot()
     @EnvironmentObject var categories: Categories
     @State var showModal: Bool = false
@@ -27,8 +28,10 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 50) {
-                
+            
+            VStack(spacing: 47) {
+//                Text("")
+//                    .navigationBarTitle(Text(mainMenu).font(.largeTitle), displayMode: .large)
                 //Present Guess View
                 NavigationLink(
                     destination: GuessView(itemUiImage:selectedImage),
@@ -67,8 +70,16 @@ struct ContentView: View {
                     )
                 }
             }
+            .background(
+            Image("background")
+                .opacity(0.1)
+                .ignoresSafeArea()
+            )
             .padding(.bottom, 40)
-            .navigationTitle(mainMenu)
+            .onAppear() {
+                UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Nexa", size: 33)!]
+            }
+            .navigationBarTitle(Text(mainMenu).font(.largeTitle), displayMode: .large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
@@ -104,16 +115,24 @@ struct ContentView: View {
     }
 }
 
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .environmentObject(Categories())
+    }
+}
+
+
+
 
 extension Color {
     static let lightPurple = Color("lightPurple")
 }
 
 
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .environmentObject(Categories())
+extension View {
+    func dismissKeyboard() {
+        let resign = #selector(UIResponder.resignFirstResponder)
+        UIApplication.shared.sendAction(resign, to: nil, from: nil, for: nil)
     }
 }

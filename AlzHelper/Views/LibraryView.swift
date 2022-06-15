@@ -43,17 +43,23 @@ struct LibraryView: View {
                 .padding()
             }
         }
+        .background(
+        Image("background")
+            .opacity(0.07)
+            .position(x: 207, y: 450)
+            .ignoresSafeArea()
+        )
         .navigationTitle(library)
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always) ,prompt: browseCategories)
     }
 }
 
-//struct LibraryView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LibraryView()
-//            .environmentObject(Categories())
-//    }
-//}
+struct LibraryView_Previews: PreviewProvider {
+    static var previews: some View {
+        LibraryView()
+            .environmentObject(Categories())
+    }
+}
 
 struct CardView: View {
     let label: String
@@ -63,14 +69,16 @@ struct CardView: View {
     var body: some View {
         ZStack {
             Image("libraryCard")
+                .resizable()
+                .frame(width: 180, height: 120)
 
             Text(pic)
                 .font(.largeTitle)
-                .padding(.bottom, 23)
+                .padding(.bottom, 20)
             
             Text(label)
-                .font(.title3)
-                .bold()
+                .font(Font.custom("Nexa", size: 20))
+                .fontWeight(.bold)
                 .foregroundColor(.white)
                 .frame(width: 150, alignment: .leading)
                 .padding(.top, 80)
@@ -80,9 +88,9 @@ struct CardView: View {
     }
 }
 
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView(label: "Animali marini", pic: "🐍", color: .lightPurple)
-            .environmentObject(Categories())
-    }
-}
+//struct CardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CardView(label: "Animali marini", pic: "🐍", color: .lightPurple)
+//            .environmentObject(Categories())
+//    }
+//}

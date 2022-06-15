@@ -32,6 +32,8 @@ struct OnboardingView: View {
                         done()
                     } label: {
                         Text(doneButton)
+                            .font(Font.custom("Nexa", size: 19))
+                            
                     }
                 }
             }
@@ -54,7 +56,8 @@ struct FirstPage: View {
     var body: some View {
             ZStack {
                 Text(takePhoto)
-                    .font(.system(size: 45))
+//                    .font(.system(size: 45))
+                    .font(Font.custom("Nexa", size: 45))
                     .fontWeight(.bold)
                     .padding(.bottom, 590)
                 
@@ -124,7 +127,7 @@ struct SecondPage: View {
     var body: some View {
         ZStack {
             Text(chooseLibrary)
-                .font(.system(size: 45))
+                .font(Font.custom("Nexa", size: 49))
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
                 .frame(width: 300, height: 150)
@@ -195,7 +198,7 @@ struct ThirdPage: View {
     var body: some View {
         ZStack {
             Text(searchKeywords)
-                .font(.system(size: 43))
+                .font(Font.custom("Nexa", size: 45))
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
                 .frame(width: 300, height: 150)
@@ -214,16 +217,19 @@ struct ThirdPage: View {
                 .padding(.bottom, 240)
             
             
+//            Text("Can't find an image in the library?")
+//            Text("Non trovi un'immagine nella libreria?")
             Text(first5)
-                .fontWeight(.medium)
+                .font(Font.custom("Nexa", size: 33))
+                .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-                .frame(width: 340, height: 160)
-                .animatableSystemFont(size: fontSize)
-                .onAppear() {
-                    withAnimation(.spring(response: 1.5, dampingFraction: 1.5, blendDuration: 1).delay(1)) {
-                        fontSize = 42
-                    }
-                }
+                .frame(width: 330, height: 100)
+//                .animatableSystemFont(size: fontSize)
+//                .onAppear() {
+//                    withAnimation(.spring(response: 1.5, dampingFraction: 1.5, blendDuration: 1).delay(1)) {
+//                        fontSize = 42
+//                    }
+//                }
                 .frame(width: 350, height: 170)
                 .padding(.top, 90)
             
@@ -234,15 +240,15 @@ struct ThirdPage: View {
                 .padding(.top, 320)
                 .opacity(opacity)
                 .onAppear() {
-                    withAnimation(.linear.delay(3.8)) {
+                    withAnimation(.linear.delay(0.7)) {
                         opacity = 1
                     }
                 }
             
             TextAnimation(first: "first6",
                           second: "second6",
-                          delay: 4,
-                          delaySecond: 4.9)
+                          delay: 1.3,
+                          delaySecond: 2.2)
             .padding(.top, 335)
         }
         .padding(.top, 30)
@@ -254,16 +260,16 @@ struct ThirdPage: View {
 
 struct ThirdPage_Previews: PreviewProvider {
     static var previews: some View {
-        FirstPage(showModal: .constant(false))
-            .previewDisplayName("Onboarding 1")
-            .environment(\.locale, .init(identifier: "it"))
+//        FirstPage(showModal: .constant(false))
+//            .previewDisplayName("Onboarding 1")
+//            .environment(\.locale, .init(identifier: "it"))
         
 //        SecondPage(showModal: .constant(false))
 //            .previewDisplayName("Onboarding 2")
 //            .environment(\.locale, .init(identifier: "it"))
         
-//        ThirdPage(showModal: .constant(false))
-//            .previewDisplayName("Onboarding 3")
-//            .environment(\.locale, .init(identifier: "en"))
+        ThirdPage(showModal: .constant(false))
+            .previewDisplayName("Onboarding 3")
+            .environment(\.locale, .init(identifier: "it"))
     }
 }

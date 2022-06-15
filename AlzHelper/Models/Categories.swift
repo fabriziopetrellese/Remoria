@@ -122,4 +122,13 @@ class Categories: ObservableObject {
         categories.append(Category(name: "vehicles", image: "🚗", color: .lightPurple, items: vehicles))
         categories.append(Category(name: "buildings", image: "🏬", color: .lightPurple, items: buildings))
     }
+    
+    func photoCategory(label: String) -> String {
+        for i in 0..<itemsCollection.count {
+            if itemsCollection[i].label == label {
+                return String(format: NSLocalizedString(itemsCollection[i].category, comment: ""))
+            }
+        }
+        return "Some category"
+    }
 }

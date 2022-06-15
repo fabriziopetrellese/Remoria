@@ -12,13 +12,17 @@
 "chooseLibrary" =  "Choose from the library";
 "searchKeywords" =  "Search by key-words";
 
-//ALERTS GUESS VIEW
+//GUESS VIEW
 "correct" = "Correct!";
 "mainScreen" = "Main screen";
 "correctMessage" = "Go back to main screen to identify new objects.";
 "wrong" = "Nice try!";
 "tryAgain" = "Try again";
 "wrongMessage" = "Almost done, you are very close.";
+"guessObject" = "Guess this object";
+"category" = "Category: ";
+"showAnswer" = "Show name";
+"nextQueue" = "Next queue";
 
 //LIBRARY VIEW
 "library" = "Library";

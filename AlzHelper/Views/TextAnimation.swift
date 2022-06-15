@@ -11,6 +11,8 @@ struct TextAnimation: View {
     
     @State var firstTextLine: String = ""
     @State var secondTextLine: String = ""
+    @State var hasPresentedFirstText = false
+    @State var hasPresentedSecondText = false
     
     var first: String
     var second: String
@@ -20,32 +22,38 @@ struct TextAnimation: View {
     var body: some View {
         ZStack {
             Text(firstTextLine)
+                .font(Font.custom("Nexa", size: 31))
                 .font(.largeTitle)
                 .fontWeight(.medium)
                 .animation(.easeIn.delay(delay))
-                .frame(width: 350, height: 150, alignment: .center)
+                .frame(width: 350, height: 175, alignment: .center)
                 .padding(.bottom)
 
             Text(secondTextLine)
+                .font(Font.custom("Nexa", size: 31))
                 .font(.largeTitle)
                 .fontWeight(.medium)
                 .animation(.easeIn.delay(delaySecond))
-                .frame(width: 365, height: 150, alignment: .center)
+                .frame(width: 365, height: 175, alignment: .center)
                 .padding(.top, 75)
         }
         .onAppear() {
+            guard hasPresentedFirstText == false else {return}
             String(format: NSLocalizedString(first, comment: "")).enumerated().forEach { index, character in
                 DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.040) {
                     firstTextLine += String(character)
                 }
             }
+            hasPresentedFirstText = true
         }
         .onAppear() {
+            guard hasPresentedSecondText == false else {return}
             String(format: NSLocalizedString(second, comment: "")).enumerated().forEach { index, character in
                 DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.040) {
                     secondTextLine += String(character)
                 }
             }
+            hasPresentedSecondText = true
         }
     }
 }

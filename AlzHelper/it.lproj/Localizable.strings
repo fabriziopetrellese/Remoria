@@ -12,13 +12,17 @@
 "chooseLibrary" =  "Scegli dalla libreria";
 "searchKeywords" =  "Ricerca con parole chiave";
 
-//ALERTS GUESS VIEW
+//GUESS VIEW
 "correct" = "Esatto!";
 "mainScreen" = "Menu principale";
 "correctMessage" = "Torna al menu principale per identificare nuovi oggetti.";
 "wrong" = "Bel tentativo!";
 "tryAgain" = "Prova ancora";
 "wrongMessage" = "Ce l'hai quasi fatta, sei molto vicino.";
+"guessObject" = "Indovina l'oggetto";
+"category" = "Categoria: ";
+"showAnswer" = "Soluzione";
+"nextQueue" = "Indizio";
 
 //LIBRARY VIEW
 "library" = "Libreria";
@@ -130,7 +134,7 @@
 "first4" = " Scegli dal nostro";
 "second4" = " catalogo di immagini.";
 
-"first5" = " Non trovi un'immagine nella libreria?";
+"first5" = "Non trovi un'immagine nella libreria?";
 
 "first6" = " Descrivi l'oggetto";
 "second6" = " usando parole chiave.";

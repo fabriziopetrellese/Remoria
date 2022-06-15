@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct GuessView: View {
+    
     // Navigation to Main Menu
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var navigationRoot: NavigationRoot
+    @EnvironmentObject var categories: Categories
     
     @StateObject var imagePredictor = ImagePredictor()
     
@@ -32,6 +34,10 @@ struct GuessView: View {
     let wrong: LocalizedStringKey = "wrong"
     let tryAgain: LocalizedStringKey = "tryAgain"
     let wrongMessage: LocalizedStringKey = "wrongMessage"
+    let guessObject: LocalizedStringKey = "guessObject"
+    let category: LocalizedStringKey = "category"
+    let showAnswer: LocalizedStringKey = "showAnswer"
+    let nextQueue: LocalizedStringKey = "nextQueue"
     
     private func showFirstCharacter() {
         guard let item = self.item else { return }
@@ -65,7 +71,7 @@ struct GuessView: View {
     }
     
     var body: some View {
-        VStack(spacing: 15) {
+        VStack() {
             
             // set image view if Library image
             if item?.source == .library, let imageUrl = item?.imageUrl {
@@ -75,7 +81,7 @@ struct GuessView: View {
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(height: 280)
+                            .frame(width: 280, height: 280)
                     },
                     placeholder: {
                         ProgressView()
@@ -87,17 +93,19 @@ struct GuessView: View {
                 Image(uiImage: image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: 280)
+                    .frame(width: 280, height: 280)
             }
             
-            Text("Item Category:\n" + (item?.category.capitalized ?? "Not Classified"))
-                .font(.title3)
+            Text(String(format: NSLocalizedString("category", comment: "")) + (item?.category.capitalized ?? "Not Classified"))
+                .font(Font.custom("Nexa", size: 23))
                 .bold()
-                .frame(width: 220, height: 55, alignment: .center)
+                .frame(width: 320, height: 50)
+//                .padding(.top, 15)
             
             TextField("", text: $name)
                 .textFieldStyle(.roundedBorder)
-                .font(.title.bold())
+//                .font(.title.bold())
+                .font(Font.custom("Nexa", size: 27))
                 .padding(.horizontal, 12)
                 .disableAutocorrection(true)
             
@@ -105,21 +113,31 @@ struct GuessView: View {
                 Button {
                     showName()
                 } label: {
-                    GuessButton(action: "Show name")
+                    GuessButton(action: showAnswer)
                 }
                 
                 Button {
                     addCharacter()
                 } label: {
-                    GuessButton(action: "Next queue")
+                    GuessButton(action: nextQueue)
                 }
             }
-            .padding(.top, 20)
+            .padding(.top, 8)
             
             Spacer()
         }
+        .background(
+            Image("background")
+                .opacity(0.09)
+                .position(x: 191, y: 380)
+                .ignoresSafeArea()
+                .onTapGesture {
+                    dismissKeyboard()
+                }
+        )
+        .padding(.top, 6)
         .padding(.horizontal)
-        .navigationTitle("Guess this object")
+//        .navigationTitle(guessObject)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear() {
             if item?.source == .library {
@@ -139,7 +157,7 @@ struct GuessView: View {
                 id: 0,
                 label: newValue,
                 //TODO: Set Category
-                category: "Some Category",
+                category: categories.photoCategory(label: newValue),
                 source: .photo
             )
             
@@ -163,6 +181,13 @@ struct GuessView: View {
         }, message: {
             Text(wrongMessage)
         })
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text(guessObject)
+                    .font(Font.custom("Nexa", size: 18))
+                    .fontWeight(.bold)
+            }
+        }
     }
     
     private func dismissView() {
@@ -180,16 +205,17 @@ struct GuessView_Previews: PreviewProvider {
 }
 
 struct GuessButton: View {
-    let action: String
+    let action: LocalizedStringKey
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 0)
                 .foregroundColor(.white)
-                .border(.black)
-                .frame(width: 120, height: 40)
+                .border(Color.lightPurple)
+                .frame(width: 130, height: 40)
             
             Text(action)
+                .font(Font.custom("Nexa", size: 20))
                 .bold()
                 .foregroundColor(.black)
         }
