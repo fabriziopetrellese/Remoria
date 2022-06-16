@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  AlzHelper
+
+  Created by Fabrizio Petrellese on 15/06/22.
+  
+*/
+
+NSCameraUsageDescription = "Remoria needs your camera to recognize objects";
