@@ -20,6 +20,7 @@ class NetworkManager: ObservableObject {
     private enum Endpoint {
         
         case query(categoryName: String, label: String)
+        case keywordQuery(keyword: String)
         
         //url components
         enum URLComponent {
@@ -33,11 +34,11 @@ class NetworkManager: ObservableObject {
         }
         
         var url: URL? {
+            
+            var components = self.getURLComponents()
                     
             switch self {
             case .query(let categoryName, let label):
-                
-                var components = self.getURLComponents()
                 components.queryItems = [
                     URLQueryItem(name: "key", value: "27990515-86dc2681fe9aa112039668d4f"),
                     URLQueryItem(name: "q", value: "\(categoryName)+\(label)"),
@@ -47,9 +48,19 @@ class NetworkManager: ObservableObject {
                     URLQueryItem(name: "page", value: "1"),
                     URLQueryItem(name: "per_page", value: "20")
                 ]
-                
-                return components.url
+              
+            case .keywordQuery(let keyword):
+                components.queryItems = [
+                    URLQueryItem(name: "key", value: "27990515-86dc2681fe9aa112039668d4f"),
+                    URLQueryItem(name: "q", value: keyword),
+                    URLQueryItem(name: "image_type", value: "photo"),
+                    URLQueryItem(name: "orientation", value: "vertical"),
+                    URLQueryItem(name: "page", value: "1"),
+                    URLQueryItem(name: "per_page", value: "20")
+                ]
             }
+            
+            return components.url
         }
         
         //construct base URL from url components
@@ -103,15 +114,46 @@ class NetworkManager: ObservableObject {
             
             let items = try JSONDecoder().decode(Pixabay.self, from: data)
             if let item = items.hits.first {
-                self.pixabayImageUrl = item.previewURL
+                self.pixabayImageUrl = item.webformatURL
                 return pixabayImageUrl
             }
             
             return nil
             
         } catch {
+            print("Error! Failed to fetch imageUrl of category + label from Pixabay")
             return nil
         }
+    }
+    
+    //keyword query
+    func getItemImages(using keyword: String) async -> [String] {
+        
+        guard let url = Endpoint.keywordQuery(keyword: keyword).url else {
+            fatalError("Error! Failed to construct Pixabay url")
+        }
+        print("Pixabay API request url: \(url)")
+        
+        var imageUrls = [String]()
+        let request = URLRequest(url: url)
+        do {
+            let (data, response) = try await URLSession.shared.data(for: request)
+            
+            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                print("Error! Pixabay server responded with error: \(httpResponse.description)")
+            }
+            
+            let items = try JSONDecoder().decode(Pixabay.self, from: data)
+            if !items.hits.isEmpty {
+                items.hits.forEach { hit in
+                    imageUrls.append(hit.webformatURL)
+                }
+            }
+        } catch {
+            print("Error! Failed to fetch imageUrls for keyword from Pixabay")
+        }
+        
+        return imageUrls
     }
 }
 
