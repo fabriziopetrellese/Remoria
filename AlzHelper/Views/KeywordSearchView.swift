@@ -8,31 +8,22 @@
 import SwiftUI
 
 struct KeywordsSearchView: View {
-    @EnvironmentObject var categories: Items
-    @State private var searchText = ""
+    @State private var items = [Item]()
+    @State private var searchText: String = ""
     
     let keywords: LocalizedStringKey = "keywords"
     let typeKeyword: LocalizedStringKey = "typeKeyword"
     
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
-    
-    var searchResults: [Item] {
-        if searchText.isEmpty {
-            return itemsCollection
-        } else {
-            return itemsCollection.filter { $0.tags!.contains(searchText.lowercased()) }
-        }
-    }
-    
     var body: some View {
         VStack {
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(searchResults) { item in
-                        NavigationLink {
-                            GuessView(item: item)
-                        } label: {
-                            ItemView(imageUrl: item.imageUrl!)
+                    ForEach(self.items) { item in
+                        if let imageUrl = item.imageUrl, !imageUrl.isEmpty {
+                            NavigationLink {
+                                GuessView(item: item)
+                            } label: { ItemView(imageUrl: item.imageUrl!) }
                         }
                     }
                 }
@@ -41,6 +32,21 @@ struct KeywordsSearchView: View {
         }
         .navigationTitle(keywords)
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always) ,prompt: typeKeyword)
+        
+        .onChange(of: self.searchText) { newValue in
+            if newValue.isEmpty {
+                self.items = [Item]()
+
+            } else {
+                self.items = Items.getItems(using: searchText.lowercased())
+                
+                for (index, item) in items.enumerated() {
+                    Task {
+                        items[index].imageUrl = await NetworkManager.shared.getItemImageUrl(using: (categoryName: item.category, label: item.label))
+                    }
+                }
+            }
+        }
     }
 }
 
