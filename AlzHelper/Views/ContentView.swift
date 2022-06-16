@@ -11,8 +11,9 @@ struct ContentView: View {
     @StateObject var navigationRoot = NavigationRoot()
     @State var showModal: Bool = false
     
-    //navigation triggers
+    //navigation to child view triggers
     @State private var isLibraryViewActive = false
+    @State private var isKeywordSearchViewActive: Bool = false
     @State private var isGuessViewActive: Bool = false
     
     //camera view properties
@@ -48,25 +49,25 @@ struct ContentView: View {
                 NavigationLink(
                     destination: LibraryView(),
                     isActive: $isLibraryViewActive
-                ) {
+                ){
                     ButtonView(title: chooseLibrary,
                                icon: "photo.on.rectangle.angled",
                                color: .blue,
                                card: "secondCard"
                     )
-                }
-                .isDetailLink(false)
+                }.isDetailLink(false)
                 
                 //keyword view
-                NavigationLink {
-                    KeywordsSearchView()
-                } label: {
+                NavigationLink(
+                    destination: KeywordsSearchView(),
+                    isActive: $isKeywordSearchViewActive
+                ){
                     ButtonView(title: searchKeywords,
                                icon: "keyboard.fill",
                                color: .yellow,
                                card: "thirdCard"
                     )
-                }
+                }.isDetailLink(false)
             }
             .background(
                 Image("background")
@@ -103,6 +104,7 @@ struct ContentView: View {
         .onReceive(navigationRoot.$backToRoot) { newValue in
             if newValue {
                 isLibraryViewActive = false
+                isKeywordSearchViewActive = false
                 navigationRoot.backToRoot = false
             }
         }
