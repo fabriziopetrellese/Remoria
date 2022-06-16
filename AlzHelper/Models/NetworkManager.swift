@@ -35,17 +35,15 @@ class NetworkManager: ObservableObject {
         var url: URL? {
                     
             switch self {
-//            case .query(let categoryName, let label):
-            case .query(_, let label):
+            case .query(let categoryName, let label):
                 
                 var components = self.getURLComponents()
                 components.queryItems = [
                     URLQueryItem(name: "key", value: "27990515-86dc2681fe9aa112039668d4f"),
-                    URLQueryItem(name: "q", value: "\(label)"),
-//                    URLQueryItem(name: "q", value: "\(categoryName)+\(label)"),
+                    URLQueryItem(name: "q", value: "\(categoryName)+\(label)"),
                     URLQueryItem(name: "image_type", value: "photo"),
                     URLQueryItem(name: "orientation", value: "vertical"),
-//                    URLQueryItem(name: "category", value: categoryName),
+                    URLQueryItem(name: "category", value: categoryName),
                     URLQueryItem(name: "page", value: "1"),
                     URLQueryItem(name: "per_page", value: "20")
                 ]

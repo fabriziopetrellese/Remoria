@@ -84,7 +84,7 @@ class Items: ObservableObject {
         var items = [Item]()
         
         for item in itemsCollection {
-            if items.count == 20 { return items }
+            if items.count == 20 { return items } // set max number of items to retrieve
             if category == item.category { items.append(item) }
         }
 

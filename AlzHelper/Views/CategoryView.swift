@@ -17,15 +17,13 @@ struct CategoryView: View {
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach(items) { item in
-                        NavigationLink {
-                            GuessView(
-                                itemUiImage: nil,
-                                item: item
-                            )
-                        } label: {
-                            if let imageUrl = item.imageUrl {
-                                ItemView(imageUrl: imageUrl)
-                            }
+                        if let imageUrl = item.imageUrl, !imageUrl.isEmpty {
+                            NavigationLink {
+                                GuessView(
+                                    itemUiImage: nil,
+                                    item: item
+                                )
+                            } label: { ItemView(imageUrl: imageUrl) }
                         }
                     }
                 }
