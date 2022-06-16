@@ -9,7 +9,37 @@ import SwiftUI
 
 struct LibraryView: View {
     @Environment(\.dismiss) var dismissView
-    @EnvironmentObject var categoriesModel: Categories
+    
+    let categories = [
+        Category(name: "animals", image: "animals", color: .lightPurple),
+        Category(name: "ocean animals", image: "oceanAnimals", color: .lightPurple),
+        Category(name: "fish", image: "fish", color: .lightPurple),
+        Category(name: "birds", image: "birds", color: .lightPurple),
+        Category(name: "amphibians", image: "amphibians", color: .lightPurple),
+        Category(name: "insects", image: "insects", color: .lightPurple),
+        Category(name: "reptiles", image: "reptiles", color: .lightPurple),
+        Category(name: "arachnids", image: "arachnids", color: .lightPurple),
+        Category(name: "mollusks", image: "mollusks", color: .lightPurple),
+        Category(name: "annelids", image: "annelids", color: .lightPurple),
+        Category(name: "food", image: "food", color: .lightPurple),
+        Category(name: "music", image: "music", color: .lightPurple),
+        Category(name: "household", image: "household", color: .lightPurple),
+        Category(name: "technology", image: "technology", color: .lightPurple),
+        Category(name: "recreation", image: "recreation", color: .lightPurple),
+        Category(name: "clothing", image: "clothing", color: .lightPurple),
+        Category(name: "automotive", image: "automotive", color: .lightPurple),
+        Category(name: "store", image: "store", color: .lightPurple),
+        Category(name: "weapon", image: "weapon", color: .lightPurple),
+        Category(name: "landscape", image: "landscape", color: .lightPurple),
+        Category(name: "fashion accessory", image: "fashionAccessory", color: .lightPurple),
+        Category(name: "work gear", image: "workGear", color: .lightPurple),
+        Category(name: "medical", image: "medical", color: .lightPurple),
+        Category(name: "outdoor structure", image: "outdoorStructure", color: .lightPurple),
+        Category(name: "vegetation", image: "vegetation", color: .lightPurple),
+        Category(name: "random", image: "random", color: .lightPurple),
+        Category(name: "building", image: "building", color: .lightPurple)
+    ]
+    
     @State private var searchText = ""
     
     var columns: [GridItem] = Array(repeating: .init(.adaptive(minimum: 150)), count: 2)
@@ -19,9 +49,9 @@ struct LibraryView: View {
     
     var searchResults: [Category] {
         if searchText.isEmpty {
-            return categoriesModel.categories
+            return categories
         } else {
-            return categoriesModel.categories.filter { String(format: NSLocalizedString($0.name, comment: "")).contains(searchText.lowercased()) }
+            return categories.filter { String(format: NSLocalizedString($0.name, comment: "")).contains(searchText.lowercased()) }
         }
     }
     
@@ -32,7 +62,7 @@ struct LibraryView: View {
                     ForEach(searchResults) { category in
                         NavigationLink {
                             CategoryView(categoryName: String(format: NSLocalizedString(category.name, comment: "")),
-                                         categoryItems: category.items)
+                                         items: Items.getItems(for: category.name))
                         } label: {
                             CardView(label: String(format: NSLocalizedString(category.name, comment: "")).capitalized,
                                      pic: category.image)
@@ -58,7 +88,6 @@ struct LibraryView: View {
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
         LibraryView()
-            .environmentObject(Categories())
     }
 }
 
@@ -85,9 +114,8 @@ struct CardView: View {
     }
 }
 
-//struct CardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CardView(label: "Animali marini", pic: "🐍")
-//            .environmentObject(Categories())
-//    }
-//}
+struct CardView_Previews: PreviewProvider {
+    static var previews: some View {
+        CardView(label: "Animali marini", pic: "🐍")
+    }
+}

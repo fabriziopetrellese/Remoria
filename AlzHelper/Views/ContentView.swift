@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @StateObject var navigationRoot = NavigationRoot()
-    @EnvironmentObject var categories: Categories
     @State var showModal: Bool = false
     
     //navigation triggers
@@ -30,8 +28,6 @@ struct ContentView: View {
         NavigationView {
             
             VStack(spacing: 47) {
-//                Text("")
-//                    .navigationBarTitle(Text(mainMenu).font(.largeTitle), displayMode: .large)
                 //Present Guess View
                 NavigationLink(
                     destination: GuessView(itemUiImage:selectedImage),
@@ -119,12 +115,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(Categories())
     }
 }
-
-
-
 
 extension Color {
     static let lightPurple = Color("lightPurple")

@@ -9,16 +9,10 @@ import SwiftUI
 
 @main
 struct AlzHelperApp: App {
-    @StateObject var categories = Categories()
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .preferredColorScheme(.light)
-                .onAppear {
-                    Task { await categories.getCategories() }
-                }
-                .environmentObject(categories)
         }
     }
 }

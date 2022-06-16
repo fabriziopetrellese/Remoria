@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct KeywordsSearchView: View {
-    @EnvironmentObject var categories: Categories
+    @EnvironmentObject var categories: Items
     @State private var searchText = ""
     
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     
     var searchResults: [Item] {
         if searchText.isEmpty {
-            return categories.itemsCollection
+            return itemsCollection
         } else {
-            return categories.itemsCollection.filter { $0.tags!.contains(searchText.lowercased()) }
+            return itemsCollection.filter { $0.tags!.contains(searchText.lowercased()) }
         }
     }
     

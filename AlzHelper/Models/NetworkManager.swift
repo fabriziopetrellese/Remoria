@@ -35,17 +35,19 @@ class NetworkManager: ObservableObject {
         var url: URL? {
                     
             switch self {
-            case .query(let categoryName, let label):
+//            case .query(let categoryName, let label):
+            case .query(_, let label):
                 
                 var components = self.getURLComponents()
                 components.queryItems = [
                     URLQueryItem(name: "key", value: "27990515-86dc2681fe9aa112039668d4f"),
-                    URLQueryItem(name: "q", value: "\(categoryName)+\(label)"),
+                    URLQueryItem(name: "q", value: "\(label)"),
+//                    URLQueryItem(name: "q", value: "\(categoryName)+\(label)"),
                     URLQueryItem(name: "image_type", value: "photo"),
                     URLQueryItem(name: "orientation", value: "vertical"),
-                    URLQueryItem(name: "category", value: categoryName),
+//                    URLQueryItem(name: "category", value: categoryName),
                     URLQueryItem(name: "page", value: "1"),
-                    URLQueryItem(name: "per_page", value: "20"),
+                    URLQueryItem(name: "per_page", value: "20")
                 ]
                 
                 return components.url
@@ -98,12 +100,12 @@ class NetworkManager: ObservableObject {
             let (data, response) = try await URLSession.shared.data(for: request)
             
             if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
-                print("Error! Pixabay server responded with error: \(httpResponse.statusCode)")
+                print("Error! Pixabay server responded with error: \(httpResponse.description)")
             }
             
             let items = try JSONDecoder().decode(Pixabay.self, from: data)
             if let item = items.hits.first {
-                self.pixabayImageUrl = item.userImageURL
+                self.pixabayImageUrl = item.previewURL
                 return pixabayImageUrl
             }
             

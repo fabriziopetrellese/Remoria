@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct CategoryView: View {
-    @EnvironmentObject var categoriesModel: Categories
     let categoryName: String
-    let categoryItems: [Item]
-    var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
+    @State var items: [Item]
     
+    var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     var body: some View {
         VStack {
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(categoryItems) { item in
+                    ForEach(items) { item in
                         NavigationLink {
                             GuessView(
                                 itemUiImage: nil,
@@ -27,7 +26,6 @@ struct CategoryView: View {
                             if let imageUrl = item.imageUrl {
                                 ItemView(imageUrl: imageUrl)
                             }
-//                            Image(systemName: "photo")
                         }
                     }
                 }
@@ -35,14 +33,22 @@ struct CategoryView: View {
             }
         }
         .navigationTitle(String(format: NSLocalizedString(categoryName, comment: "")).capitalized)
+        .onAppear  {
+            for (index, item) in items.enumerated() {
+                Task {
+                    items[index].imageUrl = await NetworkManager.shared.getItemImageUrl(using: (categoryName: item.category, label: item.label))
+                }
+            }
+        }
     }
 }
 
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryView(categoryName: "animals",
-                     categoryItems: Categories().animals)
-            .environmentObject(Categories())
+        CategoryView(
+            categoryName: "animals",
+            items: Items.sampleItems
+        )
     }
 }
 
