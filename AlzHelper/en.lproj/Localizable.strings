@@ -8,9 +8,9 @@
 
 // CONTENT VIEW
 "mainMenu" = "Main menu";
-"takePhoto" = "Take a photo";
-"chooseLibrary" = "Choose from the library";
-"searchKeywords" = "Search by key-words";
+"takePhoto" = "Take Photo";
+"chooseLibrary" = "Item Catalogue";
+"searchKeywords" = "Keyword Search";
 
 //GUESS VIEW
 "correct" = ", correct!";
@@ -19,7 +19,7 @@
 "wrong" = "Nice try!";
 "tryAgain" = "Try again";
 "wrongMessage" = "Almost done, you are very close.";
-"guessObject" = "Guess this object";
+"guessObject" = "Excercise View";
 "category" = "Category: ";
 "showAnswer" = "Solution";
 "nextQueue" = "Queue";
@@ -377,7 +377,7 @@
 "first5" = "Can't find an image in the library?";
 
 "first6" = " Try to describe the";
-"second6" = " object using key-words.";
+"second6" = " object using keywords.";
 
 "done" = "Done";
 

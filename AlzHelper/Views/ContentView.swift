@@ -57,7 +57,7 @@ struct ContentView: View {
                     )
                 }.isDetailLink(false)
                 
-                //keyword view
+                //Present Keyword Search view
                 NavigationLink(
                     destination: KeywordsSearchView(),
                     isActive: $isKeywordSearchViewActive
