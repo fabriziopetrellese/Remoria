@@ -11,33 +11,33 @@ struct LibraryView: View {
     @Environment(\.dismiss) var dismissView
     
     let categories = [
-        Category(name: "animals", image: "animals", color: .lightPurple),
-        Category(name: "ocean animals", image: "oceanAnimals", color: .lightPurple),
-        Category(name: "fish", image: "fish", color: .lightPurple),
-        Category(name: "birds", image: "birds", color: .lightPurple),
-        Category(name: "amphibians", image: "amphibians", color: .lightPurple),
-        Category(name: "insects", image: "insects", color: .lightPurple),
-        Category(name: "reptiles", image: "reptiles", color: .lightPurple),
-        Category(name: "arachnids", image: "arachnids", color: .lightPurple),
-        Category(name: "mollusks", image: "mollusks", color: .lightPurple),
-        Category(name: "annelids", image: "annelids", color: .lightPurple),
-        Category(name: "food", image: "food", color: .lightPurple),
-        Category(name: "music", image: "music", color: .lightPurple),
-        Category(name: "household", image: "household", color: .lightPurple),
-        Category(name: "technology", image: "technology", color: .lightPurple),
-        Category(name: "recreation", image: "recreation", color: .lightPurple),
-        Category(name: "clothing", image: "clothing", color: .lightPurple),
-        Category(name: "automotive", image: "automotive", color: .lightPurple),
-        Category(name: "store", image: "store", color: .lightPurple),
-        Category(name: "weapon", image: "weapon", color: .lightPurple),
-        Category(name: "landscape", image: "landscape", color: .lightPurple),
-        Category(name: "fashion accessory", image: "fashionAccessory", color: .lightPurple),
-        Category(name: "work gear", image: "workGear", color: .lightPurple),
-        Category(name: "medical", image: "medical", color: .lightPurple),
-        Category(name: "outdoor structure", image: "outdoorStructure", color: .lightPurple),
-        Category(name: "vegetation", image: "vegetation", color: .lightPurple),
-        Category(name: "random", image: "random", color: .lightPurple),
-        Category(name: "building", image: "building", color: .lightPurple)
+        Category(name: "animals", image: "animals"),
+        Category(name: "ocean animals", image: "oceanAnimals"),
+        Category(name: "fish", image: "fish"),
+        Category(name: "birds", image: "birds"),
+        Category(name: "amphibians", image: "amphibians"),
+        Category(name: "insects", image: "insects"),
+        Category(name: "reptiles", image: "reptiles"),
+        Category(name: "arachnids", image: "arachnids"),
+        Category(name: "mollusks", image: "mollusks"),
+        Category(name: "annelids", image: "annelids"),
+        Category(name: "food", image: "food"),
+        Category(name: "music", image: "music"),
+        Category(name: "household", image: "household"),
+        Category(name: "technology", image: "technology"),
+        Category(name: "recreation", image: "recreation"),
+        Category(name: "clothing", image: "clothing"),
+        Category(name: "automotive", image: "automotive"),
+        Category(name: "store", image: "store"),
+        Category(name: "weapon", image: "weapon"),
+        Category(name: "landscape", image: "landscape"),
+        Category(name: "fashion accessory", image: "fashionAccessory"),
+        Category(name: "work gear", image: "workGear"),
+        Category(name: "medical", image: "medical"),
+        Category(name: "outdoor structure", image: "outdoorStructure"),
+        Category(name: "vegetation", image: "vegetation"),
+        Category(name: "random", image: "random"),
+        Category(name: "building", image: "building")
     ]
     
     @State private var searchText = ""
@@ -97,8 +97,6 @@ struct CardView: View {
     
     var body: some View {
         ZStack {
-
-
             Image(pic)
                 .resizable()
             

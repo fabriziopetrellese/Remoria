@@ -35,7 +35,7 @@ struct Category: Identifiable {
         case weapon
         case landscape
         case fashion_accessory
-        case work_gear
+        case workgear
         case office
         case medical
         case outdoor_structure
@@ -46,7 +46,7 @@ struct Category: Identifiable {
     let id = UUID()
     let name: String
     let image: String
-    let color: Color
+   
     
     static func getCategoryName(for label: String) -> String {
         for item in itemsCollection {
