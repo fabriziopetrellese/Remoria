@@ -101,19 +101,19 @@ struct CardView: View {
                 .resizable()
             
             Text(label)
-                .font(Font.custom("Nexa", size: 20))
+                .font(.system(size: 19))
                 .fontWeight(.heavy)
                 .foregroundColor(.white)
-                .frame(width: 150, alignment: .leading)
-                .padding(.top, 90)
-                .padding(.trailing, 10)
+                .frame(width: 125, height: 46, alignment: .leading)
+                .padding(.top, 100)
+                .padding(.trailing, 50)
             
         }
     }
 }
 
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView(label: "Animali marini", pic: "🐍")
-    }
-}
+//struct CardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CardView(label: "Animali marini", pic: "🐍")
+//    }
+//}

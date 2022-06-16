@@ -58,18 +58,15 @@ struct ContentView: View {
                 .isDetailLink(false)
                 
                 //keyword view
-//                NavigationLink {
-//                    KeywordsSearchView()
-//                } label: {
-//                    ButtonView(title: searchKeywords,
-//                               icon: "keyboard.fill",
-//                               color: .yellow,
-//                               card: "thirdCard"
-//                    )
-//                }
-                
-                // comment out when showing keyword view
-                Spacer()
+                NavigationLink {
+                    KeywordsSearchView()
+                } label: {
+                    ButtonView(title: searchKeywords,
+                               icon: "keyboard.fill",
+                               color: .yellow,
+                               card: "thirdCard"
+                    )
+                }
             }
             .background(
                 Image("background")
@@ -77,10 +74,7 @@ struct ContentView: View {
                     .ignoresSafeArea()
             )
             .padding(.bottom, 40)
-            .onAppear() {
-                UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Nexa", size: 33)!]
-            }
-            .navigationBarTitle(Text(mainMenu).font(.largeTitle), displayMode: .large)
+            .navigationTitle(mainMenu)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {

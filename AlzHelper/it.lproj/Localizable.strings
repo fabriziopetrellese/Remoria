@@ -13,7 +13,7 @@
 "searchKeywords" =  "Ricerca con parole chiave";
 
 //GUESS VIEW
-"correct" = "Esatto!";
+"correct" = ", esatto!";
 "mainScreen" = "Menu principale";
 "correctMessage" = "Torna al menu principale per identificare nuovi oggetti.";
 "wrong" = "Bel tentativo!";

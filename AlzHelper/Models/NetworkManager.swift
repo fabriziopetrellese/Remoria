@@ -13,6 +13,7 @@ class NetworkManager: ObservableObject {
     
     @Published var pixabayHits = [PixabayHit]()
     @Published var pixabayImageUrl = ""
+    @Published var pixabayImageUrls = [String]()
     
     private init() {}
 
@@ -73,6 +74,7 @@ class NetworkManager: ObservableObject {
         }
     }
     
+    //category and label queries
     func getPixabayHits(using query: (categoryName: String, label: String)) async -> [PixabayHit] {
         
         guard let url = Endpoint.query(categoryName: query.categoryName, label: query.label).url else {
@@ -90,7 +92,7 @@ class NetworkManager: ObservableObject {
             
             let items = try JSONDecoder().decode(Pixabay.self, from: data)
             self.pixabayHits = items.hits
-            return items.hits
+            return pixabayHits
             
         } catch {
             fatalError("failed to fetch Pixabay hits")
@@ -126,8 +128,37 @@ class NetworkManager: ObservableObject {
         }
     }
     
-    //keyword query
-    func getItemImages(using keyword: String) async -> [String] {
+    //keyword queries
+    func getItemImageUrl(using keyword: String) async -> String? {
+        
+        guard let url = Endpoint.keywordQuery(keyword: keyword).url else {
+            fatalError("Error! Failed to construct Pixabay url")
+        }
+        print("Pixabay API request url: \(url)")
+        
+        let request = URLRequest(url: url)
+        do {
+            let (data, response) = try await URLSession.shared.data(for: request)
+            
+            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                print("Error! Pixabay server responded with error: \(httpResponse.description)")
+            }
+            
+            let items = try JSONDecoder().decode(Pixabay.self, from: data)
+            if let item = items.hits.first {
+                self.pixabayImageUrl = item.webformatURL
+                return pixabayImageUrl
+            }
+            
+            return nil
+            
+        } catch {
+            print("Error! Failed to fetch imageUrl of category + label from Pixabay")
+            return nil
+        }
+    }
+    
+    func getItemImageUrls(using keyword: String) async -> [String] {
         
         guard let url = Endpoint.keywordQuery(keyword: keyword).url else {
             fatalError("Error! Failed to construct Pixabay url")
@@ -153,38 +184,7 @@ class NetworkManager: ObservableObject {
             print("Error! Failed to fetch imageUrls for keyword from Pixabay")
         }
         
-        return imageUrls
+        self.pixabayImageUrls = imageUrls
+        return pixabayImageUrls
     }
-}
-
-struct Pixabay: Codable {
-    let total: Int
-    let totalHits: Int
-    let hits: [PixabayHit]
-}
-
-struct PixabayHit: Codable {
-    
-    let id: Int
-    let pageURL: String
-    let type: String
-    let tags: String
-    let previewURL: String
-    let previewWidth: Int
-    let previewHeight: Int
-    let webformatURL: String
-    let webformatWidth: Int
-    let webformatHeight: Int
-    let largeImageURL: String
-    let imageWidth: Int
-    let imageHeight: Int
-    let imageSize: Int
-    let views: Int
-    let downloads: Int
-    let collections: Int
-    let likes: Int
-    let comments: Int
-    let user_id: Int
-    let user: String
-    let userImageURL: String
 }

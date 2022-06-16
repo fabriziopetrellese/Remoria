@@ -78,8 +78,11 @@ struct Item: Codable, Identifiable {
 
 class Items: ObservableObject {
     
+    private init() {}
+    
     static let sampleItems = Items.getItems(for: "animals")
     
+    //for
     class func getItems(for category: String) -> [Item] {
         var items = [Item]()
         
@@ -88,6 +91,22 @@ class Items: ObservableObject {
             if category == item.category { items.append(item) }
         }
 
+        return items
+    }
+    
+    // for keyword search
+    class func getItems(using keyword: String) -> [Item] {
+        var items = [Item]()
+
+        for item in itemsCollection {
+            if items.count == 20 { return items } // set max number of items to retrieve
+            if item.label == keyword { items.append(item) }
+            if item.category == keyword { items.append(item) }
+            if let tags = item.tags, tags.contains(keyword) {
+                items.append(item)
+            }
+        }
+        
         return items
     }
 }

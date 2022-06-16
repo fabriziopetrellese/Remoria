@@ -22,7 +22,6 @@ struct TextAnimation: View {
     var body: some View {
         ZStack {
             Text(firstTextLine)
-                .font(Font.custom("Nexa", size: 31))
                 .font(.largeTitle)
                 .fontWeight(.medium)
                 .animation(.easeIn.delay(delay))
@@ -30,7 +29,6 @@ struct TextAnimation: View {
                 .padding(.bottom)
 
             Text(secondTextLine)
-                .font(Font.custom("Nexa", size: 31))
                 .font(.largeTitle)
                 .fontWeight(.medium)
                 .animation(.easeIn.delay(delaySecond))

@@ -32,7 +32,6 @@ struct OnboardingView: View {
                         done()
                     } label: {
                         Text(doneButton)
-                            .font(Font.custom("Nexa", size: 19))
                             
                     }
                 }
@@ -56,8 +55,7 @@ struct FirstPage: View {
     var body: some View {
             ZStack {
                 Text(takePhoto)
-//                    .font(.system(size: 45))
-                    .font(Font.custom("Nexa", size: 45))
+                    .font(.system(size: 45))
                     .fontWeight(.bold)
                     .padding(.bottom, 590)
                 
@@ -127,7 +125,7 @@ struct SecondPage: View {
     var body: some View {
         ZStack {
             Text(chooseLibrary)
-                .font(Font.custom("Nexa", size: 49))
+                .font(.system(size: 45))
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
                 .frame(width: 300, height: 150)
@@ -162,7 +160,7 @@ struct SecondPage: View {
                           delay: 1.0,
                           delaySecond: 1.95)
             .padding(.top, 90)
-            .padding(.leading)
+//            .padding(.leading)
             
             Text("•")
                 .font(.largeTitle)
@@ -181,7 +179,7 @@ struct SecondPage: View {
                           delay: 4,
                           delaySecond: 4.9)
             .padding(.top, 335)
-            .padding(.leading)
+//            .padding(.leading)
         }
         .padding(.top, 30)
     }
@@ -198,7 +196,7 @@ struct ThirdPage: View {
     var body: some View {
         ZStack {
             Text(searchKeywords)
-                .font(Font.custom("Nexa", size: 45))
+                .font(.system(size: 45))
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
                 .frame(width: 300, height: 150)
@@ -220,10 +218,10 @@ struct ThirdPage: View {
 //            Text("Can't find an image in the library?")
 //            Text("Non trovi un'immagine nella libreria?")
             Text(first5)
-                .font(Font.custom("Nexa", size: 33))
-                .fontWeight(.bold)
+                .font(.system(size: 34))
+                .fontWeight(.medium)
                 .multilineTextAlignment(.center)
-                .frame(width: 330, height: 100)
+                .frame(width: 340, height: 100)
 //                .animatableSystemFont(size: fontSize)
 //                .onAppear() {
 //                    withAnimation(.spring(response: 1.5, dampingFraction: 1.5, blendDuration: 1).delay(1)) {
