@@ -77,10 +77,7 @@ struct ContentView: View {
                     .ignoresSafeArea()
             )
             .padding(.bottom, 40)
-            .onAppear() {
-                UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Nexa", size: 33)!]
-            }
-            .navigationBarTitle(Text(mainMenu).font(.largeTitle), displayMode: .large)
+            .navigationTitle(mainMenu)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {

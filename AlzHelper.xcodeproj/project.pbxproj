@@ -11,9 +11,6 @@
 		2AEBDFA7284A48FE0009D657 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEBDFA6284A48FE0009D657 /* OnboardingView.swift */; };
 		2AEBDFA9284A493F0009D657 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEBDFA8284A493F0009D657 /* ButtonView.swift */; };
 		2AED3FBD2850D67E006159B7 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AED3FBC2850D67E006159B7 /* Bundle+Extensions.swift */; };
-		496479FC285A166700112313 /* Nexa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 496479F9285A166700112313 /* Nexa.ttf */; };
-		496479FD285A166700112313 /* NexaBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 496479FA285A166700112313 /* NexaBold.ttf */; };
-		496479FE285A166700112313 /* NexaHeavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 496479FB285A166700112313 /* NexaHeavy.ttf */; };
 		49647A01285A57A200112313 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49647A03285A57A200112313 /* InfoPlist.strings */; };
 		49956BA22856003E00729618 /* TextAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49956BA12856003E00729618 /* TextAnimation.swift */; };
 		49A770292845926000971C6C /* NavigationRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A770282845926000971C6C /* NavigationRoot.swift */; };
@@ -41,9 +38,6 @@
 		2AEBDFA6284A48FE0009D657 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		2AEBDFA8284A493F0009D657 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		2AED3FBC2850D67E006159B7 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
-		496479F9285A166700112313 /* Nexa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nexa.ttf; sourceTree = "<group>"; };
-		496479FA285A166700112313 /* NexaBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NexaBold.ttf; sourceTree = "<group>"; };
-		496479FB285A166700112313 /* NexaHeavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NexaHeavy.ttf; sourceTree = "<group>"; };
 		49647A02285A57A200112313 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49647A04285A57A700112313 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49956BA12856003E00729618 /* TextAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnimation.swift; sourceTree = "<group>"; };
@@ -154,9 +148,6 @@
 				B9B517B32852222200D481C2 /* Localizable.strings */,
 				49647A03285A57A200112313 /* InfoPlist.strings */,
 				B9F45AE3283D0FC600899706 /* MobileNet.mlmodel */,
-				496479F9285A166700112313 /* Nexa.ttf */,
-				496479FA285A166700112313 /* NexaBold.ttf */,
-				496479FB285A166700112313 /* NexaHeavy.ttf */,
 				B9F45ACD283D0CC100899706 /* Preview Content */,
 			);
 			path = AlzHelper;
@@ -249,10 +240,7 @@
 			files = (
 				B9F45ACF283D0CC100899706 /* Preview Assets.xcassets in Resources */,
 				49647A01285A57A200112313 /* InfoPlist.strings in Resources */,
-				496479FC285A166700112313 /* Nexa.ttf in Resources */,
-				496479FE285A166700112313 /* NexaHeavy.ttf in Resources */,
 				B9B517B12852222200D481C2 /* Localizable.strings in Resources */,
-				496479FD285A166700112313 /* NexaBold.ttf in Resources */,
 				B9F45AF128451C6200899706 /* items.json in Resources */,
 				B9F45ACC283D0CC100899706 /* Assets.xcassets in Resources */,
 			);

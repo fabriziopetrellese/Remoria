@@ -22,14 +22,13 @@ struct ButtonView: View {
             
             ZStack {
                 Text(title)
-                    .font(Font.custom("Nexa", size: 30))
                     .fontWeight(.bold)
-//                    .font(.title)
+                    .font(.title)
 //                    .bold()
                     .foregroundColor(.white)
                     .frame(width: 240, alignment: .center)
                     .multilineTextAlignment(.center)
-                    .padding(.bottom, 25)
+                    .padding(.bottom, 45)
 
                 
                 Image(systemName: icon)
@@ -37,7 +36,7 @@ struct ButtonView: View {
                     .scaledToFit()
                     .foregroundColor(.white)
                     .frame(width: 32, height: 32)
-                    .padding(.top, 69)
+                    .padding(.top, 66)
             }
         }
     }
@@ -46,6 +45,6 @@ struct ButtonView: View {
 
 struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView(title: "Take a photo", icon: "photo.on.rectangle.angled", color: .white, card: "firstCard")
+        ButtonView(title: "Choose from the library", icon: "photo.on.rectangle.angled", color: .white, card: "firstCard")
     }
 }

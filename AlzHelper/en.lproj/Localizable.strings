@@ -9,11 +9,11 @@
 // CONTENT VIEW
 "mainMenu" = "Main menu";
 "takePhoto" = "Take a photo";
-"chooseLibrary" =  "Choose from the library";
-"searchKeywords" =  "Search by key-words";
+"chooseLibrary" = "Choose from the library";
+"searchKeywords" = "Search by key-words";
 
 //GUESS VIEW
-"correct" = "Correct!";
+"correct" = ", correct!";
 "mainScreen" = "Main screen";
 "correctMessage" = "Go back to main screen to identify new objects.";
 "wrong" = "Nice try!";

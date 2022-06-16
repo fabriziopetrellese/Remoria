@@ -60,10 +60,10 @@ struct ItemView: View {
                 content: { image in
                     image
                         .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 180, height: 120)
+                        .scaledToFill()
+                        .frame(width: 180, height: 160)
                         .cornerRadius(10)
-                        .shadow(radius: 5)
+                        .shadow(radius: 2)
                 },
                 placeholder: {
                     ProgressView()

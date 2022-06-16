@@ -27,7 +27,7 @@ struct GuessView: View {
     // passed in from libary view or set by image predictor for user photos
     @State var item: Item?
     
-    let correct: LocalizedStringKey = "correct"
+    @State var correct: String = ""
     let mainScreen: LocalizedStringKey = "mainScreen"
     let correctMessage: LocalizedStringKey = "correctMessage"
     let wrong: LocalizedStringKey = "wrong"
@@ -44,6 +44,7 @@ struct GuessView: View {
         new = String(format: NSLocalizedString(item.label, comment: "")).first!
         name.append(new)
         name = name.uppercased()
+        correct = String(format: NSLocalizedString(item.label, comment: "")).capitalized + String(format: NSLocalizedString("correct", comment: ""))
     }
     
     private func addCharacter() {
@@ -95,7 +96,7 @@ struct GuessView: View {
             }
             
             Text(String(format: NSLocalizedString("category", comment: "")) + (item?.category.capitalized ?? "Not Classified"))
-                .font(Font.custom("Nexa", size: 23))
+                .font(.system(size: 25))
                 .bold()
                 .frame(width: 335, height: 50)
 //                .padding(.top, 15)
@@ -103,8 +104,7 @@ struct GuessView: View {
             TextField("", text: $name)
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 320)
-//                .font(.title.bold())
-                .font(Font.custom("Nexa", size: 27))
+                .font(.title.bold())
                 .padding(.horizontal, 12)
                 .disableAutocorrection(true)
             
@@ -123,7 +123,6 @@ struct GuessView: View {
             }
             .padding(.top, 8)
         }
-        .ignoresSafeArea(.keyboard)
         .background(
             Image("background")
                 .ignoresSafeArea()
@@ -163,6 +162,7 @@ struct GuessView: View {
             if newValue.count == NSLocalizedString(item!.label, comment: "").count {
                 guessWord()
             }
+            index = name.count - 1
             
         }
         .alert(correct, isPresented: $correctAlert, actions: {
@@ -173,14 +173,18 @@ struct GuessView: View {
             Text(correctMessage)
         })
         .alert(wrong, isPresented: $wrongAlert, actions: {
-            Button(tryAgain, role: .cancel, action: {})
+            Button(tryAgain, role: .cancel, action: {
+                index = 0
+                name = ""
+                showFirstCharacter()
+            })
         }, message: {
             Text(wrongMessage)
         })
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text(guessObject)
-                    .font(Font.custom("Nexa", size: 18))
+//                    .font(.system(size: 20))
                     .fontWeight(.bold)
             }
         }
@@ -211,7 +215,6 @@ struct GuessButton: View {
                 .frame(width: 130, height: 40)
             
             Text(action)
-                .font(Font.custom("Nexa", size: 20))
                 .bold()
                 .foregroundColor(.black)
         }
