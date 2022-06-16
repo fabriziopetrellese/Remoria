@@ -12,7 +12,7 @@ struct GuessView: View {
     // Navigation to Main Menu
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var navigationRoot: NavigationRoot
-    @EnvironmentObject var categories: Categories
+//    @EnvironmentObject var items: Items
     
     @StateObject var imagePredictor = ImagePredictor()
     
@@ -26,7 +26,6 @@ struct GuessView: View {
     
     // passed in from libary view or set by image predictor for user photos
     @State var item: Item?
-    
     
     let correct: LocalizedStringKey = "correct"
     let mainScreen: LocalizedStringKey = "mainScreen"
@@ -154,8 +153,7 @@ struct GuessView: View {
             self.item = Item(
                 id: 0,
                 label: newValue,
-                //TODO: Set Category
-                category: categories.photoCategory(label: newValue),
+                category: Category.getCategoryName(for: newValue),
                 source: .photo
             )
             

@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @StateObject var navigationRoot = NavigationRoot()
-    @EnvironmentObject var categories: Categories
     @State var showModal: Bool = false
     
     //navigation triggers
@@ -30,8 +28,6 @@ struct ContentView: View {
         NavigationView {
             
             VStack(spacing: 47) {
-//                Text("")
-//                    .navigationBarTitle(Text(mainMenu).font(.largeTitle), displayMode: .large)
                 //Present Guess View
                 NavigationLink(
                     destination: GuessView(itemUiImage:selectedImage),
@@ -61,20 +57,24 @@ struct ContentView: View {
                 }
                 .isDetailLink(false)
                 
-                NavigationLink {
-                    KeywordsSearchView()
-                } label: {
-                    ButtonView(title: searchKeywords,
-                               icon: "keyboard.fill",
-                               color: .yellow,
-                               card: "thirdCard"
-                    )
-                }
+                //keyword view
+//                NavigationLink {
+//                    KeywordsSearchView()
+//                } label: {
+//                    ButtonView(title: searchKeywords,
+//                               icon: "keyboard.fill",
+//                               color: .yellow,
+//                               card: "thirdCard"
+//                    )
+//                }
+                
+                // comment out when showing keyword view
+                Spacer()
             }
             .background(
-            Image("background")
-                .opacity(0.1)
-                .ignoresSafeArea()
+                Image("background")
+                    .opacity(0.1)
+                    .ignoresSafeArea()
             )
             .padding(.bottom, 40)
             .onAppear() {
@@ -119,12 +119,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(Categories())
     }
 }
-
-
-
 
 extension Color {
     static let lightPurple = Color("lightPurple")

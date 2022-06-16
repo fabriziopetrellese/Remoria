@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct KeywordsSearchView: View {
-    @EnvironmentObject var categories: Categories
+    @EnvironmentObject var categories: Items
     @State private var searchText = ""
     
     let keywords: LocalizedStringKey = "keywords"
@@ -18,9 +18,9 @@ struct KeywordsSearchView: View {
     
     var searchResults: [Item] {
         if searchText.isEmpty {
-            return categories.itemsCollection
+            return itemsCollection
         } else {
-            return categories.itemsCollection.filter { $0.tags!.contains(searchText.lowercased()) }
+            return itemsCollection.filter { $0.tags!.contains(searchText.lowercased()) }
         }
     }
     

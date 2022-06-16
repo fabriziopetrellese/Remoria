@@ -9,34 +9,65 @@ import SwiftUI
 
 struct LibraryView: View {
     @Environment(\.dismiss) var dismissView
-    @EnvironmentObject var categoriesModel: Categories
+    
+    let categories = [
+        Category(name: "animals", image: "animals", color: .lightPurple),
+        Category(name: "ocean animals", image: "oceanAnimals", color: .lightPurple),
+        Category(name: "fish", image: "fish", color: .lightPurple),
+        Category(name: "birds", image: "birds", color: .lightPurple),
+        Category(name: "amphibians", image: "amphibians", color: .lightPurple),
+        Category(name: "insects", image: "insects", color: .lightPurple),
+        Category(name: "reptiles", image: "reptiles", color: .lightPurple),
+        Category(name: "arachnids", image: "arachnids", color: .lightPurple),
+        Category(name: "mollusks", image: "mollusks", color: .lightPurple),
+        Category(name: "annelids", image: "annelids", color: .lightPurple),
+        Category(name: "food", image: "food", color: .lightPurple),
+        Category(name: "music", image: "music", color: .lightPurple),
+        Category(name: "household", image: "household", color: .lightPurple),
+        Category(name: "technology", image: "technology", color: .lightPurple),
+        Category(name: "recreation", image: "recreation", color: .lightPurple),
+        Category(name: "clothing", image: "clothing", color: .lightPurple),
+        Category(name: "automotive", image: "automotive", color: .lightPurple),
+        Category(name: "store", image: "store", color: .lightPurple),
+        Category(name: "weapon", image: "weapon", color: .lightPurple),
+        Category(name: "landscape", image: "landscape", color: .lightPurple),
+        Category(name: "fashion accessory", image: "fashionAccessory", color: .lightPurple),
+        Category(name: "work gear", image: "workGear", color: .lightPurple),
+        Category(name: "medical", image: "medical", color: .lightPurple),
+        Category(name: "outdoor structure", image: "outdoorStructure", color: .lightPurple),
+        Category(name: "vegetation", image: "vegetation", color: .lightPurple),
+        Category(name: "random", image: "random", color: .lightPurple),
+        Category(name: "building", image: "building", color: .lightPurple)
+    ]
+    
     @State private var searchText = ""
     
-    var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
+    var columns: [GridItem] = Array(repeating: .init(.adaptive(minimum: 150)), count: 2)
     
     let library: LocalizedStringKey = "library"
     let browseCategories: LocalizedStringKey = "browseCategories"
     
     var searchResults: [Category] {
         if searchText.isEmpty {
-            return categoriesModel.categories
+            return categories
         } else {
-            return categoriesModel.categories.filter { String(format: NSLocalizedString($0.name, comment: "")).contains(searchText.lowercased()) }
+            return categories.filter { String(format: NSLocalizedString($0.name, comment: "")).contains(searchText.lowercased()) }
         }
     }
     
     var body: some View {
         VStack {
             ScrollView {
-                LazyVGrid(columns: columns) {
+                LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(searchResults) { category in
                         NavigationLink {
                             CategoryView(categoryName: String(format: NSLocalizedString(category.name, comment: "")),
-                                         categoryItems: category.items)
+                                         items: Items.getItems(for: category.name))
                         } label: {
                             CardView(label: String(format: NSLocalizedString(category.name, comment: "")).capitalized,
-                                     pic: category.image,
-                                     color: category.color)
+                                     pic: category.image)
+                                       .frame(height: 150)
+                                     
                         }
                     }
                 }
@@ -57,40 +88,34 @@ struct LibraryView: View {
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
         LibraryView()
-            .environmentObject(Categories())
     }
 }
 
 struct CardView: View {
     let label: String
     let pic: String
-    let color: Color
     
     var body: some View {
         ZStack {
-            Image("libraryCard")
-                .resizable()
-                .frame(width: 180, height: 120)
 
-            Text(pic)
-                .font(.largeTitle)
-                .padding(.bottom, 20)
+
+            Image(pic)
+                .resizable()
             
             Text(label)
                 .font(Font.custom("Nexa", size: 20))
-                .fontWeight(.bold)
+                .fontWeight(.heavy)
                 .foregroundColor(.white)
                 .frame(width: 150, alignment: .leading)
-                .padding(.top, 80)
+                .padding(.top, 90)
                 .padding(.trailing, 10)
             
         }
     }
 }
 
-//struct CardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CardView(label: "Animali marini", pic: "🐍", color: .lightPurple)
-//            .environmentObject(Categories())
-//    }
-//}
+struct CardView_Previews: PreviewProvider {
+    static var previews: some View {
+        CardView(label: "Animali marini", pic: "🐍")
+    }
+}
