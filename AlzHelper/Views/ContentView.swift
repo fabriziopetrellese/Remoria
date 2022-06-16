@@ -58,18 +58,15 @@ struct ContentView: View {
                 .isDetailLink(false)
                 
                 //keyword view
-//                NavigationLink {
-//                    KeywordsSearchView()
-//                } label: {
-//                    ButtonView(title: searchKeywords,
-//                               icon: "keyboard.fill",
-//                               color: .yellow,
-//                               card: "thirdCard"
-//                    )
-//                }
-                
-                // comment out when showing keyword view
-                Spacer()
+                NavigationLink {
+                    KeywordsSearchView()
+                } label: {
+                    ButtonView(title: searchKeywords,
+                               icon: "keyboard.fill",
+                               color: .yellow,
+                               card: "thirdCard"
+                    )
+                }
             }
             .background(
                 Image("background")
