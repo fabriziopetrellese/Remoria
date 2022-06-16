@@ -70,8 +70,7 @@ struct GuessView: View {
     }
     
     var body: some View {
-        VStack() {
-            
+        VStack {
             // set image view if Library image
             if item?.source == .library, let imageUrl = item?.imageUrl {
                 AsyncImage(
@@ -98,11 +97,12 @@ struct GuessView: View {
             Text(String(format: NSLocalizedString("category", comment: "")) + (item?.category.capitalized ?? "Not Classified"))
                 .font(Font.custom("Nexa", size: 23))
                 .bold()
-                .frame(width: 320, height: 50)
+                .frame(width: 335, height: 50)
 //                .padding(.top, 15)
             
             TextField("", text: $name)
                 .textFieldStyle(.roundedBorder)
+                .frame(width: 320)
 //                .font(.title.bold())
                 .font(Font.custom("Nexa", size: 27))
                 .padding(.horizontal, 12)
@@ -110,33 +110,31 @@ struct GuessView: View {
             
             HStack(alignment: .center, spacing: 48) {
                 Button {
-                    showName()
-                } label: {
-                    GuessButton(action: showAnswer)
-                }
-                
-                Button {
                     addCharacter()
                 } label: {
                     GuessButton(action: nextQueue)
                 }
+                
+                Button {
+                    showName()
+                } label: {
+                    GuessButton(action: showAnswer)
+                }
             }
             .padding(.top, 8)
-            
-            Spacer()
         }
+        .ignoresSafeArea(.keyboard)
         .background(
             Image("background")
-                .opacity(0.09)
-                .position(x: 191, y: 380)
                 .ignoresSafeArea()
+                .position(x: 175, y: 190)
+                .opacity(0.09)
                 .onTapGesture {
                     dismissKeyboard()
                 }
         )
         .padding(.top, 6)
         .padding(.horizontal)
-//        .navigationTitle(guessObject)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear() {
             if item?.source == .library {

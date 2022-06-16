@@ -11,6 +11,9 @@ struct KeywordsSearchView: View {
     @EnvironmentObject var categories: Items
     @State private var searchText = ""
     
+    let keywords: LocalizedStringKey = "keywords"
+    let typeKeyword: LocalizedStringKey = "typeKeyword"
+    
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     
     var searchResults: [Item] {
@@ -36,8 +39,8 @@ struct KeywordsSearchView: View {
                 .padding()
             }
         }
-        .navigationTitle("Keywords")
-        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always) ,prompt: "Type a keyword")
+        .navigationTitle(keywords)
+        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always) ,prompt: typeKeyword)
     }
 }
 

@@ -49,14 +49,15 @@
 
 //LABELS
 //House
-"iPod" = "smartphone";
+"iPod" = "cellulare";
 "water bottle" = "bottiglia";
 
 //Tech
 "cassette" = "cassetta";
 "cassette player" = "lettore di cassette";
 "CD player" = "lettore cd";
-"cellular telephone" = "smartphone";
+"cellular telephone" = "cellulare";
+"notebook" = "Computer";
 
 //Fish
 "tench" = "pesce";
@@ -366,3 +367,9 @@
 "second6" = " usando parole chiave.";
 
 "done" = "Fatto";
+
+// KEYWORDS
+
+"keywords" = "Parole chiave";
+
+"typeKeyword" = "Scrivi una parola chiave";

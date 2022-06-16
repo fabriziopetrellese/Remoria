@@ -21,25 +21,12 @@
 "wrongMessage" = "Almost done, you are very close.";
 "guessObject" = "Guess this object";
 "category" = "Category: ";
-"showAnswer" = "Show name";
-"nextQueue" = "Next queue";
+"showAnswer" = "Solution";
+"nextQueue" = "Queue";
 
 //LIBRARY VIEW
 "library" = "Library";
 "browseCategories" = "Browse categories";
-
-//ONBOARDING
-"first" = " Make sure the object";
-"second" = " is prominent.";
-"first2" = " Make sure the object";
-"second2" = " is in focus.";
-"first3" = " If you don't have";
-"second3" = " access to the object";
-"first4" = " Choose from our";
-"second4" = " catalogue of images.";
-"first5" = "Can't find an image in the library?";
-"first6" = " Try to describe the";
-"second6" = " object using key-words.";
 
 //CATEGORIES
 "animals" = "animals";
@@ -65,6 +52,7 @@
 //House
 "iPod" = "smartphone";
 "water bottle" = "bottle";
+"notebook" = "notebook";
 
 //Tech
 "cassette" = "cassette";
@@ -373,10 +361,6 @@
 //"wok" = ;
 //"toilet tissue" = ;
 
-
-
-
-
 //ONBOARDING
 "first" = " Make sure the object";
 "second" = " is prominent.";
@@ -396,3 +380,9 @@
 "second6" = " object using key-words.";
 
 "done" = "Done";
+
+// KEYWORDS
+
+"keywords" = "Keywords";
+
+"typeKeyword" = "Type a keyword";
