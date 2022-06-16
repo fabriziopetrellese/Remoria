@@ -143,24 +143,11 @@ struct SecondPage: View {
                 .foregroundColor(.white)
                 .padding(.bottom, 240)
             
-//            Text("•")
-//                .font(.largeTitle)
-//                .fontWeight(.medium)
-//                .padding(.trailing, 318.5)
-//                .padding(.top, 70)
-//                .opacity(opacity)
-//                .onAppear() {
-//                    withAnimation(.linear.delay(0.8)) {
-//                        opacity = 1
-//                    }
-//                }
-            
             TextAnimation(first: "first3",
                           second: "second3",
                           delay: 1.0,
                           delaySecond: 1.95)
             .padding(.top, 90)
-//            .padding(.leading)
             
             Text("•")
                 .font(.largeTitle)
@@ -177,9 +164,9 @@ struct SecondPage: View {
             TextAnimation(first: "first4",
                           second: "second4",
                           delay: 4,
-                          delaySecond: 4.9)
+                          delaySecond: 4.9
+            )
             .padding(.top, 335)
-//            .padding(.leading)
         }
         .padding(.top, 30)
     }
@@ -214,20 +201,11 @@ struct ThirdPage: View {
                 .foregroundColor(.white)
                 .padding(.bottom, 240)
             
-            
-//            Text("Can't find an image in the library?")
-//            Text("Non trovi un'immagine nella libreria?")
             Text(first5)
                 .font(.system(size: 34))
                 .fontWeight(.medium)
                 .multilineTextAlignment(.center)
                 .frame(width: 340, height: 100)
-//                .animatableSystemFont(size: fontSize)
-//                .onAppear() {
-//                    withAnimation(.spring(response: 1.5, dampingFraction: 1.5, blendDuration: 1).delay(1)) {
-//                        fontSize = 42
-//                    }
-//                }
                 .frame(width: 350, height: 170)
                 .padding(.top, 90)
             
@@ -258,14 +236,6 @@ struct ThirdPage: View {
 
 struct ThirdPage_Previews: PreviewProvider {
     static var previews: some View {
-//        FirstPage(showModal: .constant(false))
-//            .previewDisplayName("Onboarding 1")
-//            .environment(\.locale, .init(identifier: "it"))
-        
-//        SecondPage(showModal: .constant(false))
-//            .previewDisplayName("Onboarding 2")
-//            .environment(\.locale, .init(identifier: "it"))
-        
         ThirdPage(showModal: .constant(false))
             .previewDisplayName("Onboarding 3")
             .environment(\.locale, .init(identifier: "it"))

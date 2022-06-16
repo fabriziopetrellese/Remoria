@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LibraryView: View {
-    @Environment(\.dismiss) var dismissView
     
     let categories = [
         Category(name: "animals", image: "animals", color: .lightPurple),
@@ -114,8 +113,8 @@ struct CardView: View {
     }
 }
 
-//struct CardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CardView(label: "Animali marini", pic: "🐍")
-//    }
-//}
+struct CardView_Previews: PreviewProvider {
+    static var previews: some View {
+        CardView(label: "Animali marini", pic: "🐍")
+    }
+}

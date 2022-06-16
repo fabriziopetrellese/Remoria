@@ -24,13 +24,11 @@ struct ButtonView: View {
                 Text(title)
                     .fontWeight(.bold)
                     .font(.title)
-//                    .bold()
                     .foregroundColor(.white)
                     .frame(width: 240, alignment: .center)
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 45)
 
-                
                 Image(systemName: icon)
                     .resizable()
                     .scaledToFit()
