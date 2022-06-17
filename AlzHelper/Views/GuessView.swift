@@ -124,13 +124,10 @@ struct GuessView: View {
             .padding(.top, 8)
         }
         .background(
-            Image("background")
-                .ignoresSafeArea()
-                .position(x: 175, y: 190)
-                .opacity(0.09)
-                .onTapGesture {
-                    dismissKeyboard()
-                }
+            Color.white
+            .onTapGesture {
+                dismissKeyboard()
+            }
         )
         .padding(.top, 6)
         .padding(.horizontal)

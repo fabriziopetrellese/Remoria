@@ -74,22 +74,16 @@ struct LibraryView: View {
                 .padding()
             }
         }
-        .background(
-        Image("background")
-            .opacity(0.07)
-            .position(x: 207, y: 450)
-            .ignoresSafeArea()
-        )
         .navigationTitle(library)
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always) ,prompt: browseCategories)
     }
 }
 
-struct LibraryView_Previews: PreviewProvider {
-    static var previews: some View {
-        LibraryView()
-    }
-}
+//struct LibraryView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LibraryView()
+//    }
+//}
 
 struct CardView: View {
     let label: String
@@ -101,6 +95,7 @@ struct CardView: View {
 
             Image(pic)
                 .resizable()
+                .cornerRadius(12)
             
             Text(label)
                 .font(.system(size: 19))
@@ -114,8 +109,8 @@ struct CardView: View {
     }
 }
 
-//struct CardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CardView(label: "Animali marini", pic: "🐍")
-//    }
-//}
+struct CardView_Previews: PreviewProvider {
+    static var previews: some View {
+        CardView(label: "Animali marini", pic: "🐍")
+    }
+}
