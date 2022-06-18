@@ -102,7 +102,7 @@ struct CardView: View {
                 .foregroundColor(.white)
                 .frame(width: 125, height: 46, alignment: .leading)
                 .padding(.top, 100)
-                .padding(.trailing, 50)
+                .padding(.trailing, 41)
             
         }
     }
