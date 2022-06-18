@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LibraryView: View {
-    @Environment(\.dismiss) var dismissView
     
     let categories = [
         Category(name: "animals", image: "animals", color: .lightPurple),

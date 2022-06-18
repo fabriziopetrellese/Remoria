@@ -12,8 +12,6 @@ struct GuessView: View {
     // Navigation to Main Menu
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var navigationRoot: NavigationRoot
-//    @EnvironmentObject var items: Items
-    
     @StateObject var imagePredictor = ImagePredictor()
     
     @State var name: String = ""
@@ -95,11 +93,10 @@ struct GuessView: View {
                     .frame(width: 280, height: 280)
             }
             
-            Text(String(format: NSLocalizedString("category", comment: "")) + (item?.category.capitalized ?? "Not Classified"))
+            Text(String(format: NSLocalizedString("category", comment: "")) + (item?.category.capitalized ?? "Not Categorized"))
                 .font(.system(size: 25))
                 .bold()
                 .frame(width: 335, height: 50)
-//                .padding(.top, 15)
             
             TextField("", text: $name)
                 .textFieldStyle(.roundedBorder)
@@ -181,7 +178,6 @@ struct GuessView: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text(guessObject)
-//                    .font(.system(size: 20))
                     .fontWeight(.bold)
             }
         }
