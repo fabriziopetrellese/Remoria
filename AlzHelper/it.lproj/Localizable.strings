@@ -48,7 +48,7 @@
 "building" = "edifici";
 "automotive" = "veicoli";
 "store" = "negozi";
-"household" = "domestici";
+"household" = "casa";
 "recreation" = "svago";
 "weapon" = "armi";
 "landscape" = "paesaggio";
