@@ -19,6 +19,7 @@ struct ContentView: View {
     //camera view properties
     @State private var isCameraViewPresented: Bool = false
     @State private var selectedImage: UIImage?
+    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     
     let mainMenu: LocalizedStringKey = "mainMenu"
     let takePhoto: LocalizedStringKey = "takePhoto"
@@ -69,11 +70,6 @@ struct ContentView: View {
                     )
                 }.isDetailLink(false)
             }
-            .background(
-                Image("background")
-                    .opacity(0.1)
-                    .ignoresSafeArea()
-            )
             .padding(.bottom, 40)
             .navigationTitle(mainMenu)
             .toolbar {
@@ -85,7 +81,7 @@ struct ContentView: View {
                             .foregroundColor(.black)
                     }
                     .sheet(isPresented: $showModal) {
-                        OnboardingView(showModal: $showModal)
+                        OnboardingView(shouldShowOnboarding: $shouldShowOnboarding, showModal: $showModal)
                     }
                 }
             }
@@ -97,6 +93,9 @@ struct ContentView: View {
                 .ignoresSafeArea()
             }
         }
+        .sheet(isPresented: $shouldShowOnboarding, content: {
+            OnboardingView(shouldShowOnboarding: $shouldShowOnboarding, showModal: $showModal)
+        })
         .onChange(of: selectedImage) { newValue in
             guard newValue != nil else { return }
             isGuessViewActive.toggle()

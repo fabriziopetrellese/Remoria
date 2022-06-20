@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @Binding var shouldShowOnboarding: Bool
     @Binding var showModal: Bool
     @Environment(\.dismiss) var done
     let doneButton: LocalizedStringKey = "done"
@@ -15,11 +16,14 @@ struct OnboardingView: View {
     var body: some View {
         NavigationView {
             TabView {
-                FirstPage(showModal: $showModal)
+                FirstPage(showModal: $showModal,
+                          shouldShowOnboarding: $shouldShowOnboarding)
                 
-                SecondPage(showModal: $showModal)
+                SecondPage(showModal: $showModal,
+                           shouldShowOnboarding: $shouldShowOnboarding)
                 
-                ThirdPage(showModal: $showModal)
+                ThirdPage(showModal: $showModal,
+                          shouldShowOnboarding: $shouldShowOnboarding)
             }
             .tabViewStyle(PageTabViewStyle())
             .onAppear {
@@ -48,7 +52,7 @@ func setupAppearance() {
 struct FirstPage: View {
     @Binding var showModal: Bool
     let takePhoto: LocalizedStringKey = "takePhoto"
-    
+    @Binding var shouldShowOnboarding: Bool
     @State var opacity: Double = 0
     @State var secondLineOpacity: Double = 0
      
@@ -117,6 +121,7 @@ struct FirstPage: View {
 
 struct SecondPage: View {
     @Binding var showModal: Bool
+    @Binding var shouldShowOnboarding: Bool
     @State var opacity: Double = 0
     @State var secondLineOpacity: Double = 0
     
@@ -174,6 +179,7 @@ struct SecondPage: View {
 
 struct ThirdPage: View {
     @Binding var showModal: Bool
+    @Binding var shouldShowOnboarding: Bool
     @State private var fontSize = 0.1
     @State var opacity: Double = 0
     
@@ -236,7 +242,15 @@ struct ThirdPage: View {
 
 struct ThirdPage_Previews: PreviewProvider {
     static var previews: some View {
-        ThirdPage(showModal: .constant(false))
+//        FirstPage(showModal: .constant(false))
+//            .previewDisplayName("Onboarding 1")
+//            .environment(\.locale, .init(identifier: "it"))
+        
+//        SecondPage(showModal: .constant(false))
+//            .previewDisplayName("Onboarding 2")
+//            .environment(\.locale, .init(identifier: "it"))
+        
+        ThirdPage(showModal: .constant(false), shouldShowOnboarding: .constant(false))
             .previewDisplayName("Onboarding 3")
             .environment(\.locale, .init(identifier: "it"))
     }
