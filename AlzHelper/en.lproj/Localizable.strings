@@ -38,6 +38,11 @@
 "arachnids" = "arachnids";
 "reptiles" = "reptiles";
 "mollusks" = "mollusks";
+"anellids" = "anellids";
+"medical" = "medical";
+"outdoor structure" = "outdoor structures";
+"vegetation" = "vegetation";
+"random" = "random";
 
 "food" = "food";
 "music" = "music";
@@ -46,13 +51,24 @@
 "sport" = "sport";
 "clothes" = "clothing";
 "vehicles" = "vehicles";
-"buildings" = "buildings";
+"building" = "buildings";
+"automotive" = "automotive";
+"store" = "store";
+"sunglasses" = "sunglasses";
+"household" = "household";
+"recreation" = "recreation";
+"weapon" = "weapon";
+"landscape" = "landscape";
+"fashion accessory" = "fashion accessory";
+"work gear" = "work gears";
+"church" = "church";
 
 //LABELS
 //House
 "iPod" = "smartphone";
 "water bottle" = "bottle";
 "notebook" = "notebook";
+"sunglass" = "sunglasses";
 
 //Tech
 "cassette" = "cassette";
