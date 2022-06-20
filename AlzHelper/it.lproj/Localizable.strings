@@ -13,7 +13,7 @@
 "searchKeywords" =  "Ricerca con parole chiave";
 
 //GUESS VIEW
-"correct" = ", esatto!";
+"correct" = ", esatto! 🎉";
 "mainScreen" = "Menu principale";
 "correctMessage" = "Torna al menu principale per identificare nuovi oggetti.";
 "wrong" = "Bel tentativo!";
@@ -44,20 +44,36 @@
 "technology" = "tecnologia";
 "sport" = "sport";
 "vehicles" = "veicoli";
-"clothes" = "abbigliamento";
-"buildings" = "edifici";
+"clothing" = "vestiti";
+"building" = "edifici";
+"automotive" = "veicoli";
+"store" = "negozi";
+"household" = "domestici";
+"recreation" = "svago";
+"weapon" = "armi";
+"landscape" = "paesaggio";
+"fashion accessory" = "accessori moda";
+"anellids" = "anellidi";
+"work gear" = "attrezzi da lavoro";
+"medical" = "medicina";
+"outdoor structure" = "strutture esterne";
+"vegetation" = "vegetazione";
+"random" = "casuali";
+"church" = "chiesa";
 
 //LABELS
 //House
 "iPod" = "cellulare";
 "water bottle" = "bottiglia";
+"sunglass" = "occhiali da sole";
+"sunglasses" = "occhiali da sole";
 
 //Tech
 "cassette" = "cassetta";
 "cassette player" = "lettore di cassette";
 "CD player" = "lettore cd";
 "cellular telephone" = "cellulare";
-"notebook" = "Computer";
+"notebook" = "computer";
 
 //Fish
 "tench" = "pesce";

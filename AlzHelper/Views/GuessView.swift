@@ -96,7 +96,7 @@ struct GuessView: View {
             Text(String(format: NSLocalizedString("category", comment: "")) + (item?.category.capitalized ?? "Not Categorized"))
                 .font(.system(size: 25))
                 .bold()
-                .frame(width: 335, height: 50)
+                .frame(width: 345, height: 50)
             
             TextField("", text: $name)
                 .textFieldStyle(.roundedBorder)
