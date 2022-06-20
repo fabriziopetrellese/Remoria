@@ -10088,7 +10088,8 @@
         "source":"library",
         "tags":[
            "building",
-           "factory"
+           "factory",
+           "wood"
         ]
      },
      {
@@ -10099,7 +10100,8 @@
         "source":"library",
         "tags":[
            "building",
-           "factory"
+           "factory",
+           "religion"
         ]
      },
      {
@@ -10143,7 +10145,9 @@
         "source":"library",
         "tags":[
            "building",
-           "factory"
+           "factory",
+           "beach",
+           "water"
         ]
      },
      {
@@ -10165,7 +10169,8 @@
         "source":"library",
         "tags":[
            "building",
-           "factory"
+           "factory",
+           "bell"
         ]
      },
      {

@@ -13,16 +13,16 @@
 "searchKeywords" = "Keyword Search";
 
 //GUESS VIEW
-"correct" = ", correct!";
+"correct" = ", success! 🎉";
 "mainScreen" = "Main screen";
-"correctMessage" = "Go back to main screen to identify new objects.";
+"correctMessage" = "Back to main screen to identify new objects.";
 "wrong" = "Nice try!";
 "tryAgain" = "Try again";
-"wrongMessage" = "Almost done, you are very close.";
+"wrongMessage" = "Almost, you are close.";
 "guessObject" = "Perform Exercise";
 "category" = "Category: ";
-"showAnswer" = "Solution";
-"nextQueue" = "Queue";
+"showAnswer" = "Show Solution";
+"nextQueue" = "Cue";
 
 //LIBRARY VIEW
 "library" = "Library";
