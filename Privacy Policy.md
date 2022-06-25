@@ -87,7 +87,3 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 If you have any questions about this Privacy Policy, You can contact us:
 
 * **By sending an email at: petrellesefabrizio@icloud.com**
-
-We use PixalBay’s API to get the images for the items in the app.
-Analytics
-We will not use third-party Service providers to monitor and analyze the use of our Service.
